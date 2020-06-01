@@ -21,6 +21,16 @@ function onload()
 
   bool_4player = true
 
+  BOARDMAP_ZONE = getObjectFromGUID('515a29')
+
+  table_points = {}
+  table_points['pink'] = 0
+  table_points['red'] = 0
+  table_points['green'] = 0
+  table_points['blue'] = 0
+  table_points['yellow'] = 0
+  table_points['white'] = 0
+
   guild_position =
   {
     { --alchemistes
@@ -75,10 +85,74 @@ function onload()
     self.setVar(funcName, func)
     self.createButton({
     click_function=funcName, function_owner=self, label = 'Update Guild Position',
-    position={0,1.5,0}, rotation={0,180,0}, height=400, width=5000, font_size = 250
+    position={0,1.5,0}, rotation={0,180,0}, height=400, width=5000, font_size = 250,
+    color = {0.89, 0.43, 0.51}, font_color = {0,0,0}
     })
 
+    TABLE_REGION = {}
+    TABLE_REGION["mountain_region"] = {{20.23, 1.16, 7.23}, {21.85, 1.16, 0.80}}
+    TABLE_REGION["badlands_region"] = {{5.55, 1.36, 7.47}, {12.11, 1.16, 5.57}, {14.44, 1.36, -0.24}, {16.55, 1.16, -5.27}, {8.61, 1.16, 1.61}}
+    TABLE_REGION["desert_region"] = {{-8.68, 1.16, -7.48}, {-4.67, 1.16, -2.73}, {9.53, 1.16, -6.42}, {-1.79, 1.36, -6.46}, {4.33, 1.36, -3.05}}
+    TABLE_REGION["forest_region"] = {{-3.61, 1.36, 6.03}, {2.49, 1.36, 2.93}, {-12.35, 1.16, 6.99}}
+    TABLE_REGION["island_region"] = {{-15.10, 1.16, 2.78}, {-11.13, 1.16, -1.23}, {-20.65, 1.16, -3.76}, {-16.00, 1.16, -6.94}}
+    TABLE_REGION["sea_region"] = {{-19.90, 1.16, 6.25}, {-21.64, 1.16, 1.55}, {-8.16, 1.16, 2.25}}
+
+
+    EPIC_VOYAGE = {{10.79, 1.16, 9.85}, {12.22, 1.16, 10.46}, {15.40, 1.16, 10.42}, {16.90, 1.16, 10.69}, {20.05, 1.16, 10.34}, {21.50, 1.16, 10.87}, {22.76, 1.16, 11.66}}
+
+    MILITARY_SERVICE = {{-16.43, 1.16, -11.76}, {-13.46, 1.16, -11.38}, {-10.79, 1.16, -10.79}}
+
+    EPOCH_MARKER = {{-11.72, 1.16, 9.35}, {-10.51, 1.16, 9.98}, {-8.82, 1.16, 10.13}, {-7.24, 1.16, 9.92}, {-5.92, 1.16, 9.29}}
+
+
+    params = {
+        click_function = "centralizedButton",
+        function_owner = self,
+        label          = "Next Epoch",
+        position       = {11, 1.16, -2.33},
+        rotation       = {0, 180, 0},
+        width          = 750,
+        height         = 300,
+        font_size      = 125,
+        color          = {0.97, 0.51, 0.22},
+        font_color     = {0, 0, 0},
+        tooltip        = "",
+    }
+    self.createButton(params)
+
+
+    --Colors are always in this order : 1) pink 2) red 3)green 4)blue 5)yellow 6)white
+
+  COLOR = {}
+
+
+  local pink_object = getObjectFromGUID('740bb1')
+  local pink = pink_object.getColorTint()
+  table.insert(COLOR, 1, pink)
+  local red_object = getObjectFromGUID('1b257c')
+  local red = red_object.getColorTint()
+  table.insert(COLOR, 2, red)
+  local green_object = getObjectFromGUID('e74e7f')
+  local green = green_object.getColorTint()
+  table.insert(COLOR, 3, green)
+  local blue_object = getObjectFromGUID('850665')
+  local blue = blue_object.getColorTint()
+  table.insert(COLOR, 4, blue)
+  local yellow_object = getObjectFromGUID('3f489d')
+  local yellow = yellow_object.getColorTint()
+  table.insert(COLOR, 5, yellow)
+  local white_object = getObjectFromGUID('6c0762')
+  local white = white_object.getColorTint()
+  table.insert(COLOR, 6, white)
+
+  --log(COLOR, 'general')
+  --log(COLOR[2],'rouge')
+
+
+
+
 end
+
 
 
 -- function to launch guild update (numpad1)
@@ -92,12 +166,15 @@ function onScriptingButtonUp(index, color)
 end
 
 -- helper to find object on top of position
-function findObjectOnTop(pos, radius)
+function findObjectOnTop(pos, my_type, radius, radius_1)
 
     local radius = (radius or 1.5)
+    if radius_1 == nil then
+      radius_1 = radius
+    end
     local objList = Physics.cast({
-        origin=pos, direction={0,1,0}, type=2, debug=false,
-        size={radius,radius,radius}
+        origin=pos, direction={0,1,0}, type = my_type, debug=true,
+        max_distance = 0, size={radius_1, radius, radius_1}
     })
 
     local refinedList = {}
@@ -125,7 +202,7 @@ function getTitleType(value)
       if (temp_url == 'https://i.imgur.com/hk15lLU.jpg') then
         title_type = 'farm'
       elseif (temp_url == 'https://i.imgur.com/yt2yOIJ.jpg') then
-        title_type = 'tower'
+        title_type = 'outpost'
       elseif (temp_url == 'https://i.imgur.com/UirRzRn.jpg') then
         title_type = 'town'
       end
@@ -139,7 +216,7 @@ function detectInfluence(title)
 
   local color = {}
   local position = title.getPosition()
-  local table_object = findObjectOnTop(position)
+  local table_object = findObjectOnTop(position, 3, radius, 0.4)
 
   for key,value in pairs(table_object) do
     -- print(value.getGUID())
@@ -162,7 +239,9 @@ end
 function detectInfluenceFromPosition(position, radius)
 
   local color = {}
-  local table_object = findObjectOnTop({position[1],1.30 ,position[3]}, radius)
+  local table_object = findObjectOnTop({position[1],1.30 ,position[3]}, 3, radius, 0.4)
+
+  --log(table_object)
 
   for key,value in pairs(table_object) do
     -- print(value.getGUID())
@@ -185,7 +264,7 @@ end
 function getInfluenceFromPosition(position, radius)
 
   local obj = nil
-  local table_object = findObjectOnTop({position[1],1.30 ,position[3]}, radius)
+  local table_object = findObjectOnTop({position[1],1.30 ,position[3]}, 3, radius, 0.4)
 
   for key,value in pairs(table_object) do
     -- print(value.getGUID())
@@ -217,8 +296,8 @@ end
 function guildCount(guild_number)
 
     -- get boardmap_zonesd
-  local boardmap_zone = getObjectFromGUID('515a29')
-  local temp_table = boardmap_zone.getObjects()
+
+  local temp_table = BOARDMAP_ZONE.getObjects()
 
   local nb_player = 0
 
@@ -290,7 +369,7 @@ function guildCount(guild_number)
         for key_point,value_point in pairs(table_point) do
           if stringColorToRGB(key_point) == color then
             if table_point[key_point] > 0 then
-              if (guild_number == 1 or guild_number == 4) and title_type == 'tower' then
+              if (guild_number == 1 or guild_number == 4) and title_type == 'outpost' then
                 table_point[key_point] = table_point[key_point] + 1
               elseif (guild_number == 2 or guild_number == 6) and title_type == 'farm' then
                 table_point[key_point] = table_point[key_point] + 1
@@ -702,5 +781,985 @@ function onObjectDrop(player_color, dropped_object  )
       updateGuildInfluence(table_point, i)
     end
   end
+end
+
+
+
+
+
+----------------------------------------------------------------------
+--UPDATE SCORE-----------------------------------------------------------------------
+---------------UPDATE SCORE-----------------------------------------------------------------
+---------------------------UPDATE SCORE----------------------------------------
+----------------------------------------UPDATE SCORE---------------------------------------
+----------------------------------------------------UPDATE SCORE--------------------------
+-----------------------------------------------------------------UPDATE SCORE------------
+
+
+
+
+
+
+--detecte le colortint des disques scores du palteau de jeu.
+function detectDiscColor(position)
+
+  local color_disc_list = {}
+  local temp_object = findObjectOnTop({position[1],1.30 ,position[3]}, 3, 0.4)
+
+  for k, value in pairs(temp_object) do
+
+    local disc = value.getName()
+    if value.getName() == 'Reeve/Disc' or 'Disc' then
+
+      local color_disc = value.getColorTint()
+
+      for x = 1,6 do
+        if color_disc == COLOR[x] then
+          table.insert(color_disc_list, COLOR[x])
+        end
+      end
+    end
+  end
+  --log(color_disc_list,'color_disc_list 2eme')
+  return color_disc_list
+end
+
+
+--Cette fonction est exactement la même que la tienne, mais j'ai supprimé le changement de couleur grey => white. Fais ce que tu veux.
+function detectInfluenceFromLocation(position)
+
+  local color = nil
+  local table_object = findObjectOnTop({position[1],1.30 ,position[3]}, 3, radius, 0.4)
+  --log(table_object)
+  for key,value in pairs(table_object) do
+    -- print(value.getGUID())
+    if (value.getName() == 'Influence') then
+      color = value.getColorTint()
+    end
+  end
+
+  return(color)
+end
+
+-- Pour attribuer les couleurs à chaque table de score.
+function loopInfColor(my_table, my_score, search_color)
+
+
+  local temp_color = search_color
+  local score = my_score
+
+  for i = 1,6 do
+    if temp_color == COLOR[i] then
+      my_table[i] = my_table[i] + score
+    end
+  end
+  return my_table
+end
+
+
+--Calcul du score d'époque de guilde.
+function calculScoreGuild()
+
+  local score_guild = {
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  }
+
+  for key, type_guild in pairs(guild_position) do
+
+    --Search the masters
+    local score = 5
+    score_guild = loopInfColor(score_guild, score, detectInfluenceFromLocation(type_guild[1]))
+
+    --Search the journeymen
+    local score = 3
+    score_guild = loopInfColor(score_guild, score, detectInfluenceFromLocation(type_guild[2]))
+
+    --Search the apprenties
+    local score = 1
+    score_guild = loopInfColor(score_guild, score, detectInfluenceFromLocation(type_guild[3]))
+  end
+  --log(score_guild,'final')
+  return score_guild
+end
+
+
+-- Calcul du score d'époque des paysages vides ou pleins.
+function calculScoreLandscape()
+
+  local score_ldscp = {
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  }
+
+  --Scan regions and determine pts, empty (2) or full (4).
+
+  for key_region, value_region in pairs(TABLE_REGION) do
+    for key_pos, value_pos in pairs(value_region) do
+
+      local temp_hit = findObjectOnTop(value_pos, 2, 3.75)
+      for key, value_hit in pairs(temp_hit) do
+
+        local type = value_hit.tag
+        if string.find(type, 'Card') then
+
+          local ldscp_full = false
+          local landscape_pos = value_hit.getPosition()
+          local object_on_landscape = findObjectOnTop(landscape_pos, 3, 2.1)
+
+          for key, value in pairs(object_on_landscape) do
+            --log(ldscp_full,'1er')
+            if value.getName() == 'Food' then
+              ldscp_full = true
+            elseif value.getName() == 'Archery Target' then
+              ldscp_full = true
+            elseif value.getName() == 'Shilling' then
+              ldscp_full = true
+            elseif value.getName() == 'Sulfur' then
+              ldscp_full = true
+            end
+            --log(ldscp_full,'bonus ou non')
+          end
+
+          for key, value in pairs(object_on_landscape) do
+            if value.getName() == 'Influence' then
+
+              local score = 0
+              if ldscp_full == true then
+                 score = 4
+               elseif ldscp_full == false then
+                 score = 2
+              end
+              --log(score,'score')
+
+    --Insert score on score_ldscp table.
+              score_ldscp = loopInfColor(score_ldscp, score, value.getColorTint())
+            end
+          end
+        end
+      end
+    end
+  end
+  --log(score_ldscp,'final')
+
+  return score_ldscp
+end
+
+
+--Calcule le score d'époque pour le contrôle des différentes régions.
+function calculScoreRegion()
+
+  local score_region = {}
+
+  --Trouver au moins une influence "ruler", par couleur et par région
+  --création d'un tableau pour stocker les inf trouvées
+
+  local unit_exist = 1
+
+  local temp_score_region = {
+    {}, --pink
+    {}, --red
+    {}, --green
+    {}, --blue
+    {}, --yellow
+    {}  --white
+  }
+
+  --Scan des régions, et sélection d'une unique influence par couleur, région et landscape
+
+  for key_region, value_region in pairs(TABLE_REGION) do
+
+    local unit_region = {
+      false,  --mountain
+      false,  --badlands
+      false,  --desert
+      false,  --forest
+      false,  --island
+      false   --sea
+    }
+
+    --log(unit_region)
+
+    for key_pos, value_pos in pairs(value_region) do
+
+     local temp_object_hit = findObjectOnTop(value_pos, 3, radius, 0.4)
+     local temp_landscape_hit = findObjectOnTop(value_pos, 2, 3.75)
+
+     --if lanscape found
+
+     if temp_landscape_hit ~= nil then
+      for index, object in pairs(temp_landscape_hit) do
+        local type = object.tag
+        if string.find(type, 'Card') then
+          --log(object)
+          local landscape_pos = object.getPosition()
+          local inf_serf = findObjectOnTop(landscape_pos, 3, 2.1)
+
+          for key, value in pairs (inf_serf) do
+            --log(value,'serf')
+            if (value.getName() == 'Influence') then
+
+              local temp_color = value.getColorTint()
+              --log(temp_color,'color serf')
+
+              --Don't count two times same color's serf on landscape by region
+              for i = 1,6 do
+                if temp_color == COLOR[i] then
+                  if unit_region[i] == false then
+                    table.insert(temp_score_region[i], unit_exist)
+                    unit_region[i] = true
+                  end
+                end
+              end
+            end
+          end
+        end
+      end
+     end
+
+       --Scan des rulers par region
+      for key, value in pairs(temp_object_hit) do
+
+        if (value.getName() == 'Influence') then
+
+          local temp_color = value.getColorTint()
+
+          --Don't count two times two same color's rulers by region
+          for i = 1,6 do
+            if temp_color == COLOR[i] then
+              if unit_region[i] == false then
+                table.insert(temp_score_region[i], unit_exist)
+                unit_region[i] = true
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+
+  --log(temp_score_region[1], "rose")
+  --log(temp_score_region[2], "rouge")
+  --log(temp_score_region[3], "vert")
+  --log(temp_score_region[4], "bleu")
+  --log(temp_score_region[5], "jaune")
+  --log(temp_score_region[6], "blanc")
+
+  --convert units to points
+
+  for c = 1,6 do
+
+      local n = #temp_score_region[c]
+
+      if n == 0 then
+        table.insert(score_region, 0)
+      elseif n == 1 then
+        table.insert(score_region, 1)
+      elseif n == 2 then
+        table.insert(score_region, 3)
+      elseif n == 3 then
+        table.insert(score_region, 5)
+      elseif n == 4 then
+        table.insert(score_region, 7)
+      elseif n == 5 then
+        table.insert(score_region, 9)
+      elseif n == 6 then
+        table.insert(score_region, 11)
+      end
+    end
+  --log(score_region)
+  return score_region
+end
+
+
+--Calcul du score final pour chaque location ruled. 1 pts for each or 3 pts for each fief.
+function calculEachStandardLocationRuled()
+
+  local each_standard_location_ruled = {
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  }
+
+
+  for key_region, value_region in pairs(TABLE_REGION) do
+    for key_pos, value_pos in pairs(value_region) do
+
+      local color_ruler = detectInfluenceFromLocation(value_pos)
+
+      if color_ruler ~= nil then
+
+        local fief = false
+        local hit_location_ruler = findObjectOnTop({value_pos[1],1.30 ,value_pos[3]}, 3, radius, 0.4)
+
+        for k, value in pairs(hit_location_ruler) do
+
+          if value.getName() == 'fief' then
+            fief = true
+            each_standard_location_ruled = loopInfColor(each_standard_location_ruled, 3, color_ruler)
+          end
+        end
+
+        if fief == false then
+          each_standard_location_ruled = loopInfColor(each_standard_location_ruled, 1, color_ruler)
+        end
+      end
+    end
+  end
+  --log(each_standard_location_ruled,'each_standard_location_ruled')
+  return each_standard_location_ruled
+
+end
+
+--Calcul du score final du voyage épique.
+function calculScoreEpicVoyage()
+
+  local score_epic_voyage = {
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  }
+
+  for i = 1,7 do
+
+    local color_disc_list = detectDiscColor(EPIC_VOYAGE[i])
+    --log(EPIC_VOYAGE[i],'EPIC_VOYAGE[i]')
+    --log(color_disc_list,'color_disc_list')
+    if color_disc_list ~= nil then
+      if i ~= 7 then
+        for k,value in pairs(color_disc_list) do
+          --log(value,'value1')
+          local pts = i*2 + 1
+          score_epic_voyage = loopInfColor(score_epic_voyage, pts, value)
+        end
+
+      elseif i == 7 then
+        for k,value in pairs(color_disc_list) do
+          --log(value, 'value17')
+          local pts = 17
+          score_epic_voyage = loopInfColor(score_epic_voyage, pts, value)
+        end
+      end
+    end
+ end
+ --log(score_epic_voyage,'score_epic_voyage')
+ return score_epic_voyage
+end
+
+--Fonction secondaire qui sert à déterminer le malus éventuel d'un joueur en fonction de l'époque.
+function checkMilitaryServicePerformed(military_service)
+
+  local military_service_performed = {
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  }
+
+  local malus_service_false = 0
+
+  if military_service == MILITARY_SERVICE[1] then
+    malus_service_false = -3
+  elseif military_service == MILITARY_SERVICE[2] then
+    malus_service_false = -4
+  elseif military_service == MILITARY_SERVICE[3] then
+    malus_service_false = -5
+  end
+
+  local temp_table = BOARDMAP_ZONE.getObjects()
+  for key,value in pairs(temp_table) do
+
+    --Search if 'fief' on zoneboard and his ruler.
+
+      if value.getName() == 'fief' then
+
+        local temp_military_service_performed = false
+        local pos_fief = value.getPosition()
+        local color_ruler_fief = detectInfluenceFromLocation(pos_fief)
+
+              --Search all markers in one MILITARY_SERVICE
+        local color_disc_list = detectDiscColor(military_service)
+
+        if color_disc_list ~= nil then
+          for k,value in pairs(color_disc_list) do
+            if value == color_ruler_fief then
+              temp_military_service_performed = true
+            end
+          end
+
+          --log(temp_military_service_performed,'temp_military_service_performed')
+          if temp_military_service_performed == false then
+
+            for x = 1,6 do
+              if color_ruler_fief == COLOR[x] then
+                military_service_performed[x] = false
+              end
+            end
+          end
+        end
+      end
+  end
+  --log(military_service_performed)
+  --log(malus_service_false,'malus_service_false')
+  for i = 1,6 do
+    if military_service_performed[i] == false then
+      military_service_performed[i] = malus_service_false
+    else military_service_performed[i] = 0
+    end
+  end
+  --log(military_service_performed,'military_service_performed')
+  return military_service_performed
+end
+
+-- divise un nombre par trois, arrondis à l'entier inférieur.
+function doResultByThree(unit)
+
+  local mod_unit = unit % 3
+  local temp_unit = unit - mod_unit
+  local total = temp_unit / 3
+
+  return total
+end
+
+
+--Calcul du score pour la quantité de Shillings détenu dans la zone d'un joueurs (1 pt par tranche complète de 3 shillings)
+function calculScoreShillingByZone(color_zone)
+  --Shilling
+  local nb_shilling = 0
+
+  local zone = color_zone
+  local hit_in_zone = zone.getObjects()
+
+  for k, value in pairs(hit_in_zone) do
+    if value.getName() == 'Shilling' then
+      nb_shilling = nb_shilling + 1
+    end
+  end
+
+  local color_score_shilling = doResultByThree(nb_shilling)
+  --log(color_score_shilling)
+  return color_score_shilling
+end
+
+--Déterminer le score final de shilling de chaque joueur
+function calculScoreShilling()
+
+  local pts = 0
+  local score_shilling = {
+    pts,
+    pts,
+    pts,
+    pts,
+    pts,
+    pts
+  }
+
+  score_shilling[1] = calculScoreShillingByZone(getObjectFromGUID('7cb0f1'))
+  score_shilling[2] = calculScoreShillingByZone(getObjectFromGUID('28be03'))
+  score_shilling[3] = calculScoreShillingByZone(getObjectFromGUID('f1d518'))
+  score_shilling[4] = calculScoreShillingByZone(getObjectFromGUID('678bf3'))
+  score_shilling[5] = calculScoreShillingByZone(getObjectFromGUID('35b34d'))
+  score_shilling[6] = calculScoreShillingByZone(getObjectFromGUID('e09210'))
+
+  --log(score_shilling)
+  return score_shilling
+
+end
+
+
+--Calcule un score temporaire par groupe de trois locations identiques
+function tempScoreOneColorIdenticalLocation(my_table)
+
+  local table = my_table
+
+  --log(table,'tempScoreOneColorIdenticalLocation')
+  local score_outpost = doResultByThree(table[1]) * 3
+  local score_farm = doResultByThree(table[2]) * 3
+  local score_town = doResultByThree(table[3]) * 3
+  local score_fief = doResultByThree(table[4]) * 3
+
+  local score = score_outpost + score_farm + score_town + score_fief
+
+  --log(score,'tempScoreOneColorIdenticalLocation')
+  return score
+end
+
+--Détermine le modulo d'un nombre divisé par trois.
+function doModuloByThree(my_table)
+
+  local table = my_table
+  --log(table,'doModuloByThree')
+  local mod = {
+    {},
+    {},
+    {}
+  }
+
+  local mod_1 = table[1] % 3
+  local mod_2 = table[2] % 3
+  local mod_3 = table[3] % 3
+
+  mod[1] = mod_1
+  mod[2] = mod_2
+  mod[3] = mod_3
+  --log(mod,'doModuloByThree')
+  return mod
+end
+
+
+--Répartis les fiefs dans les groupes des autres locations, "outpost", "farm" ou "town", de façon optimale.
+--C'est à dire, voir s'il y a encore des fiefs de dispo, voir combien il en faut pour atteindre le prochain entier divisible par trois,
+--Ajouter les fiefs si c'est utile (c'est à dire si on atteind le prochain entier).
+--retirer ces fiefs du total de fiefs dispo.
+
+function divisionOfFief(my_table, a, type_location)
+
+  local table = my_table
+  local mod = doModuloByThree(table)
+
+  if 3 - mod[type_location] == a then
+    if table[4] >= a and table[4] ~= 0 then
+      if table[type_location] + a == 3 then
+        table[type_location] = table[type_location] + a
+        table[4] = table[4] - a
+        --log(table[4],'après outpost')
+      end
+    end
+  end
+  return table
+end
+
+
+--Faire la division des fiefs pour les trois types de locations, et pour quelquesoit le nombre de fiefs de dispo.
+
+function divisionOfFiefByLocation(my_table, a)
+
+  local table = my_table
+  local type_location = 1
+  local a = a
+
+  --pour les outposts
+  table_1 = divisionOfFief(table, a, 1)
+
+  --pour les farms
+  table_2 = divisionOfFief(table_1, a, 2)
+
+  --pour les towns
+  table_3 = divisionOfFief(table_2, a, 3)
+
+  return table_3
+end
+
+--Calculer le score d'un jouer en fonction du nombre de ses fiefs
+function nFief(my_table, a)
+
+  local table = my_table
+
+  local table_1 = divisionOfFiefByLocation(table, a)
+
+  local score = tempScoreOneColorIdenticalLocation(table_1)
+  --log(score,'nFief_score')
+  --log(table_1,'nFief_table1')
+  return score, table_1
+
+end
+
+--Calculer les scores possibles d'un joueur s'il a deux fiefs, et choisir le meilleur.
+function calculFortwoFiefs(my_table)
+
+  local table = my_table
+  --log(table[4],'table[4]')
+  local score_1 = nil
+  local score_2 = nil
+
+  do
+    score_1 = nFief(table, 1)
+    --log(score_1,'score_1')
+  end
+
+  do
+    score_2 = nFief(table, 2)
+    --log(score_2,'score_2')
+  end
+
+  if score_1 >= score_2 then
+    score = score_1
+  else score = score_2
+  end
+  --log(score,'calculFortwoFiefs')
+  return score, table
+end
+
+
+--Calculer les scores possibles d'un joueur s'il a trois fiefs, et choisir le meilleur.
+function calculForThreeFiefs(my_table)
+
+  local table = my_table
+
+  local score_1 = nil
+  local score_2 = nil
+  local score_3 = nil
+
+  do
+    local table_1 = divisionOfFiefByLocation(table, 1)
+    local table_2 = divisionOfFiefByLocation(table_1, 2)
+    score_1 = tempScoreOneColorIdenticalLocation(table_2)
+  end
+
+  do
+    score_2 = nFief(table, 3)
+  end
+
+  do
+    score_3 = tempScoreOneColorIdenticalLocation(table)
+  end
+
+  if score_1 >= score_2 and score_1 >= score_3 then
+    score = score_1
+  elseif score_2 >= score_1 and score_2 >= score_3 then
+    score = score_2
+  elseif score_3 >= score_1 and score_3 >= score_2 then
+    score = score_3
+  end
+  --log(score,'calculForThreeFiefs')
+  return score, table
+
+end
+
+--Déterminer le score d'un joueur en faisant le calcul nécessaire en fonction du nombre de ses fiefs.
+--Je pense que j'aurai pu encore plus optimiser là, et trouver le bon calcul en fonction du nombre de fiefs = x mais bon....
+--Est-ce possible d'avoir plus de 6 fiefs pour un même joueurs??? Je me suis arrêté à 6.
+--Pour info, et suite à une question que je t'avais posé, on peut rappeler plusieurs résultats par variable. L'ordre du rappel est important,
+       --et si tu ne veux utiliser que le second résultat rappelé, tu marques       _, deuxième resultat = .........
+
+function calculScoreOneColorIdenticalLocation(my_table)
+
+  local score = 0
+  local table = my_table
+  --log(table,'calculScoreOneColorIdenticalLocation')
+
+  --Si 0 fief :
+  if table[4] == 0 then
+    score = tempScoreOneColorIdenticalLocation(table, 0)
+
+  --Si 1 fief :
+  elseif table[4] == 1 then
+    score = nFief(table, 1)
+
+  --Si 2 fiefs :
+  elseif table[4] == 2 then
+    score = calculFortwoFiefs(table)
+
+  --Si 3 fiefs :
+  elseif table[4] == 3 then
+    score = calculForThreeFiefs(table)
+
+    --Si 4 fiefs :
+  elseif table[4] == 4 then
+
+    local _, table_1 = nFief(table, 1)
+    score = calculForThreeFiefs(table_1)
+
+    --Si 5 fiefs :
+  elseif table[4] == 5 then
+
+    local _, table_1 = calculFortwoFiefs(table)
+    score = calculForThreeFiefs(table_1)
+
+    --Si 6 fiefs :
+  elseif table[4] == 6 then
+
+    local _, table_1 = calculForThreeFiefs(table)
+    score = calculForThreeFiefs(table_1)
+
+  end
+  --log(score,'calculScoreOneColorIdenticalLocation')
+    --We can build more than 6 fiefs? Really?
+  return score
+end
+
+-- Déterminer le nombre de locations_ruled de chaque type et pour chaque joueur, puis lancer le calcul du score pour chaque joueur.
+function calculScoreAllColorsIdenticalLocation()
+
+  local score_identical_location = {0}
+
+  local loc = 0
+
+  local table_loc_by_color = {
+    {loc,loc,loc,loc}, --pink {outpost/farm/town/fief}
+    {loc,loc,loc,loc}, --red {outpost/farm/town/fief}
+    {loc,loc,loc,loc}, --green {outpost/farm/town/fief}
+    {loc,loc,loc,loc}, --blue {outpost/farm/town/fief}
+    {loc,loc,loc,loc}, --yellow {outpost/farm/town/fief}
+    {loc,loc,loc,loc} --white {outpost/farm/town/fief}
+  }
+
+
+  for k_region, value_region in pairs(TABLE_REGION) do
+    for k_pos, value_pos in pairs(value_region) do
+      local color_ruler = detectInfluenceFromLocation(value_pos)
+      if color_ruler ~= nil then
+        for i = 1,6 do
+          if color_ruler == COLOR[i] then
+            local hit_pos = findObjectOnTop({value_pos[1],1.30 ,value_pos[3]}, 3, radius, 0.4)
+            for k, value in pairs(hit_pos) do
+              local hit_location = getTitleType(value)
+              if hit_location == 'outpost' then
+                table_loc_by_color[i][1] = table_loc_by_color[i][1] + 1
+              elseif hit_location == 'farm' then
+                table_loc_by_color[i][2] = table_loc_by_color[i][2] + 1
+              elseif hit_location == 'town' then
+                table_loc_by_color[i][3] = table_loc_by_color[i][3] + 1
+              elseif value.getName() == 'fief' then
+                table_loc_by_color[i][4] = table_loc_by_color[i][4] + 1
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+
+  --log(table_loc_by_color,'table_loc_by_color')
+
+  for i = 1,6 do
+  score_identical_location[i] = calculScoreOneColorIdenticalLocation(table_loc_by_color[i])
+  end
+  --log(score_identical_location,'score_identical_location')
+  return score_identical_location
+end
+
+--Ici, je détermine la fonction "addition" de ma métatable. j'ai essayé de faire l'addition de trois tables. J'ai pas réussi.
+--Je ne sais pas si c'est parce que c'est impossible ou si c'est parce que je n'ai pas correctement config la fonction.
+function addTwoScores(my_table1, my_table2)
+
+  local total   = {}
+  local t1 = my_table1
+  local t2 = my_table2
+
+  local mt = {}    -- Construction de la table qui servira de métatable.
+
+  mt.__add = function(a, b)    -- Création de l'opération d'addition (__add)
+    for i = 1,6 do
+      total[i] = a[i] + b[i]
+    end
+  end
+
+  setmetatable(t1, mt)    -- Association de la mt à score_region
+
+  local function addition(a, b)    -- On ajoute un message d'erreur ... au cas ou!
+    if (getmetatable(a) == nil) and (getmetatable(b) == nil) then
+      error("Vous essayez d'additionner 2 tables sans métatable.")
+    else
+      local t = a + b
+    end
+  end
+
+  addition(t1,t2)   -- On lance l'addition.
+
+  return total
+end
+
+
+
+--Là, j'additionne les scores des régions, guildes et landscapes qui seront rappelés à chaque passage d'époque.
+function calculScoreRegLdscpGuild()
+
+  local score_reg_ldscp_guild = {}
+
+  local score_region = calculScoreRegion()
+  local score_ldscp = calculScoreLandscape()
+  local score_guild = calculScoreGuild()
+
+  local total_1 = addTwoScores(score_region, score_ldscp)
+
+  score_reg_ldscp_guild = addTwoScores(total_1, score_guild)
+
+  return score_reg_ldscp_guild
+end
+
+--Là, l'addition des scores qui renverra le score final qui sera ajouté après le score d'époque de l'âge 5.
+function calculFinalScoring()
+
+  local final_scoring = {}
+
+  local score_epic_voyage = calculScoreEpicVoyage()
+  local score_shilling = calculScoreShilling()
+  local score_ident_loc = calculScoreAllColorsIdenticalLocation()
+  local score_each_loc_ruled = calculEachStandardLocationRuled()
+
+  local total_1 = addTwoScores(score_epic_voyage, score_shilling)
+  local large_empire = addTwoScores(score_each_loc_ruled, score_ident_loc)
+
+  final_scoring = addTwoScores(total_1, large_empire)
+
+  return final_scoring
+end
+
+--La fonction qui bouge le marqueur époque vers son époque suivante. Cette fonction renvoie aussi la nouvelle position du marqueur.
+function moveEpochMarker()
+
+  local new_pos = {}
+
+  for i = 1,5 do
+    local hit_value = findObjectOnTop(EPOCH_MARKER[i], 3, radius, 0.4)
+    for k,value in pairs(hit_value) do
+      if value.getName() == 'Epoch Marker' then
+        if i ~= 5 then
+          local obj_marker = getObjectFromGUID('3976bc')
+          obj_marker.setPositionSmooth(EPOCH_MARKER[i+1], false, false)
+          new_pos = EPOCH_MARKER[i+1]
+        end
+      end
+    end
+  end
+  return new_pos
+end
+
+--Determine l'époque à prendre en compte pour calculer le malus éventuel des services militaires
+function calculScoreMilitaryService(epoch_marker_pos)
+
+  local total_score_milit = {}
+  local pos = epoch_marker_pos
+
+  if pos == EPOCH_MARKER[2] then
+    total_score_milit = checkMilitaryServicePerformed(MILITARY_SERVICE[1])
+  end
+
+  if pos == EPOCH_MARKER[4] then
+    local total_1 = checkMilitaryServicePerformed(MILITARY_SERVICE[1])
+    local total_2 = checkMilitaryServicePerformed(MILITARY_SERVICE[2])
+    total_score_milit = addTwoScores(total_1, total_2)
+  end
+
+  if pos == EPOCH_MARKER[5] then
+    local total_1 = checkMilitaryServicePerformed(MILITARY_SERVICE[1])
+    local total_2 = checkMilitaryServicePerformed(MILITARY_SERVICE[2])
+    local total_3 = addTwoScores(total_1, total_2)
+    local total_4 = checkMilitaryServicePerformed(MILITARY_SERVICE[3])
+    total_score_milit = addTwoScores(total_3, total_4)
+  end
+
+  return total_score_milit
+end
+
+--Renvoi le score époque définitif, avec l'éventuel calcul du malus adéquat, si besoin est.
+function scoreEpoch(new_pos_marker)
+
+  local score_epoch = {}
+  local new_pos = new_pos_marker
+
+  if new_pos == EPOCH_MARKER[2] then
+    local score_milit = calculScoreMilitaryService(EPOCH_MARKER[2])
+    score_epoch = addTwoScores(score_milit, calculScoreRegLdscpGuild())
+  elseif new_pos == EPOCH_MARKER[3] then
+    score_epoch = calculScoreRegLdscpGuild()
+  elseif new_pos == EPOCH_MARKER[4] then
+    local score_milit = calculScoreMilitaryService(EPOCH_MARKER[4])
+    score_epoch = addTwoScores(score_milit, calculScoreRegLdscpGuild())
+  elseif new_pos == EPOCH_MARKER[5] then
+    local score_milit = calculScoreMilitaryService(EPOCH_MARKER[5])
+    score_epoch = addTwoScores(score_milit, calculScoreRegLdscpGuild())
+  end
+
+  return score_epoch
+end
+
+--Définir la fonction qui imprimera les scores sur le chat
+function printScore(my_table)
+
+  local color = {
+    'pink',
+    'red',
+    'green',
+    'blue',
+    'yellow',
+    'white',
+  }
+
+  local affichage = ''
+  for i = 6, 1, -1 do
+    affichage = color[i].." = "..my_table[i].."\n"..affichage
+    end
+  printToAll(affichage)
+end
+
+--Déterminer la fonction du bouton centralisé :
+
+            --Bouger le marqueur
+            --Calculer le score Epoch adéquat
+            --Calculer le score final si nous sommes en fin de partie.
+
+                     --(Attention pour bouger le pion score du bord du plateau, il n'y a qu'un score à prendre en compte)
+                     --(car l'addition du score d'époque et du score final est déjà faite.)
+                     --(J'ai volontairement séparé les affichages des deux scores car )
+                            --Ils sont séparés dans les règles.)
+                            --Ce sera plus facile aux joueurs de contrôler les scores calculés.)
+
+            -- J'aimerai aussi activer les fonctions de réapprovisionnement lorsque nécessaire aux bonnes époques.
+              --J'arrive pas à le faire, si tu peux m'aider stp.
+
+            --Afficher un petit message sur la fenêtre principale du jouer, mais ça s'efface de suite. Y a pas une fonction qui permet de garder
+              --l'affichage genre une minute? Du coup, je ne suis pas sûr que mon choix de couleur soit optimal. Je veux du voyant sans être flash.
+
+function centralizedButton()
+
+  local new_pos_marker = moveEpochMarker()
+  local score = {}
+
+  if new_pos_marker ~= EPOCH_MARKER[5] then
+    score = scoreEpoch(new_pos_marker)
+    printToAll('Score epoch')
+    printScore(score)
+
+  elseif new_pos_marker == EPOCH_MARKER[5] then
+
+    local score_epoch = scoreEpoch(new_pos_marker)
+    printToAll('Score epoch')
+    printScore(score_epoch)
+
+    local final_scoring = calculFinalScoring()
+    printToAll('Final scoring')
+    printScore(final_scoring)
+
+    score = addTwoScores(score_epoch, final_scoring)
+
+    local msg = "Game over. Don't forget to add your royal writ with king's seal !!  Thanks"
+    local rgb = {r=0.14, g=0.18, b=0.26}
+    broadcastToAll(msg, rgb)
+
+  end
+
+    --if new_pos_marker == EPOCH_MARKER[2] then
+    --  Global.click_Button(1)
+    --end
+
+    --if new_pos_marker == EPOCH_MARKER[3] then
+    --  Global.click_Button(2)
+    --end
+
+    --if new_pos_marker == EPOCH_MARKER[4] then
+    --  Global.click_Button(3)
+    --end
+
+    --if new_pos_marker == EPOCH_MARKER[3] then
+    --  Global.click_Button(4)
+    --end
 
 end
