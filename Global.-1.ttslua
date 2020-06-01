@@ -42,19 +42,58 @@ function onload()
         end
     end
 
+    table_score2position = {}
 
-    -- board = getObjectFromGUID('8d3d4e')
-    -- local updateAllGuild = 'GuildFunction'
-    -- local GuildFunction = function ()
-    --   for i=1,6 do
-    --     local table_point = guildCount(i)
-    --     updateGuildInfluence(table_point, i)
-    --   end
-    -- end
-    --
-    -- self.setVar(updateAllGuild, GuildFunction)
-    -- board.createButton({
-    --   click_function=updateAllGuild, function_owner=board, label = 'Update guild position',
-    --   position={-10.5, 0.2, 3.5}, rotation={0,180,0}, height=400, width=4000, font_size = 250
-    -- })
+    local table_position = {}
+    local table_rotation = {}
+    table_rotation["x"] = 0
+    table_rotation["y"] = 0
+    table_rotation["z"] = 0
+
+    for i=0,3 do
+      local x_slope = 1.318054
+      local y_slope = 1.3206
+      local x_intercept = -36.01638
+      local y_intercept = -13.2466
+      local span = 0
+
+      if i <= 20 then
+        x_slope = 0
+      elseif i > 20 and i <= 75 then
+        span = -20
+        y_intercept = y_intercept+20*y_slope
+        y_slope = 0
+      elseif i > 75 and i <= 95 then
+        x_intercept = x_intercept+55*x_slope
+        y_intercept = y_intercept+20*y_slope
+        x_slope = 0
+        y_slope = -y_slope
+        span = -75
+      elseif i > 95 then
+        x_intercept = x_intercept+55*x_slope
+        x_slope = -x_slope
+        y_slope = 0
+        span = -95
+      end
+
+      table_position["x"] = x_intercept+(i+span)*x_slope
+      table_position["y"] = 1.5
+      table_position["z"] = y_intercept+(i+span)*y_slope
+
+      table_score2position[i] = table_position
+
+      log(table_position)
+
+      self.setSnapPoints({
+        {
+          position         = table_position,-- Vector},
+          rotation         = table_rotation,-- Vector,
+          rotation_snap    = false
+        },
+      })
+
+    end
+
+
+
 end
