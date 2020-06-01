@@ -1,0 +1,302 @@
+SETTINGS={
+    NAME="Rules",
+    SCALE=0.75,
+    WIDTH=1341,
+    HEIGHT=2012,
+    SLIDER_HEIGHT=100,
+    SLIDER_BG_COLOR="#000000",
+    SLIDER_FILL_COLOR="#424242",
+    SLIDER_HANDLE_COLOR="#8B0A0A",
+    SINGLE_PAGE=false,
+    FIRST_PAGE_SINGLE=true,
+    PERMANENT=false,
+    PAGES={
+        'https://i.imgur.com/LYf9gmq.jpg',
+        'https://i.imgur.com/Ye6i9EP.jpg',
+        'https://i.imgur.com/NzLoenY.jpg',
+        'https://i.imgur.com/6QOpjVi.jpg',
+        'https://i.imgur.com/RblQnwh.jpg',
+        'https://i.imgur.com/Saf9YKC.jpg',
+        'https://i.imgur.com/fapwYIa.jpg',
+        'https://i.imgur.com/tIB8RWX.jpg',
+        'https://i.imgur.com/aGjtiVS.jpg',
+        'https://i.imgur.com/TRFhAsZ.jpg',
+        'https://i.imgur.com/XhwxkiA.jpg',
+        'https://i.imgur.com/TActOES.jpg',
+        'https://i.imgur.com/jcL2PCV.jpg',
+        'https://i.imgur.com/CexyRcY.jpg',
+        'https://i.imgur.com/TBwhyyJ.jpg',
+        'https://i.imgur.com/sr1o6Ys.jpg',
+        'https://i.imgur.com/kbKcvLF.jpg',
+        'https://i.imgur.com/dTpeAo6.jpg',
+        'https://i.imgur.com/h9gkEtl.jpg',
+        'https://i.imgur.com/V7bzNk3.jpg',
+        'https://i.imgur.com/dN9H8MP.jpg'
+         },
+    MAX_VAL = 0
+    }
+
+CURRENT_PAGE = 1
+function onLoad(save_state)
+    if save_state ~= '' then
+        SETTINGS = JSON.decode(save_state)
+    end
+    if SETTINGS.PERMANENT then
+        createRules()
+    else
+        SettingMenu()
+    end
+end
+
+function createRules()
+    if #SETTINGS.PAGES==0 then
+        startLuaCoroutine(self, 'SettingMenu')
+        return
+    end
+    CURRENT_PAGE=1
+    assets = {
+        {
+            name="left",
+            url="http://cloud-3.steamusercontent.com/ugc/916924328390814774/D9639CAE37C1976D117AF135C96B872A963FBFD1/"
+        },
+        {
+            name="right",
+            url="http://cloud-3.steamusercontent.com/ugc/916924328390815613/E351065E777FEADEBCA0F495FA90F97A00E01817/"
+        },
+        {
+            name="gear",
+            url="https://i.imgur.com/p1g8sza.png"
+        }
+    }
+    for page, asset in ipairs(SETTINGS.PAGES) do
+        assets[#assets+1] = {name=SETTINGS.NAME..tostring(page),url=asset}
+    end
+    self.UI.setCustomAssets(assets)
+    if SETTINGS.SINGLE_PAGE then
+        SETTINGS.MAX_VAL = #SETTINGS.PAGES
+    elseif SETTINGS.FIRST_PAGE_SINGLE then
+        if (#SETTINGS.PAGES-1)%2 == 0 then
+            SETTINGS.MAX_VAL = 1+math.floor((#SETTINGS.PAGES-1)/2)
+        else
+            SETTINGS.MAX_VAL = 2+math.floor((#SETTINGS.PAGES-1)/2)
+        end
+    else
+        if #SETTINGS.PAGES%2==0 then
+            SETTINGS.MAX_VAL = #SETTINGS.PAGES/2
+        else
+            SETTINGS.MAX_VAL = math.floor(#SETTINGS.PAGES/2)+1
+        end
+    end
+    ui_table={
+        {tag="Panel", attributes={id=SETTINGS.NAME.."Panel", position="0 0 -20", scale=tostring(SETTINGS.SCALE).." "..tostring(SETTINGS.SCALE), rotation="0 0 0", width=SETTINGS.SINGLE_PAGE and SETTINGS.WIDTH or SETTINGS.WIDTH*2, height=SETTINGS.HEIGHT+SETTINGS.SLIDER_HEIGHT,}, children={
+            {tag="Image", attributes={id=SETTINGS.NAME.."LeftImage", height=SETTINGS.HEIGHT, image="", preserveAspect="True", rectAlignment="UpperLeft", active=not (SETTINGS.SINGLE_PAGE or SETTINGS.FIRST_PAGE_SINGLE)}},
+            {tag="Image", attributes={id=SETTINGS.NAME.."RightImage", height=SETTINGS.HEIGHT, image="", preserveAspect="True", rectAlignment="UpperRight", active=not (SETTINGS.SINGLE_PAGE or SETTINGS.FIRST_PAGE_SINGLE)}},
+            {tag="Image", attributes={id=SETTINGS.NAME.."SingleImage", height=SETTINGS.HEIGHT, image="", preserveAspect=true, rectAlignment="UpperCenter", active=(SETTINGS.SINGLE_PAGE or SETTINGS.FIRST_PAGE_SINGLE),}},
+            {tag="Button", attributes={id=SETTINGS.NAME.."Setting", icon="gear", height=SETTINGS.SLIDER_HEIGHT, width=SETTINGS.SLIDER_HEIGHT, rectAlignment="UpperRight", onClick="SettingMenu", color="rgba(1,1,1,0)", active=not SETTINGS.PERMANENT}},
+            {tag="Button", attributes={icon="left", height=SETTINGS.SLIDER_HEIGHT, width=SETTINGS.SLIDER_HEIGHT, rectAlignment="Lowerleft", offsetXY="0", onClick="buttonPage(-1)", color=SETTINGS.SLIDER_HANDLE_COLOR}},
+            {tag="Slider", attributes={minValue="1", maxValue=SETTINGS.MAX_VAL, wholeNumbers="True", height=SETTINGS.SLIDER_HEIGHT, width=SETTINGS.SINGLE_PAGE and SETTINGS.WIDTH-(2*SETTINGS.SLIDER_HEIGHT) or SETTINGS.WIDTH*2-(2*SETTINGS.SLIDER_HEIGHT),
+                                       value="1", onValueChanged="changePage", rectAlignment="LowerCenter", id=SETTINGS.NAME.."PageSelector", backgroundColor=SETTINGS.SLIDER_BG_COLOR, fillColor=SETTINGS.SLIDER_FILL_COLOR, handleColor=SETTINGS.SLIDER_HANDLE_COLOR}},
+            {tag="Button", attributes={icon="right", width=SETTINGS.SLIDER_HEIGHT, height=SETTINGS.SLIDER_HEIGHT, rectAlignment="LowerRight", onClick="buttonPage(1)", color=SETTINGS.SLIDER_HANDLE_COLOR}}
+        }}}
+    Wait.frames(||self.UI.setXmlTable(ui_table), 10)
+    self.setName(SETTINGS.NAME)
+    Wait.frames(||changePage(nil, "1", nil), 20)
+end
+
+function permanentSave(player, value, id)
+    if make_permanent then
+        SETTINGS.PERMANENT = true
+        updateSave()
+        createRules()
+    else
+        broadcastToColor("Are you sure to make this permanent? Can not be easily changed afterwards. Click again within 5 seconds if you're sure", player.color, "Red")
+        make_permanent = true
+        self.UI.setAttribute("makePermanent", "colors", 'Red|Red|#808080|#606060')
+        function reset()
+            make_permanent = false
+            self.UI.setAttribute("makePermanent", "colors", '#dddddd|#ffffff|#808080|#606060')
+        end
+        Wait.time(reset, 5)
+    end
+end
+
+function updateSave()
+    saved_data = JSON.encode(SETTINGS)
+    self.script_state = saved_data
+end
+
+function setVar(player, value, id)
+    SETTINGS[id] = value
+    updateSave()
+end
+
+function setColor(player, value, id)
+    setVar(nil, value, id)
+    self.UI.setAttribute(self.UI.getAttribute(id, 'comp'), 'colors', SETTINGS[id].."|"..SETTINGS[id].."|#808080|#40404040")
+end
+
+function toggleVar(player, value, id)
+    setVar(nil, not SETTINGS[id], id)
+    self.UI.setAttributes("SINGLE_PAGE", {image=(SETTINGS.SINGLE_PAGE and 'ui_check_on' or 'ui_check_off')})
+    self.UI.setAttributes("FIRST_PAGE_SINGLE", {image=((SETTINGS.FIRST_PAGE_SINGLE or SETTINGS.SINGLE_PAGE) and 'ui_check_on' or 'ui_check_off'), onClick=(SETTINGS.SINGLE_PAGE and '' or 'toggleVar')})
+end
+
+function setPages(player, value, id)
+    SETTINGS.PAGES = {}
+    for w in value:gmatch("%S+") do
+        SETTINGS.PAGES[#SETTINGS.PAGES+1] = w
+    end
+    updateSave()
+end
+
+function SettingMenu(player, value, id)
+    self.UI.setCustomAssets({
+        {
+            name="ui_drop",
+            url="http://cloud-3.steamusercontent.com/ugc/795365490130624255/A8EECA6326DB4A0AD40B2717123EF9D8B62A4DB9/"
+        },
+        {
+            name="ui_check_on",
+            url="http://cloud-3.steamusercontent.com/ugc/795365490130735160/9B69A887F05A9898E082259FA7A05CD0672039ED/"
+        },
+        {
+            name="ui_check_off",
+            url="http://cloud-3.steamusercontent.com/ugc/795365490130735396/18D994B6680FECDC9AF3C2C0C0716EA471BE9588/"
+        },
+    })
+    lines = ""
+    for _, page in ipairs(SETTINGS.PAGES) do
+        lines = lines..page.."\n"
+    end
+    local settings_menu={
+        {tag='Defaults', children={
+            {tag='Text', attributes={color='#cccccc', fontSize='18', alignment='MiddleLeft'}},
+            {tag='InputField', attributes={fontSize='24', preferredHeight='40'}},
+            {tag='Button', attributes={fontSize='18', preferredHeight='40', colors='#dddddd|#ffffff|#808080|#606060'}},
+        }},
+        {tag='Panel', attributes={position='0 0 -20', height='1800', width='1500'}, children={
+            {tag='VerticalLayout', attributes={childForceExpandHeight=false, minHeight='0', spacing=5, rectAlignment='UpperCenter'}, children={
+                {tag='HorizontalLayout', attributes={preferredHeight=80, childForceExpandWidth=false, flexibleHeight=0, spacing=20, padding='10 10 10 10'}, children={
+                    {tag='Button', attributes={fontSize='22', text='Show', onClick='createRules', flexibleWidth=1}},
+                    {tag='Button', attributes={fontSize='22', id="makePermanent", text='Make permanent', onClick='permanentSave', flexibleWidth=1}},
+                }},
+                {tag='VerticalLayout', attributes={spacing='5', flexibleHeight=0, padding='5 5 5 5', color='black'}, children={
+                    {tag='HorizontalLayout', attributes={preferredHeight=30}, children={
+                        {tag='Text', attributes={preferredWidth=1000, alignment='UpperLeft', fontSize='24', text='Options', preferredHeight='40'}},
+                    }},
+                    {tag='VerticalLayout', attributes={color='#404040', padding='10 10 10 10', spacing='5', childForceExpandHeight=false}, children={
+                        {tag='HorizontalLayout', attributes={preferredHeight=60}, children={
+                            {tag='Text', attributes={preferredWidth=1000, alignment='Lowerleft', fontSize='24', text='Width and height of the image in pixels and scale you want to show it at.'}},
+                        }},
+                        {tag='HorizontalLayout', attributes={spacing='5'}, children={
+                            {tag='VerticalLayout', attributes={flexibleWidth=0, preferredWidth=300}, children={
+                                {tag='Text', attributes={text='Name'}},
+                                {tag='InputField', attributes={id='NAME', text=SETTINGS.NAME, onEndEdit='setVar'}},
+                            }},
+                            {tag='VerticalLayout', attributes={flexibleWidth=0, preferredWidth=300}, children={
+                                {tag='Text',attributes={text='Width'}},
+                                {tag='InputField', attributes={id='WIDTH', text=SETTINGS.WIDTH, onEndEdit='setVar', characterValidation='Integer'}},
+                            }},
+                            {tag='VerticalLayout', attributes={flexibleWidth=0, preferredWidth=300}, children={
+                                {tag='Text', attributes={text='Height'}},
+                                {tag='InputField', attributes={id='HEIGHT', text=SETTINGS.HEIGHT, onEndEdit='setVar', characterValidation='Integer'}},
+                            }},
+                            {tag='VerticalLayout', attributes={flexibleWidth=0, preferredWidth=300}, children={
+                                {tag='Text', attributes={text='Scale'}},
+                                {tag='InputField', attributes={id='SCALE', text=SETTINGS.SCALE, onEndEdit='setVar', characterValidation='Decimal'}},
+                            }},
+                        }},
+                        {tag='HorizontalLayout', attributes={preferredHeight=60}, children={
+                            {tag='Text', attributes={preferredWidth=1000, alignment='Lowerleft', fontSize='24', text='Colors as HEX values (#AABB55)'}},
+                        }},
+                        {tag='HorizontalLayout', attributes={spacing='5'}, children={
+                            {tag='VerticalLayout', attributes={flexibleWidth=0, preferredWidth=300}, children={
+                                {tag='Text', attributes={text='Slider Background'}},
+                                {tag="HorizontalLayout", attributes={spacing='5'}, children={
+                                    {tag='InputField', attributes={id='SLIDER_BG_COLOR', text=SETTINGS.SLIDER_BG_COLOR, comp="imSliderBg", onEndEdit='setColor', preferredWidth=1000}},
+                                    {tag='Button', attributes={image='ui_drop', preferredWidth=150, colors=SETTINGS.SLIDER_BG_COLOR.."|"..SETTINGS.SLIDER_BG_COLOR.."|#808080|#40404040", id="imSliderBg"}},
+                                }},
+                            }},
+                            {tag='VerticalLayout', attributes={flexibleWidth=0, preferredWidth=300}, children={
+                                {tag='Text', attributes={text='Silder Fill'}},
+                                {tag="HorizontalLayout", attributes={spacing='5'}, children={
+                                    {tag='InputField', attributes={id='SLIDER_FILL_COLOR', text=SETTINGS.SLIDER_FILL_COLOR, comp="imSliderFill", onEndEdit='setColor', preferredWidth=1000}},
+                                    {tag='Button', attributes={image='ui_drop', preferredWidth=150, colors=SETTINGS.SLIDER_FILL_COLOR.."|"..SETTINGS.SLIDER_FILL_COLOR.."|#808080|#40404040", id="imSliderFill"}}
+                                }},
+                            }},
+                            {tag='VerticalLayout', attributes={flexibleWidth=0, preferredWidth=300}, children={
+                                {tag='Text', attributes={text='Silder Handle'}},
+                                {tag="HorizontalLayout", attributes={spacing='5'}, children={
+                                    {tag='InputField', attributes={id='SLIDER_HANDLE_COLOR', text=SETTINGS.SLIDER_HANDLE_COLOR, comp="imSliderHandle", onEndEdit='setColor', preferredWidth=1000}},
+                                    {tag='Button', attributes={image='ui_drop', preferredWidth=150, colors=SETTINGS.SLIDER_HANDLE_COLOR.."|"..SETTINGS.SLIDER_HANDLE_COLOR.."|#808080|#40404040", id="imSliderHandle"}},
+                                }},
+                            }},
+                            {tag='VerticalLayout', attributes={flexibleWidth=0, preferredWidth=300}, children={
+                                {tag='Text', attributes={text='Silder Height'}},
+                                {tag='InputField', attributes={id='silderHandleColor', text=SETTINGS.SLIDER_HEIGHT}},
+                            }},
+                        }},
+                        {tag='HorizontalLayout', attributes={preferredHeight=60}, children={
+                            {tag='Text', attributes={preferredWidth=1000, alignment='Lowerleft', fontSize='24', text='Page preferences'}},
+                        }},
+                        {tag='HorizontalLayout', attributes={preferredHeight=30}, children={
+                            {tag='Text', attributes={preferredWidth=1800, alignment='UpperLeft', fontSize='24', text='Single Page width', onClick='toggleToolip()'}},
+                            {tag='Button', attributes={id="SINGLE_PAGE", minWidth=30, preferredWidth=30, image=(SETTINGS.SINGLE_PAGE and 'ui_check_on' or 'ui_check_off'), onClick='toggleVar'}},
+                        }},
+                        {tag='HorizontalLayout', attributes={preferredHeight=30}, children={
+                            {tag='Text', attributes={preferredWidth=1800, alignment='UpperLeft', fontSize='24', text='First page is single', onClick='toggleToolip()'}},
+                            {tag='Button', attributes={id="FIRST_PAGE_SINGLE", minWidth=30, preferredWidth=30, image=((SETTINGS.FIRST_PAGE_SINGLE or SETTINGS.SINGLE_PAGE) and 'ui_check_on' or 'ui_check_off'), onClick=(SETTINGS.SINGLE_PAGE and '' or 'toggleVar')}},
+                        }},
+                        {tag='HorizontalLayout', attributes={preferredHeight=60}, children={
+                            {tag='Text', attributes={preferredWidth=1000, alignment='Lowerleft', fontSize='24', text='Pages urls:'}},
+                        }},
+                        {tag='HorizontalLayout', attributes={preferredHeight=600}, children={
+                            {tag="InputField", attributes={lineType="MultiLineNewLine", placeholder="http://firstpage\nhttp://secondpage", text=lines, onEndEdit='setPages'}},
+                        }},
+                    }},
+                }},
+            }},
+        }},
+    }
+    Wait.frames(||self.UI.setXmlTable(settings_menu), 5)
+    return 1
+end
+
+function buttonPage(player, value, id)
+    val = tonumber(value)
+    CURRENT_PAGE = CURRENT_PAGE+val
+    if (CURRENT_PAGE < 1) then CURRENT_PAGE=1 end
+    if (CURRENT_PAGE > SETTINGS.MAX_VAL) then CURRENT_PAGE=SETTINGS.MAX_VAL end
+    changePage(nil, CURRENT_PAGE, nil)
+end
+
+function changePage(player, value, id)
+    if id==nil then
+        self.UI.setAttribute(SETTINGS.NAME.."PageSelector", "value", tostring(value))
+    else
+        CURRENT_PAGE = tonumber(value)
+    end
+    if SETTINGS.SINGLE_PAGE then
+        self.UI.setAttribute(SETTINGS.NAME..'SingleImage', 'image', SETTINGS.NAME..tostring(CURRENT_PAGE))
+    elseif SETTINGS.FIRST_PAGE_SINGLE and CURRENT_PAGE==1 then
+        self.UI.setAttribute(SETTINGS.NAME..'LeftImage', 'active', 'False')
+        self.UI.setAttribute(SETTINGS.NAME..'RightImage', 'active', 'False')
+        self.UI.setAttributes(SETTINGS.NAME..'SingleImage', {image=SETTINGS.NAME..tostring(CURRENT_PAGE), active="True"})
+    elseif SETTINGS.FIRST_PAGE_SINGLE and CURRENT_PAGE==SETTINGS.MAX_VAL and #SETTINGS.PAGES%2==0 then
+        self.UI.setAttributes(SETTINGS.NAME..'SingleImage', {image=SETTINGS.NAME..tostring((CURRENT_PAGE-1)*2), active="True"})
+        self.UI.setAttribute(SETTINGS.NAME..'LeftImage', 'active', 'False')
+        self.UI.setAttribute(SETTINGS.NAME..'RightImage', 'active', 'False')
+    elseif SETTINGS.FIRST_PAGE_SINGLE then
+        self.UI.setAttribute(SETTINGS.NAME..'SingleImage', 'active', 'False')
+        self.UI.setAttributes(SETTINGS.NAME..'LeftImage', {image=SETTINGS.NAME..tostring((CURRENT_PAGE-1)*2), active="True"})
+        self.UI.setAttributes(SETTINGS.NAME..'RightImage', {image=SETTINGS.NAME..tostring((CURRENT_PAGE-1)*2+1), active="True"})
+    elseif CURRENT_PAGE==SETTINGS.MAX_VAL and #SETTINGS.PAGES%2==1 then
+        self.UI.setAttributes(SETTINGS.NAME..'SingleImage', {image=SETTINGS.NAME..tostring(CURRENT_PAGE*2-1), active="True"})
+        self.UI.setAttribute(SETTINGS.NAME..'LeftImage', 'active', 'False')
+        self.UI.setAttribute(SETTINGS.NAME..'RightImage', 'active', 'False')
+    else
+        self.UI.setAttribute(SETTINGS.NAME..'SingleImage', 'active', 'False')
+        self.UI.setAttributes(SETTINGS.NAME..'LeftImage', {image=SETTINGS.NAME..tostring(CURRENT_PAGE*2-1), active="True"})
+        self.UI.setAttributes(SETTINGS.NAME..'RightImage', {image=SETTINGS.NAME..tostring(CURRENT_PAGE*2), active="True"})
+    end
+end

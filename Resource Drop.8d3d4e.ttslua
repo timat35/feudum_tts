@@ -1,0 +1,280 @@
+function onload()
+Haversack = getObjectFromGUID('09678f')
+KingsSealsBag = getObjectFromGUID('0f9375')
+ResourcePositions = {{{-20.96, 3, 5.59},{-13.41, 3, 7.70},{-13.43, 3, 2.66},
+    {4.53, 3, 8.89},{19.67, 3, 6.02},{-3.50, 3, -2.80}},
+    {{-22.60, 3, 0.62},{-14.95, 3, -8.05},{-8.57, 3, -9.07},
+    {1.23, 3, 2.54},{15.32, 3, -5.82},{20.96, 3, -0.20}},
+    {{-9.91, 3, -2.48},{-6.92, 3, 2.63},{1.13, 3, 3.12},
+    {10.74, 3, -6.92},{15.79, 3, -6.29},{21.48, 3, -0.47}},
+    {{-22.11, 3, 0.35},{-21.89, 3, -4.22},{-13.89, 3, 7.68},
+    {-9.06, 3, -9.09},{5.03, 3, 8.84},{20.17, 3, 6.03}}}
+
+    ref_Buttons = {
+        {val=1, pos={3.3, 0.2, 3}, label = 'S'},
+        {val=2, pos={0.3, 0.2, 2.8}, label = 'E'},
+        {val=3, pos={-2.5, 0.2, 3}, label = 'W'},
+        {val=4, pos={-0.5, 0.2, 2.6}, label = '<>'}
+
+    }
+
+    for i, entry in ipairs(ref_Buttons) do
+      local funcName = 'PlayerFunction'..i
+      local func = function() click_Button(entry.val) end
+      self.setVar(funcName, func)
+      self.createButton({
+      click_function=funcName, function_owner=self, label = entry.label,
+      position=entry.pos, rotation={0,180,0}, height=230, width=230, font_size = 170
+      })
+    end
+
+
+
+
+
+
+
+end
+
+function NDrop()
+    local params = {}
+    for i=1, 6, 1 do
+    params.position = ResourcePositions[1][i]
+    Haversack.takeObject(params)
+    end
+end
+
+function click_Button(val)
+    local params = {}
+    if val == 1 then
+        for i=1, 6, 1 do
+        params.position = ResourcePositions[2][i]
+        Haversack.takeObject(params)
+        end
+    end
+
+    if val == 2 then
+        for i=1, 6, 1 do
+        params.position = ResourcePositions[3][i]
+        Haversack.takeObject(params)
+        end
+    end
+
+    if val == 3 then
+        for i=1, 6, 1 do
+        params.position = ResourcePositions[4][i]
+        Haversack.takeObject(params)
+        end
+    end
+
+    if val == 4 then
+    Guild1()
+    Guild2()
+    Guild3()
+    Guild4()
+    Guild5()
+    Guild6()
+    end
+end
+
+function Guild1()
+    local Zone = getObjectFromGUID('8d957c')
+    local k = 0
+    local obj = {}
+    obj = Zone.getObjects()
+    for i=1, #obj, 1 do
+        if obj[i].tag == 'Block' then
+        k = k+1
+        end
+    end
+
+    local params = {}
+    GoodsPositions = {{-29, 3, -7.5},{-28.5, 3, -7.5},{-28, 3, -7.5},{-27.5, 3, -7.5},{-27, 3, -7.5},
+        {-29, 3, -8},{-28.5, 3, -8},{-28, 3, -8},{-27.5, 3, -8},{-27, 3, -8}}
+    for i=k+1, 10, 1 do
+    params.position = GoodsPositions[i]
+    Haversack.takeObject(params)
+    end
+end
+
+function Guild2()
+    ResMZones = {'4a5fb1', 'eca746', 'b64a2b', '07c077', '46fabf'}
+    SaltpeterMPositions = {{-31.84, 1.39, -2.95},{-31.84, 1.39, -2.03},{-31.84, 1.39, -1.02}}
+    SulfurMPosition = {{-30.80, 1.39, -2.94},{-30.80, 1.39, -2.01},{-30.81, 1.39, -1.01}}
+    IronMPosition = {{-29.80, 1.39, -2.91},{-29.80, 1.39, -1.99},{-29.80, 1.39, -0.99},{-29.82, 1.39, -0.01}}
+    WoodMPositions = {{-28.71, 1.39, -2.92},{-28.71, 1.39, -2.00},{-28.71, 1.39, -1.00},{-28.73, 1.39, -0.02}}
+    FoodMPositions = {{-27.65, 1.39, -2.98},{-27.65, 1.39, -2.06},{-27.65, 1.39, -1.05},{-27.66, 1.39, -0.07}}
+    ResMType = {SaltpeterMPositions,SulfurMPosition,IronMPosition,WoodMPositions,FoodMPositions}
+    Guild = 'M'
+
+    for j=1, #ResMZones, 1 do
+        local ResPlaced = 0
+        local obj = {}
+        obj = getObjectFromGUID(ResMZones[j]).getObjects()
+        for i=1, #obj, 1 do
+            if obj[i].tag == 'Block' then
+            ResPlaced = ResPlaced + 1
+            end
+        end
+
+        for i= ResPlaced+1, #ResMType[j], 1 do
+        FindResource(j,i)
+        end
+    end
+
+end
+
+function Guild3()
+    ResAZones = {'611e02', '6d53b3', 'be37f7', '61f8ce', '9f4ee9'}
+    SaltpeterAPositions = {{-26.38, 1.39, 4.86},{-26.95, 1.39, 5.20},{-26.36, 1.39, 5.49}}
+    SulfurAPosition = {{-26.38, 1.39, 6.51}}
+    IronAPosition = {{-29.38, 1.39, 6.68},{-29.36, 1.39, 7.28},{-29.37, 1.39, 7.89}}
+    WoodAPositions = {{-30.36, 1.39, 6.66},{-30.33, 1.39, 7.26},{-30.34, 1.39, 7.86}}
+    FoodAPositions = {{-28.43, 1.39, 6.66}}
+    ResAType = {SaltpeterAPositions,SulfurAPosition,IronAPosition,WoodAPositions,FoodAPositions}
+    Guild = 'A'
+
+    for j=1, #ResAZones, 1 do
+        local ResPlaced = 0
+        local obj = {}
+        obj = getObjectFromGUID(ResAZones[j]).getObjects()
+        for i=1, #obj, 1 do
+            if obj[i].tag == 'Block' then
+            ResPlaced = ResPlaced + 1
+            end
+        end
+
+        for i= ResPlaced+1, #ResAType[j], 1 do
+        FindResource(j,i)
+        end
+    end
+
+    ShipZone = '997677'
+    NewShipZone = 'c65496'
+    local ShipPlaced = 0
+    local obj = {}
+    obj = getObjectFromGUID(ShipZone).getObjects()
+    for i=1, #obj, 1 do
+        if obj[i].tag == 'Tile' then
+        ShipPlaced = ShipPlaced + 1
+        end
+    end
+
+    local obj = {}
+    obj = getObjectFromGUID(NewShipZone).getObjects()
+    rand1 = math.random(1, #obj)
+    tt=0
+    repeat rand2 = math.random(1, #obj)
+    tt = tt+1
+    until rand2 != rand1 or tt == 100
+    rand = {rand1, rand2}
+
+    for i= ShipPlaced+1, 2, 1 do
+        if (obj[rand[i]].tag == 'Tile') and (obj[rand[i]].getName() != '') then
+        obj[rand[i]].setPosition{-28.8+1.8*i, 1.7, 10.8}
+        end
+    end
+end
+
+function Guild4()
+    InfZones = {'a83131','7bf5c6','f85387','9454bf','358495','977bf6'}
+    InfBagGreen = getObjectFromGUID('b80e85')
+    InfBagPink = getObjectFromGUID('ecda3f')
+    InfBagWhite = getObjectFromGUID('4b5c12')
+    InfBagRed = getObjectFromGUID('673e6f')
+    InfBagBlue = getObjectFromGUID('5fd7df')
+    InfBagYellow = getObjectFromGUID('10d1c0')
+    InfBag = {InfBagGreen, InfBagPink, InfBagWhite, InfBagRed, InfBagBlue, InfBagYellow}
+    InfPositionsGreen = {{27.22, 1.35, 11.83},{27.23, 1.35, 10.86}}
+    InfPositionsPink = {{28.03, 1.35, 11.84},{28.03, 1.35, 10.87}}
+    InfPositionsWhite = {{28.90, 1.35, 11.81},{28.90, 1.35, 10.84}}
+    InfPositionsRed = {{29.72, 1.35, 11.82},{29.72, 1.35, 10.85}}
+    InfPositionsBlue = {{30.54, 1.35, 11.85},{30.54, 1.35, 10.88}}
+    InfPositionsYellow = {{31.45, 1.35, 11.84},{31.45, 1.35, 10.87}}
+    InfPositions = {InfPositionsGreen,InfPositionsPink,InfPositionsWhite,InfPositionsRed,InfPositionsBlue,InfPositionsYellow}
+
+    for j=1, #InfBag, 1 do
+        InfPlaced = 0
+        local obj = {}
+        obj = getObjectFromGUID(InfZones[j]).getObjects()
+        for i=1, #obj, 1 do
+            if obj[i].tag == 'Generic' then
+            InfPlaced = InfPlaced + 1
+            end
+        end
+
+        params = {}
+        params.rotation = {0,90,0}
+        for i= InfPlaced+1, 2, 1 do
+        params.position = (InfPositions[j])[i]
+            if InfBag[j] != nil then
+            InfBag[j].takeObject(params)
+            end
+        end
+    end
+end
+
+function Guild5()
+    KSZones = {'4230af', '1515e0', '261940', '894424'}
+    KSPositions = {{27.97, 1.6, 2.46}, {30.52, 1.6, 0.08}, {30.29, 1.6, 2.46}, {29.25, 1.6, 1.24}}
+
+    for j=1, #KSZones, 1 do
+        local TokenPlaced = 0
+        local obj = {}
+        obj = getObjectFromGUID(KSZones[j]).getObjects()
+        for i=1, #obj, 1 do
+            if obj[i].tag == 'Tile' then
+            TokenPlaced = 1
+            break
+            end
+        end
+
+        if TokenPlaced == 0 then
+        local params = {}
+        params.position = KSPositions[j]
+        params.rotation = {0,270,180}
+        KingsSealsBag.takeObject(params)
+        end
+    end
+end
+
+function Guild6()
+    local Zone = getObjectFromGUID('7c6941')
+    local k = 0
+    local obj = {}
+    obj = Zone.getObjects()
+    for i=1, #obj, 1 do
+        if (obj[i].tag == 'Tile') and (obj[i].getName() == 'Kings Seal / Rosary Bead') then
+        k = k+1
+        end
+    end
+
+    local params = {}
+    params.rotation = {0,270,0}
+    KingsSealsPositions = {{29.78, 3, -6.17}, {28.72, 3, -6.57}, {27.57, 3, -7.01}, {26.56, 3, -7.87}}
+    for i=k+1, 4, 1 do
+    params.position = KingsSealsPositions[i]
+    KingsSealsBag.takeObject(params)
+    end
+end
+
+function FindResource(j,k)
+    local obj = {}
+    local color = {}
+    local HaversackInsides = {}
+    ResourceType = {'Saltpeter','Sulfur','Iron','Wood','Food'}
+    local params = {}
+    params.rotation = {0,0,0}
+    resTaken = false
+
+    local HaversackInsides = Haversack.getObjects()
+    for i,v in ipairs(HaversackInsides) do
+        if (v.name == ResourceType[j]) and (resTaken == false) then
+        params.index = v.index
+            if Guild == 'M' then params.position = (ResMType[j])[k] end
+            if Guild == 'A' then params.position = (ResAType[j])[k] end
+        Haversack.takeObject(params)
+        resTaken = true
+        end
+    end
+end

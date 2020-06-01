@@ -1,0 +1,198 @@
+function onload()
+--[[White = true
+Pink = true
+Green = false
+Red = false
+Blue = false
+Yellow = false
+Colors = {White,Pink,Green,Red,Blue,Yellow}]]--
+Tint1 = '0AF900'
+Tint2 = 'E00200'
+Tint = {Tint1,Tint1,Tint2,Tint2,Tint2,Tint2}
+
+ref_Buttons1 = {
+    {pos={0, 0.2, -2.5}, label = '['..Tint[1]..']White'},
+    {pos={0, 0.2, -1.5}, label = '['..Tint[2]..']Pink'},
+    {pos={0, 0.2, -0.5}, label = '['..Tint[3]..']Green'},
+    {pos={0, 0.2, 0.5}, label = '['..Tint[4]..']Red'},
+    {pos={0, 0.2, 1.5}, label = '['..Tint[5]..']Blue'},
+    {pos={0, 0.2, 2.5}, label = '['..Tint[6]..']Yellow'},
+}
+
+ref_Buttons2 = {
+    {val=1, pos={0, 0.1, -2.5}},
+    {val=2, pos={0, 0.1, -1.5}},
+    {val=3, pos={0, 0.1, -0.5}},
+    {val=4, pos={0, 0.1, 0.5}},
+    {val=5, pos={0, 0.1, 1.5}},
+    {val=6, pos={0, 0.1, 2.5}},
+}
+
+    for i, entry in ipairs(ref_Buttons1) do  
+    local funcName1 = 'PlayerFunction1'..i
+    local func = function() click_Button1(entry.val) end
+    self.setVar(funcName1, func)
+    self.createButton({
+    click_function=funcName1, function_owner=self, label = entry.label,
+    position=entry.pos, rotation={0,0,0}, height=0, width=0, font_size = 180
+    })
+    end
+
+    for i, entry in ipairs(ref_Buttons2) do  
+    local funcName2 = 'PlayerFunction2'..i
+    local func = function() click_Button2(entry.val) end
+    self.setVar(funcName2, func)
+    self.createButton({
+    click_function=funcName2, function_owner=self, label = entry.label,
+    position=entry.pos, rotation={0,0,0}, height=230, width=500
+    })
+    end
+end
+
+function click_Button1(val)
+end
+
+function click_Button2(val)
+    if Tint[val] == Tint1 then
+    Tint[val] = Tint2 else
+    Tint[val] = Tint1
+    end
+
+    UpdateRef1()
+    for i, entry in ipairs(ref_Buttons1) do
+    local funcName3 = 'PlayerFunction3'..i
+    local func = function() click_Button1(entry.val) end
+    self.setVar(funcName3, func)
+    self.editButton({
+    index = entry.index, label = entry.label
+    })
+    end
+end
+
+function UpdateRef1()
+ref_Buttons1 = {
+    {index=0, pos={0, 0.2, -2.5}, label = '['..Tint[1]..']White'},
+    {index=1, pos={0, 0.2, -1.5}, label = '['..Tint[2]..']Pink'},
+    {index=2, pos={0, 0.2, -0.5}, label = '['..Tint[3]..']Green'},
+    {index=3, pos={0, 0.2, 0.5}, label = '['..Tint[4]..']Red'},
+    {index=4, pos={0, 0.2, 1.5}, label = '['..Tint[5]..']Blue'},
+    {index=5, pos={0, 0.2, 2.5}, label = '['..Tint[6]..']Yellow'},
+}
+end
+
+function RemoveUnused()
+    Haversack = getObjectFromGUID('09678f')
+    if Tint[1] == Tint2 then startLuaCoroutine(self, 'DeleteWhite') end
+    if Tint[2] == Tint2 then startLuaCoroutine(self, 'DeletePink') end
+    if Tint[3] == Tint2 then startLuaCoroutine(self, 'DeleteGreen') end
+    if Tint[4] == Tint2 then startLuaCoroutine(self, 'DeleteRed') end
+    if Tint[5] == Tint2 then startLuaCoroutine(self, 'DeleteBlue') end
+    if Tint[6] == Tint2 then startLuaCoroutine(self, 'DeleteYellow') end
+end
+
+function DeleteWhite()
+    Food = {'55b456', 'd1a24f', '360bde', 'ce1b29', '6d3be7', 'cf8d16', '32ef37'}
+    for i=1, 7, 1 do
+    Haversack.putObject(getObjectFromGUID(Food[i]))
+    end
+    wait(0.4)
+
+    Zone = getObjectFromGUID('e09210')
+    local obj = {}
+    obj = Zone.getObjects()
+    for i=1, #obj, 1 do
+    obj[i].destruct()
+    end
+
+    return 1
+end
+
+function DeletePink()
+    Food = {'2ac639', '5131a5', '5c9e9e', '9d5d0a', 'e9b514', '222488', 'dbfadf'}
+    for i=1, 7, 1 do
+    Haversack.putObject(getObjectFromGUID(Food[i]))
+    end
+    wait(0.4)
+
+    Zone = getObjectFromGUID('7cb0f1')
+    local obj = {}
+    obj = Zone.getObjects()
+    for i=1, #obj, 1 do
+    obj[i].destruct()
+    end
+
+    return 1
+end
+
+function DeleteGreen()
+    Food = {'cf12fa', 'bd832f', 'a41829', 'e0464a', '909727', '8d44c6', '4dcd29'}
+    for i=1, 7, 1 do
+    Haversack.putObject(getObjectFromGUID(Food[i]))
+    end
+    wait(0.4)
+
+    Zone = getObjectFromGUID('f1d518')
+    local obj = {}
+    obj = Zone.getObjects()
+    for i=1, #obj, 1 do
+    obj[i].destruct()
+    end
+
+    return 1
+end
+
+function DeleteRed()
+    Food = {'052ecd', 'fd90bc', '525d54', 'dfb422', '2a5fb9', '16b07a', '81b884'}
+    for i=1, 7, 1 do
+    Haversack.putObject(getObjectFromGUID(Food[i]))
+    end
+    wait(0.4)
+
+    Zone = getObjectFromGUID('28be03')
+    local obj = {}
+    obj = Zone.getObjects()
+    for i=1, #obj, 1 do
+    obj[i].destruct()
+    end
+
+    return 1
+end
+
+function DeleteBlue()
+    Food = {'632b69', '92bc4f', 'a35872', 'c94c60', 'ab82d7', 'afa867', '516755'}
+    for i=1, 7, 1 do
+    Haversack.putObject(getObjectFromGUID(Food[i]))
+    end
+    wait(0.4)
+
+    Zone = getObjectFromGUID('678bf3')
+    local obj = {}
+    obj = Zone.getObjects()
+    for i=1, #obj, 1 do
+    obj[i].destruct()
+    end
+
+    return 1
+end
+
+function DeleteYellow()
+    Food = {'481e27', 'ff3e73', 'd73001', '59b4ad', 'e50e4a', 'eae4d6', '7fad93'}
+    for i=1, 7, 1 do
+    Haversack.putObject(getObjectFromGUID(Food[i]))
+    end
+    wait(0.4)
+
+    Zone = getObjectFromGUID('35b34d')
+    local obj = {}
+    obj = Zone.getObjects()
+    for i=1, #obj, 1 do
+    obj[i].destruct()
+    end
+
+    return 1
+end
+
+function wait(time)
+  local start = os.time()
+  repeat coroutine.yield(0) until os.time() > start + time
+end

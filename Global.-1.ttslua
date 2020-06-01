@@ -1,0 +1,60 @@
+function onload()
+    NonInt = {'fcc0ff', '8d25ab', '9c5bf8', '491a00', '8d3d4e'}
+
+    guild_position =
+    {
+      { --alchemistes
+        {-33.15,  3,  9.70},
+        { -33.15, 3,  6.96},
+        { -33.15, 3,  6.13}
+      },
+      { -- knight
+        {33.57, 3,  6.89},
+        {33.57, 3,  9.59},
+        {33.57, 3,  10.47}
+      },
+      { --merchant
+        {-33.15,  3,  1.05},
+        { -33.15, 3,  -1.39},
+        { -33.15, 3,  -2.21}
+      },
+      { -- monk
+        {33.57, 3,  -9.77},
+        {33.57, 3,  -7.09},
+        {33.57, 3,  -6.22}
+
+      },
+      { --noble
+        {33.57, 3,  -1.45},
+        {33.57, 3,  1.29},
+        {33.57, 3,  2.15}
+      },
+      { -- farmer
+        {-33.15,  3,  -7.02},
+        {-33.15,  3,  -9.73},
+        {-33.15,  3,  -10.61}
+      }
+    }
+
+    for i=1, #NonInt, 1 do
+        if getObjectFromGUID(NonInt[i]) ~= nil then
+        getObjectFromGUID(NonInt[i]).interactable = false
+        end
+    end
+
+
+    -- board = getObjectFromGUID('8d3d4e')
+    -- local updateAllGuild = 'GuildFunction'
+    -- local GuildFunction = function ()
+    --   for i=1,6 do
+    --     local table_point = guildCount(i)
+    --     updateGuildInfluence(table_point, i)
+    --   end
+    -- end
+    --
+    -- self.setVar(updateAllGuild, GuildFunction)
+    -- board.createButton({
+    --   click_function=updateAllGuild, function_owner=board, label = 'Update guild position',
+    --   position={-10.5, 0.2, 3.5}, rotation={0,180,0}, height=400, width=4000, font_size = 250
+    -- })
+end

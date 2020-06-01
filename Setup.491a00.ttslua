@@ -1,0 +1,126 @@
+function onload()
+RoyalWritCards = getObjectFromGUID('0c4abd')
+RegionTiles1 = getObjectFromGUID('86cfc5')
+RegionTiles2 = getObjectFromGUID('c0d80a')
+RegionTiles3 = getObjectFromGUID('f95873')
+RegionTiles4 = getObjectFromGUID('cc7b2c')
+StartingLocationsBag = getObjectFromGUID('d42216')
+StartingLocationsPositions = {{-3.61, 1.36, 6.03}, {5.55, 1.36, 7.47}, {2.49, 1.36, 2.93},
+    {4.33, 1.36, -3.05}, {-1.79, 1.36, -6.46}, {14.44, 1.36, -0.24}}
+OtherLocationsBag = getObjectFromGUID('8b1dca')
+OtherLocationsPositions = {{-19.90, 1.16, 6.25}, {-21.64, 1.16, 1.55}, {-8.16, 1.16, 2.25},
+    {-15.10, 1.16, 2.78}, {-11.13, 1.16, -1.23}, {-20.65, 1.16, -3.76}, {-16.00, 1.16, -6.94},
+    {-12.35, 1.16, 6.99}, {-8.68, 1.16, -7.48}, {-4.67, 1.16, -2.73}, {9.53, 1.16, -6.42},
+    {12.11, 1.16, 5.57}, {8.61, 1.16, 1.61}, {16.55, 1.16, -5.27}, {20.23, 1.16, 7.23}, {21.85, 1.16, 0.80}}
+ 
+VesselsGUID = {'248495','ec9afb','06723e','d4ff1d','ea9f53','5f9353','2fef8c','13ac96','d9e99e'}
+Vessels = {}
+    for i=1, #VesselsGUID, 1 do
+    Vessels[i] = getObjectFromGUID(VesselsGUID[i])
+    end
+VesselPositions = {{-25.19, 1.16, 10.85}, {-26.91, 1.16, 10.85}}
+
+KingsSealsBag = getObjectFromGUID('0f9375')
+KingsSealsPositions = {{27.97, 1.36, 2.46}, {29.25, 1.36, 1.24}, {30.52, 1.36, 0.08}, {30.29, 1.36, 2.46},
+    {29.78, 1.16, -6.17}, {28.72, 1.16, -6.57}, {27.57, 1.16, -7.01}, {26.56, 1.16, -7.87}, {-26.47, 1.16, -11.16}}
+Haversack = getObjectFromGUID('09678f')
+GoodsPositions = {{-29, 1.39, -7.5},{-28.5, 1.39, -7.5},{-28, 1.39, -7.5},{-27.5, 1.39, -7.5},{-27, 1.39, -7.5},
+    {-29, 1.39, -8},{-28.5, 1.39, -8},{-28, 1.39, -8},{-27.5, 1.39, -8},{-27, 1.39, -8}}
+
+
+self.createButton({
+    function_owner = self, click_function = 'StartLUA', label = 'Start', color = {0.25,0.25,0.25}, font_color = {1,1,1},
+    position = {0, 0.5, 0}, rotation = {0,180,0}, width = 1700, height = 650, font_size = 450
+    })
+end
+
+function StartLUA()
+    startLuaCoroutine(self, 'Start')
+end
+
+function Start()
+    RoyalWritCards.shuffle()
+    RegionTiles1.shuffle()
+    RegionTiles2.shuffle()
+    RegionTiles3.shuffle()
+    RegionTiles4.shuffle()
+    StartingLocationsBag.shuffle()
+    OtherLocationsBag.shuffle()
+    KingsSealsBag.shuffle()
+    wait(0.2)
+
+    PlayerColors = getObjectFromGUID('5254e4')
+    PlayerColors.call('RemoveUnused')
+
+    local params = {}
+    params.rotation = {0, 180, 180}
+    RegionTilesPosition = {{-6.18, 3, -11.33}, {-3.73, 3, -11.33}, {-1.29, 3, -11.33},
+    {1.83, 3, -11.33}, {4.33, 3, -11.33}, {6.79, 3, -11.33}}
+    for i=1, 6, 1 do
+    params.position = RegionTilesPosition[i]
+    RegionTiles4.takeObject(params)
+    params.position = {RegionTilesPosition[i][1], RegionTilesPosition[i][2] + 3, RegionTilesPosition[i][3]}
+    RegionTiles3.takeObject(params)
+    params.position = {RegionTilesPosition[i][1], RegionTilesPosition[i][2] + 6, RegionTilesPosition[i][3]}
+    RegionTiles2.takeObject(params)
+    params.position = {RegionTilesPosition[i][1], RegionTilesPosition[i][2] + 9, RegionTilesPosition[i][3]}
+    RegionTiles1.takeObject(params)
+    end
+
+    local params = {}
+    params.rotation = {0,180,0}
+    for i=1, 6, 1 do
+    params.position = StartingLocationsPositions[i]
+    StartingLocationsBag.takeObject(params)
+    end
+    local params = {}
+    params.rotation = {0,180,0}
+    for i=1, 16, 1 do
+    params.position = OtherLocationsPositions[i]
+    OtherLocationsBag.takeObject(params)
+    end
+    StartingLocationsBag.destruct()
+    OtherLocationsBag.destruct()
+
+    rand1 = math.random(1,9)
+    Vessels[rand1].setPosition(VesselPositions[1])
+    repeat
+    rand2 = math.random(1,9)
+    until rand2 != rand1
+    Vessels[rand2].setPosition(VesselPositions[2])
+
+    local params = {}
+    for i=1, 4, 1 do
+    params.position = KingsSealsPositions[i]
+    params.rotation = {0,270,180}
+    KingsSealsBag.takeObject(params)
+    end
+    local params = {}
+    for i=5, 9, 1 do
+    params.position = KingsSealsPositions[i]
+    params.rotation = {0,270,0}
+    if i == 9 then params.rotation = {0,90,0} end
+    KingsSealsBag.takeObject(params)
+    end
+
+    wait(0.5)
+    Haversack.shuffle()
+    wait(0.1)
+    local params = {}
+    for i=1, 10, 1 do
+    params.position = GoodsPositions[i]
+    Haversack.takeObject(params)
+    end
+    ResourceDrop = getObjectFromGUID('8d3d4e')
+    ResourceDrop.call('NDrop')
+
+    broadcastToAll('Continue setup from page 5 of rulebook - taking 3 different resources', {1,1,1})
+    PlayerColors.destruct()
+    self.destruct()
+    return 1
+end
+
+function wait(time)
+  local start = os.time()
+  repeat coroutine.yield(0) until os.time() > start + time
+end

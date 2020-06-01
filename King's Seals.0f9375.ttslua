@@ -1,0 +1,5 @@
+function onObjectEnterContainer(bag, obj)
+    if (bag == self) then
+      self.shuffle()
+    end
+end

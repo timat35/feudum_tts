@@ -1,0 +1,706 @@
+function onload()
+
+  table_missing = {}
+  table_missing["White"] = false
+  table_missing["Pink"] = false
+  table_missing["Green"] = false
+  table_missing["Yellow"] = false
+  table_missing["Red"] = false
+  table_missing["Blue"] = false
+
+
+  table_zone = {}
+  table_zone["White"] = 'e09210'
+  table_zone["Pink"] = '7cb0f1'
+  table_zone["Green"] = 'f1d518'
+  table_zone["Red"] = '28be03'
+  table_zone["Blue"] = '678bf3'
+  table_zone["Yellow"] = '35b34d'
+
+  table_token_moving = {}
+
+  bool_4player = true
+
+  guild_position =
+  {
+    { --alchemistes
+      {-33.15,  3,  9.70},
+      { -33.15, 3,  6.96},
+      { -33.15, 3,  6.13}
+    },
+    { -- knight
+      {33.57, 3,  6.89},
+      {33.57, 3,  9.59},
+      {33.57, 3,  10.47}
+    },
+    { --merchant
+      {-33.15,  3,  1.05},
+      { -33.15, 3,  -1.39},
+      { -33.15, 3,  -2.21}
+    },
+    { -- monk
+      {33.57, 3,  -9.77},
+      {33.57, 3,  -7.09},
+      {33.57, 3,  -6.22}
+
+    },
+    { --noble
+      {33.57, 3,  -1.45},
+      {33.57, 3,  1.29},
+      {33.57, 3,  2.15}
+    },
+    { -- farmer
+      {-33.15,  3,  -7.02},
+      {-33.15,  3,  -9.73},
+      {-33.15,  3,  -10.61}
+    }
+  }
+
+    ref_Buttons = {
+        {val=1, pos={3.3, 0.2, 3}, label = 'S'},
+        {val=2, pos={0.3, 0.2, 2.8}, label = 'E'},
+        {val=3, pos={-2.5, 0.2, 3}, label = 'W'},
+        {val=4, pos={-0.5, 0.2, 2.6}, label = '<>'}
+
+
+    }
+
+    local funcName = 'updateGuild'
+    local func = function()
+      for i=1,6 do
+        local table_point = guildCount(i)
+        updateGuildInfluence(table_point, i)
+      end
+    end
+    self.setVar(funcName, func)
+    self.createButton({
+    click_function=funcName, function_owner=self, label = 'Update Guild Position',
+    position={0,1.5,0}, rotation={0,180,0}, height=400, width=5000, font_size = 250
+    })
+
+end
+
+
+-- function to launch guild update (numpad1)
+function onScriptingButtonUp(index, color)
+    if index == 1 then
+      for i=1,6 do
+        local table_point = guildCount(i)
+        updateGuildInfluence(table_point, i)
+      end
+    end
+end
+
+-- helper to find object on top of position
+function findObjectOnTop(pos, radius)
+
+    local radius = (radius or 1.5)
+    local objList = Physics.cast({
+        origin=pos, direction={0,1,0}, type=2, debug=false,
+        size={radius,radius,radius}
+    })
+
+    local refinedList = {}
+
+    for key, value in ipairs(objList) do
+      table.insert(refinedList, value.hit_object)
+    end
+
+    return refinedList
+end
+
+
+
+function getTitleType(value)
+  local title_type = ""
+  local temp_image = value.getCustomObject()
+  local temp_url= ""
+  if temp_image ~= nil then
+    if (temp_image['image'] ~= nil) then
+      if not value.is_face_down then
+        temp_url = temp_image['image']
+      else
+        temp_url = temp_image['image_bottom']
+      end
+      if (temp_url == 'https://i.imgur.com/hk15lLU.jpg') then
+        title_type = 'farm'
+      elseif (temp_url == 'https://i.imgur.com/yt2yOIJ.jpg') then
+        title_type = 'tower'
+      elseif (temp_url == 'https://i.imgur.com/UirRzRn.jpg') then
+        title_type = 'town'
+      end
+    end
+  end
+
+  return title_type
+end
+
+function detectInfluence(title)
+
+  local color = {}
+  local position = title.getPosition()
+  local table_object = findObjectOnTop(position)
+
+  for key,value in pairs(table_object) do
+    -- print(value.getGUID())
+    if (value.getName() == 'Influence') then
+      color = value.getColorTint()
+    end
+  end
+
+  -- Grey color to white
+  if color[1] == 0.5 and color[2] == 0.5 and color[3] == 0.5 then
+    color[1] = 1
+    color[2] = 1
+    color[3] = 1
+   end
+
+   return(color)
+
+end
+
+function detectInfluenceFromPosition(position, radius)
+
+  local color = {}
+  local table_object = findObjectOnTop({position[1],1.30 ,position[3]}, radius)
+
+  for key,value in pairs(table_object) do
+    -- print(value.getGUID())
+    if (value.getName() == 'Influence') then
+      color = value.getColorTint()
+    end
+  end
+
+  -- Grey color to white
+  if color[1] == 0.5 and color[2] == 0.5 and color[3] == 0.5 then
+    color[1] = 1
+    color[2] = 1
+    color[3] = 1
+   end
+
+   return(color)
+
+end
+
+function getInfluenceFromPosition(position, radius)
+
+  local obj = nil
+  local table_object = findObjectOnTop({position[1],1.30 ,position[3]}, radius)
+
+  for key,value in pairs(table_object) do
+    -- print(value.getGUID())
+    if (value.getName() == 'Influence') then
+      obj = value
+      break
+    end
+  end
+
+   return(obj)
+
+end
+
+
+function getGuildName(guild_number)
+
+  local guild_name = ""
+  if guild_number == 1 then guild_name = 'Alchemist'
+  elseif guild_number == 2 then guild_name = 'Knight'
+  elseif guild_number == 3 then guild_name = 'Merchant'
+  elseif guild_number == 4 then guild_name = 'Monk'
+  elseif guild_number == 5 then guild_name = 'Noble'
+  elseif guild_number == 6 then guild_name = 'Farmer'
+  end
+
+  return(guild_name)
+end
+
+function guildCount(guild_number)
+
+    -- get boardmap_zonesd
+  local boardmap_zone = getObjectFromGUID('515a29')
+  local temp_table = boardmap_zone.getObjects()
+
+  local nb_player = 0
+
+  -- create table for point and update number of players
+  local table_point = {}
+  if getObjectFromGUID('c2feb3') ~= nil then
+    table_point['Green'] = 0
+    nb_player = nb_player+1
+  end
+  if getObjectFromGUID('610c42') ~= nil then
+    table_point['Pink'] = 0
+    nb_player = nb_player+1
+  end
+  if getObjectFromGUID('401fca') ~= nil then
+    table_point['White'] = 0
+    nb_player = nb_player+1
+  end
+  if getObjectFromGUID('5df877') ~= nil then
+    table_point['Red'] = 0
+    nb_player = nb_player+1
+  end
+  if getObjectFromGUID('66e1c5') ~= nil then
+    table_point['Blue'] = 0
+    nb_player = nb_player+1
+  end
+  if getObjectFromGUID('0dda34') ~= nil then
+    table_point['Yellow'] = 0
+    nb_player = nb_player+1
+  end
+
+  if nb_player < 4 then
+    bool_4player = false
+  end
+
+
+  local guild_name = getGuildName(guild_number)
+
+  -- add 1 point for each  dice (6)
+  for key,value in pairs(temp_table) do --actualcode
+      if value.name == 'Custom_Dice' then
+        if value.getDescription() ~= "" then
+          if value.getValue() == guild_number then
+             table_point[value.getDescription()] =  table_point[value.getDescription()] + 1
+          end
+        end
+      end
+  end
+
+   -- add 3 point for each fief 6
+  for key,value in pairs(temp_table) do --actualcode
+      if value.getDescription() == 'fief'..guild_number then
+        local color = detectInfluence(value)
+        if next(color) ~= nil then
+          for key_point,value_point in pairs(table_point) do
+            if stringColorToRGB(key_point) == color then
+              table_point[key_point] = table_point[key_point] + 3
+            end
+          end
+        end
+      end
+  end
+
+
+  for key,value in pairs(temp_table) do --actualcode
+    local title_type =  getTitleType(value)
+    if title_type ~= nil then
+      local color = detectInfluence(value)
+      if next(color) ~= nil then
+        for key_point,value_point in pairs(table_point) do
+          if stringColorToRGB(key_point) == color then
+            if table_point[key_point] > 0 then
+              if (guild_number == 1 or guild_number == 4) and title_type == 'tower' then
+                table_point[key_point] = table_point[key_point] + 1
+              elseif (guild_number == 2 or guild_number == 6) and title_type == 'farm' then
+                table_point[key_point] = table_point[key_point] + 1
+              elseif (guild_number == 3 or guild_number == 5) and title_type == 'town' then
+                table_point[key_point] = table_point[key_point] + 1
+              end
+            end
+          end
+        end
+      end
+    end
+
+
+  end
+
+
+  -- print point
+  -- print(guild_name)
+  -- for i,v in pairs(table_point) do
+  --   print(i,':',v)
+  -- end
+
+
+  return(table_point)
+
+end
+
+function setInfluenceGuild(guild_number,guild_level, object_influence)
+
+  object_influence.setPositionSmooth(guild_position[guild_number][guild_level], false, true)
+
+end
+
+function setInfluenceToPlayer(obj)
+
+  -- get player zone
+  local color = obj.getColorTint()
+  local x_lag = 0
+  local y_lag = 0
+
+  if color[1] == 0.5 and color[2] == 0.5 and color[3] == 0.5 then
+    zoneGuid = table_zone["White"]
+    x_lag = -7.5
+    y_lag = 6
+  elseif  color == stringColorToRGB("Pink") then
+    zoneGuid = table_zone["Pink"]
+    x_lag = -7
+    y_lag = 6
+  elseif  color == stringColorToRGB("Green") then
+    zoneGuid = table_zone["Green"]
+    x_lag = -7
+    y_lag = 6
+  elseif  color == stringColorToRGB("Red") then
+    zoneGuid = table_zone["Red"]
+    x_lag = 7.5
+    y_lag = -6
+  elseif  color == stringColorToRGB("Blue") then
+    zoneGuid = table_zone["Blue"]
+    x_lag = 7
+    y_lag = -6
+  elseif  color == stringColorToRGB("Yellow") then
+    zoneGuid = table_zone["Yellow"]
+    x_lag = 7
+    y_lag = -6
+  end
+
+  local pos1 = getObjectFromGUID(zoneGuid).getPosition()[1]+x_lag
+  local pos2 = getObjectFromGUID(zoneGuid).getPosition()[2]+2
+  local pos3 = getObjectFromGUID(zoneGuid).getPosition()[3]+y_lag
+
+  obj.setPositionSmooth({pos1,pos2,pos3}, false, true)
+
+
+
+
+end
+
+function updateGuildLevel(table_point, guild_number, guild_level)
+
+  -- if less than 4 player and guild level 3, no third position
+  if (bool_4player == false) then
+    if (guild_level == 3) then
+      for key, value in pairs(table_point) do
+        if (value ~= nil) then
+          if (value > 0) then
+            table_point[key] = 0
+          end
+        end
+      end
+    end
+  end
+
+  -- get actual guild position
+  table_old = getGuildPosition(guild_number)
+  -- get color to update
+  temp_color = getFirstPlayerColor(table_point, table_old)
+  -- for update guild level 1,2,3
+  if guild_level > 0 then
+  -- if there is a player in this position
+    if temp_color ~= nil then
+      -- if no influence in this position
+      if (table_old[guild_level] == nil) then
+        local token = getInfluenceFromZone(temp_color)
+        if token ~= nil then
+          setInfluenceGuild(guild_number,guild_level,token)
+        else
+          table_missing[temp_color] = true
+          table_point[temp_color] = nil
+          temp_color = getFirstPlayerColor(table_point, table_old)
+          local bool_while = (temp_color ~= nil)
+          while bool_while do
+            token = getInfluenceFromZone(temp_color)
+            if token ~= nil then
+              setInfluenceGuild(guild_number,guild_level,token)
+              bool_while = false
+            else
+              table_missing[temp_color] = true
+              table_point[temp_color] = nil
+              temp_color = getFirstPlayerColor(table_point, table_old)
+              if temp_color == nil then
+                bool_while = false
+              end
+            end
+          end
+        end
+      else
+        -- if  influence is correct
+          if (stringColorToRGB(temp_color) == table_old[guild_level]) then
+          -- if influence need update
+          else
+            local table_token = {
+              getInfluenceFromGuild(guild_number,1),
+              getInfluenceFromGuild(guild_number,2),
+              getInfluenceFromGuild(guild_number,3)
+            }
+
+            -- case 1 <->2 or 2 <->3
+            if guild_level < 3 then
+              if (stringColorToRGB(temp_color) == table_old[guild_level+1]) then
+                setInfluenceGuild(guild_number,guild_level,table_token[guild_level+1])
+                setInfluenceGuild(guild_number,guild_level+1,table_token[guild_level])
+              end
+            end
+
+            -- case first token in third position
+            if guild_level == 1 then
+              if (stringColorToRGB(temp_color) == table_old[3]) then
+                setInfluenceGuild(guild_number,1,table_token[3])
+                setInfluenceGuild(guild_number,3,table_token[2])
+                setInfluenceGuild(guild_number,2,table_token[1])
+              end
+            end
+
+            -- cases token not on guild
+            if (stringColorToRGB(temp_color) ~= table_old[2] and stringColorToRGB(temp_color) ~= table_old[3]) then
+
+              local token = getInfluenceFromZone(temp_color)
+              if token == nil then
+                table_missing[temp_color] = true
+              else
+              -- if third token on guild, get it back
+                if (table_token[3] ~= nil) then
+                  setInfluenceToPlayer(table_token[3])
+                end
+
+                if guild_level < 3 then
+                  if (table_token[2] ~= nil) then
+                    setInfluenceGuild(guild_number,3,table_token[2])
+                  end
+                end
+
+                if guild_level == 1 then
+                  setInfluenceGuild(guild_number,2,table_token[1])
+                end
+
+                setInfluenceGuild(guild_number,guild_level,token)
+
+
+              end
+
+            end
+          end
+
+      end
+    end
+
+    if (temp_color ~= nil) then
+      table_point[temp_color] = nil
+    end
+
+
+
+  -- remove guild token with 0 point
+  else
+    for key, value in pairs(table_point) do
+      if (value ==0) then
+        for key_token, value_token in pairs(table_old) do
+          if (stringColorToRGB(key) == value_token) then
+            setInfluenceToPlayer(getInfluenceFromGuild(guild_number,key_token))
+          end
+        end
+      end
+    end
+  end
+
+
+
+
+end
+
+
+function updateGuildInfluence(table_point, guild_number)
+
+
+  table_old = nil
+  temp_color = nil
+
+
+  table_old = getGuildPosition(guild_number)
+  local color_expect1 = stringColorToRGB(getFirstPlayerColor(table_point, table_old))
+
+  updateGuildLevel(table_point, guild_number, 1)
+  local color_expect2 = stringColorToRGB(getFirstPlayerColor(table_point, table_old))
+  local color_expect3 = nil
+
+  Wait.condition(
+      function()
+        updateGuildLevel(table_point, guild_number, 2)
+        color_expect3 = stringColorToRGB(getFirstPlayerColor(table_point, table_old))
+      end,
+      function()
+        return checkGuild(guild_number,1,color_expect1)
+      end
+    )
+
+
+    Wait.condition(
+        function() updateGuildLevel(table_point, guild_number, 3) end,
+        function()
+          return checkGuild(guild_number,2,color_expect2) and checkGuild(guild_number,1,color_expect1)
+        end
+      )
+
+
+
+
+  Wait.condition(
+      function()  updateGuildLevel(table_point, guild_number, 0) end,
+      function() return checkGuild(guild_number,3,color_expect3) and checkGuild(guild_number,2,color_expect2) and checkGuild(guild_number,1,color_expect1) end,
+      1,
+      function() updateGuildLevel(table_point, guild_number, 0) end
+    )
+
+
+
+  Wait.frames(function () table_token_moving = {} end, 100)
+
+end
+
+function checkGuild(guild_number,guild_level, color_expect)
+  local color_actual = detectInfluenceFromPosition(guild_position[guild_number][guild_level],0)
+  local bool = false
+  if color_expect == nil then
+    bool = true
+  else
+    bool = color_expect == color_actual
+  end
+  return bool
+end
+
+
+
+
+
+function getInfluenceFromGuild(guild_number, guild_level)
+
+  local obj = getInfluenceFromPosition(guild_position[guild_number][guild_level],0)
+  return obj
+end
+
+function getInfluenceFromZone(color)
+
+  local zoneGUID = table_zone[color]
+  local token = nil
+
+  local player_zone = getObjectFromGUID(zoneGUID)
+  local temp_table = player_zone.getObjects()
+
+  for key,value in pairs(temp_table) do --actualcode
+    if (value.getName() == 'Influence') then
+      token = value
+      local bool = true
+      if next(table_token_moving) ~= nil then
+        for key_token,value_token in pairs(table_token_moving) do
+          if token == value_token then
+            bool = false
+            token = nil
+          end
+        end
+      end
+
+      if bool then
+        table.insert(table_token_moving, token)
+        break
+      end
+    end
+  end
+
+  return(token)
+
+end
+
+
+
+function getGuildPosition(guild_number)
+
+    local table_old = {}
+    local color = detectInfluenceFromPosition(guild_position[guild_number][1],0)
+    if next(color) ~= nil then
+      table_old[1] = color
+    end
+    color = detectInfluenceFromPosition(guild_position[guild_number][2],0)
+    if next(color) ~= nil then
+      table_old[2] = color
+    end
+    color = detectInfluenceFromPosition(guild_position[guild_number][3],0)
+    if next(color) ~= nil then
+      table_old[3] = color
+    end
+
+    return(table_old)
+end
+
+
+function getFirstPlayerColor(table_point, table_old)
+
+  local table_old = (table_old or nil)
+
+  local color = nil
+  local temp = 0
+  for key, value in pairs(table_point) do
+    if value > 0 then
+      if value > temp then
+        color = key
+        temp = value
+        -- log(temp)
+      elseif value == temp then
+        if (stringColorToRGB(key) == table_old[1]) then
+          color = key
+          temp = value
+        elseif stringColorToRGB(color) ~= table_old[1] and stringColorToRGB(key) == table_old[2] then
+          color = key
+          temp = value
+        elseif stringColorToRGB(color) ~= table_old[2] and stringColorToRGB(key) == table_old[3] then
+          color = key
+          temp = value
+        end
+      end
+    end
+  end
+
+  return color
+end
+
+function onObjectDrop(player_color, dropped_object  )
+
+  local bool_update_guild = false
+
+  -- log('onObjectDrop')
+
+  for key, value in pairs(table_missing) do
+    -- if there is an influence missing
+    if value then
+      -- if the object frop is an influence
+      if dropped_object.getName() == 'Influence' then
+        local token_color = dropped_object.getColorTint()
+        if token_color[1]==token_color[2] and token_color[1]==token_color[3] and token_color[1] == 0.5 then
+          token_color = stringColorToRGB("White")
+        end
+
+        local temp_zone = getObjectFromGUID(table_zone[key])
+        local temp_table = temp_zone.getObjects()
+
+        -- check if influence if correct color
+        if token_color ==stringColorToRGB(key) then
+
+          -- check influence is drop in his the zone
+          for key_zone, value_zone in pairs(temp_table) do
+            if value_zone == dropped_object then
+              broadcastToAll("influence have been place immediatly on guild\n")
+              broadcastToAll(key, stringColorToRGB(key))
+              bool_update_guild = true
+              break
+            end
+          end
+        end
+      end
+    end
+  end
+
+  if bool_update_guild then
+    -- reset table_missing
+    for key, value in pairs(table_missing) do
+      table_missing[key] = false
+    end
+
+    for i=1,6 do
+      table_point = guildCount(i)
+      updateGuildInfluence(table_point, i)
+    end
+  end
+
+end
