@@ -1,3 +1,21 @@
+
+-- note general
+
+-- il y a un chevauchement si un paysage est place entre 2 endroit
+-- du coup, le paysage est compte deux fois, 
+-- le joueur est considere dans deux zone et le paysage vaut le double 
+
+-- pour eviter cela: 
+-- loop sur les paysage plutot que sur les lieux (evite le double comptage)
+-- searcher autour des paysage plutot et trouve le lieu le plus proche 
+
+
+-- c'est une mauvaise idee de faire des boutons cameleon (couleur du fond)
+-- le but d'un bouton c'est que il se voit bien et clairement
+-- toi tu sais que il est la, mais les joueur ne le trouveront pas
+
+
+
 function onload()
 
   table_missing = {}
@@ -21,7 +39,10 @@ function onload()
 
   bool_4player = true
 
-  BOARDMAP_ZONE = getObjectFromGUID('515a29')
+  -- Il vaut mieux eviter les objet global de maniere general, sauf si vraiment necessaire
+  -- BOARDMAP_ZONE est appelé deux fois seulement, et se defini en une ligne
+  -- c'est different des tableaux qui seront appelé plusieurs fois et se definissent en plusieur ligne
+  -- BOARDMAP_ZONE = getObjectFromGUID('515a29')
 
   table_points = {}
   table_points['pink'] = 0
@@ -66,15 +87,6 @@ function onload()
     }
   }
 
-    ref_Buttons = {
-        {val=1, pos={3.3, 0.2, 3}, label = 'S'},
-        {val=2, pos={0.3, 0.2, 2.8}, label = 'E'},
-        {val=3, pos={-2.5, 0.2, 3}, label = 'W'},
-        {val=4, pos={-0.5, 0.2, 2.6}, label = '<>'}
-
-
-    }
-
     local funcName = 'updateGuild'
     local func = function()
       for i=1,6 do
@@ -104,8 +116,8 @@ function onload()
 
     EPOCH_MARKER = {{-11.72, 1.16, 9.35}, {-10.51, 1.16, 9.98}, {-8.82, 1.16, 10.13}, {-7.24, 1.16, 9.92}, {-5.92, 1.16, 9.29}}
 
-
-    params = {
+    -- variable local
+    local params = {
         click_function = "centralizedButton",
         function_owner = self,
         label          = "Next Epoch",
@@ -122,28 +134,44 @@ function onload()
 
 
     --Colors are always in this order : 1) pink 2) red 3)green 4)blue 5)yellow 6)white
+    -- dans l'ideal on evite toujours de ce base sur un ordre pour ce genre de chose mais bon 
+    -- si ca marche 
 
-  COLOR = {}
+  -- on evite de donner des noms de variable qui peuvent etre utilise par programme comme les couleur
+  -- ou table (tu le fais plus loin pour table)
+  
+  -- c'est tres malin de recuperer les couleur de cette facon
+  -- pour eviter le probleme du gris 
+  -- par contre, ca rajoute des tonne de boucle pour rien, mais je contournerais cela plus tard 
 
+  -- ton code se repet, c'est le moment d'utiliser une boucle plutot que 
+  -- creer plein de variable local pour rien
 
-  local pink_object = getObjectFromGUID('740bb1')
-  local pink = pink_object.getColorTint()
-  table.insert(COLOR, 1, pink)
-  local red_object = getObjectFromGUID('1b257c')
-  local red = red_object.getColorTint()
-  table.insert(COLOR, 2, red)
-  local green_object = getObjectFromGUID('e74e7f')
-  local green = green_object.getColorTint()
-  table.insert(COLOR, 3, green)
-  local blue_object = getObjectFromGUID('850665')
-  local blue = blue_object.getColorTint()
-  table.insert(COLOR, 4, blue)
-  local yellow_object = getObjectFromGUID('3f489d')
-  local yellow = yellow_object.getColorTint()
-  table.insert(COLOR, 5, yellow)
-  local white_object = getObjectFromGUID('6c0762')
-  local white = white_object.getColorTint()
-  table.insert(COLOR, 6, white)
+  COLOR ={'740bb1','1b257c','e74e7f','850665','3f489d','6c0762'}
+
+  for key, values in pairs(COLOR) do
+    -- on modifie direct la table COLOR
+    COLOR[key] = getObjectFromGUID(values).getColorTint()
+  end 
+
+  -- local pink_object = getObjectFromGUID('740bb1')
+  -- local pink = pink_object.getColorTint()
+  -- table.insert(COLOR, 1, pink)
+  -- local red_object = getObjectFromGUID('1b257c')
+  -- local red = red_object.getColorTint()
+  -- table.insert(COLOR, 2, red)
+  -- local green_object = getObjectFromGUID('e74e7f')
+  -- local green = green_object.getColorTint()
+  -- table.insert(COLOR, 3, green)
+  -- local blue_object = getObjectFromGUID('850665')
+  -- local blue = blue_object.getColorTint()
+  -- table.insert(COLOR, 4, blue)
+  -- local yellow_object = getObjectFromGUID('3f489d')
+  -- local yellow = yellow_object.getColorTint()
+  -- table.insert(COLOR, 5, yellow)
+  -- local white_object = getObjectFromGUID('6c0762')
+  -- local white = white_object.getColorTint()
+  -- table.insert(COLOR, 6, white)
 
   --log(COLOR, 'general')
   --log(COLOR[2],'rouge')
@@ -166,15 +194,18 @@ function onScriptingButtonUp(index, color)
 end
 
 -- helper to find object on top of position
-function findObjectOnTop(pos, my_type, radius, radius_1)
+function findObjectOnTop(pos, my_type, radius_y, radius_xz)
 
-    local radius = (radius or 1.5)
-    if radius_1 == nil then
-      radius_1 = radius
-    end
+    -- Il vaut mieux utiliser le system mis en place par lua por les valeur par default
+    -- je rajoute un type par default (car c'est 3 en general)
+
+    local my_type = (my_type or 3)
+    local radius_y = (radius_y or 1.5)
+    local radius_xz = (radius_xz or radius_y)
+
     local objList = Physics.cast({
         origin=pos, direction={0,1,0}, type = my_type, debug=true,
-        max_distance = 0, size={radius_1, radius, radius_1}
+        max_distance = 0, size={radius_xz, radius_y, radius_xz}
     })
 
     local refinedList = {}
@@ -216,7 +247,14 @@ function detectInfluence(title)
 
   local color = {}
   local position = title.getPosition()
-  local table_object = findObjectOnTop(position, 3, radius, 0.4)
+
+  -- tu precise radius alors que cette variable n'existe pas
+  -- si tu n'utilise pas toute les variable par defaut, 
+  -- il faut preciser celle que on utilise plutot
+  -- c'est assez mal faut en lua, dans d'autre language on preciserais pas nil et nil
+  -- mais plutot le nom de variable utilisé...
+
+  local table_object = findObjectOnTop(position, nil, nil, 0.4)
 
   for key,value in pairs(table_object) do
     -- print(value.getGUID())
@@ -297,7 +335,8 @@ function guildCount(guild_number)
 
     -- get boardmap_zonesd
 
-  local temp_table = BOARDMAP_ZONE.getObjects()
+  local boardmap_zone = getObjectFromGUID('515a29')
+  local temp_table = boardmap_zone.getObjects()
 
   local nb_player = 0
 
@@ -1182,7 +1221,9 @@ function checkMilitaryServicePerformed(military_service)
     malus_service_false = -5
   end
 
-  local temp_table = BOARDMAP_ZONE.getObjects()
+  local boardmap_zone = getObjectFromGUID('515a29')
+  local temp_table = boardmap_zone.getObjects()
+
   for key,value in pairs(temp_table) do
 
     --Search if 'fief' on zoneboard and his ruler.
