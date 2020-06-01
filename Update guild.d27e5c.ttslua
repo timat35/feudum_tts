@@ -14,6 +14,12 @@
 -- le but d'un bouton c'est que il se voit bien et clairement
 -- toi tu sais que il est la, mais les joueur ne le trouveront pas
 
+-- je pense pas que il faille bloquer le pion d'epoque, il faut que les joueurs puissent 
+-- revenir en arrriere si il clique sans faire expres desssus.. !!
+
+-- a terme, on doit pouvoir faire apparaitre le bouton epoque que quand l'epoque se detectInfluence
+
+
 
 
 function onload()
