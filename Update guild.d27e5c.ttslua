@@ -858,6 +858,102 @@ function loopInfColor(my_table, my_score, search_color)
   return my_table
 end
 
+--Repèrer les landscapes, et déterminer le lieu le plus proche. Un cercle de lumière blanche s'allume 5 secondes autour du lieu retenu.
+
+function detectNearestLocationLandscape()
+
+
+  local color_inf_serf = {}
+  local title_GUID = {}
+
+  local boardmap_zone = getObjectFromGUID('515a29')
+  local temp_table = boardmap_zone.getObjects()
+  --log(temp_table,'temp_table')
+
+  for key, temp_object in pairs(temp_table) do
+
+    local object = temp_object.tag
+
+    --log(object,'object')
+
+    if object == 'Card' then
+      if not temp_object.is_face_down then
+
+        local table_distance = {}
+        local table_title = {}
+        local ldscp_pos = temp_object.getPosition()
+        local ldscp_hit = findObjectOnTop(ldscp_pos, 2, 5)
+
+        for key, object_hit in pairs(ldscp_hit) do
+
+          local object_title = getTitleType(object_hit)
+          local object_name = object_hit.getName()
+
+          --log(object_title,'object_title')        
+
+          if object_title == 'outpost' then
+            local temp_distance = ldscp_pos:distance(object_hit.getPosition())
+            local object_GUID = object_hit.getGUID()
+
+            table.insert(table_distance, temp_distance)
+            table.insert(table_title, object_GUID)
+
+          elseif object_title == 'farm' then
+            local temp_distance = ldscp_pos:distance(object_hit.getPosition())
+            local object_GUID = object_hit.getGUID()
+
+            table.insert(table_distance, temp_distance)
+            table.insert(table_title, object_GUID)
+
+          elseif object_title == 'town' then
+            local temp_distance = ldscp_pos:distance(object_hit.getPosition())
+            local object_GUID = object_hit.getGUID()
+
+            table.insert(table_distance, temp_distance)
+            table.insert(table_title, object_GUID)
+
+          elseif object_name == 'fief' then
+
+            local temp_distance = ldscp_pos:distance(object_hit.getPosition())
+            local object_GUID = object_hit.getGUID()
+
+            table.insert(table_distance, temp_distance)
+            table.insert(table_title, object_GUID)
+          end
+
+          if object_name == 'Influence' then
+            table.insert(color_inf_serf, object_hit.getColorTint())
+          end
+        end
+
+        --Supprimer les lieu les plus éloignés
+        local n = #table_distance
+        while n > 1 do
+          if table_distance[1] > table_distance[2] then
+            table.remove(table_distance, 1)
+            table.remove(table_title, 1)
+          else table.remove(table_distance, 2)
+            table.remove(table_title, 2)
+          end
+          n = #table_distance
+        end
+        --log(table_distance,'table_distance_2')
+        --log(table_title,'table_title_2')
+
+        --Mettre en surbrillance le lieu retenu
+        local title_spoted = getObjectFromGUID(table_title[1])
+        title_spoted.highlightOn({1,1,1}, 5)
+
+        --Archiver le guid de la location
+        table.insert(title_GUID, table_title[1])
+      end
+    end
+  end
+
+  return title_GUID, color_inf_serf
+
+end
+
 
 --Calcul du score d'époque de guilde.
 function calculScoreGuild()
@@ -956,129 +1052,131 @@ function calculScoreLandscape()
 end
 
 
---Calcule le score d'époque pour le contrôle des différentes régions.
-function calculScoreRegion()
+--Cette fonction est exactement la même que la tienne, mais j'ai supprimé le changement de couleur grey => white. Fais ce que tu veux.
+function detectInfluenceFromLocation(position)
 
-  local score_region = {}
+  local color = nil
+  local table_object = findObjectOnTop({position[1],1.30 ,position[3]}, 3, radius, 0.4)
+  --log(table_object)
+  for key,value in pairs(table_object) do
+    -- print(value.getGUID())
+    if (value.getName() == 'Influence') then
+      color = value.getColorTint()
+    end
+  end
 
-  --Trouver au moins une influence "ruler", par couleur et par région
-  --création d'un tableau pour stocker les inf trouvées
+  return color
+end
 
-  local unit_exist = 1
+-- Pour attribuer les couleurs à chaque table de score.
+function loopInfColor(my_table, my_score, search_color)
 
-  local temp_score_region = {
-    {}, --pink
-    {}, --red
-    {}, --green
-    {}, --blue
-    {}, --yellow
-    {}  --white
-  }
 
-  --Scan des régions, et sélection d'une unique influence par couleur, région et landscape
+  local temp_color = search_color
+  local score = my_score
 
-  for key_region, value_region in pairs(TABLE_REGION) do
+  for i = 1,6 do
+    if temp_color == COLOR[i] then
+      my_table[i] = my_table[i] + score
+    end
+  end
+  return my_table
+end
 
-    local unit_region = {
-      false,  --mountain
-      false,  --badlands
-      false,  --desert
-      false,  --forest
-      false,  --island
-      false   --sea
-    }
+--Repèrer les landscapes, et déterminer le lieu le plus proche. Un cercle de lumière blanche s'allume 5 secondes autour du lieu retenu.
 
-    --log(unit_region)
+function detectNearestLocationLandscape()
 
-    for key_pos, value_pos in pairs(value_region) do
 
-     local temp_object_hit = findObjectOnTop(value_pos, 3, radius, 0.4)
-     local temp_landscape_hit = findObjectOnTop(value_pos, 2, 3.75)
+  local color_inf_serf = {}
+  local title_GUID = {}
 
-     --if lanscape found
+  local boardmap_zone = getObjectFromGUID('515a29')
+  local temp_table = boardmap_zone.getObjects()
+  --log(temp_table,'temp_table')
 
-     if temp_landscape_hit ~= nil then
-      for index, object in pairs(temp_landscape_hit) do
-        local type = object.tag
-        if string.find(type, 'Card') then
-          --log(object)
-          local landscape_pos = object.getPosition()
-          local inf_serf = findObjectOnTop(landscape_pos, 3, 2.1)
+  for key, temp_object in pairs(temp_table) do
 
-          for key, value in pairs (inf_serf) do
-            --log(value,'serf')
-            if (value.getName() == 'Influence') then
+    local object = temp_object.tag
 
-              local temp_color = value.getColorTint()
-              --log(temp_color,'color serf')
+    --log(object,'object')
 
-              --Don't count two times same color's serf on landscape by region
-              for i = 1,6 do
-                if temp_color == COLOR[i] then
-                  if unit_region[i] == false then
-                    table.insert(temp_score_region[i], unit_exist)
-                    unit_region[i] = true
-                  end
-                end
-              end
-            end
+    if object == 'Card' then
+      if not temp_object.is_face_down then
+
+        local table_distance = {}
+        local table_title = {}
+        local ldscp_pos = temp_object.getPosition()
+        local ldscp_hit = findObjectOnTop(ldscp_pos, 2, 5)
+
+        for key, object_hit in pairs(ldscp_hit) do
+
+          local object_title = getTitleType(object_hit)
+          local object_name = object_hit.getName()
+
+          --log(object_title,'object_title')        
+
+          if object_title == 'outpost' then
+            local temp_distance = ldscp_pos:distance(object_hit.getPosition())
+            local object_GUID = object_hit.getGUID()
+
+            table.insert(table_distance, temp_distance)
+            table.insert(table_title, object_GUID)
+
+          elseif object_title == 'farm' then
+            local temp_distance = ldscp_pos:distance(object_hit.getPosition())
+            local object_GUID = object_hit.getGUID()
+
+            table.insert(table_distance, temp_distance)
+            table.insert(table_title, object_GUID)
+
+          elseif object_title == 'town' then
+            local temp_distance = ldscp_pos:distance(object_hit.getPosition())
+            local object_GUID = object_hit.getGUID()
+
+            table.insert(table_distance, temp_distance)
+            table.insert(table_title, object_GUID)
+
+          elseif object_name == 'fief' then
+
+            local temp_distance = ldscp_pos:distance(object_hit.getPosition())
+            local object_GUID = object_hit.getGUID()
+
+            table.insert(table_distance, temp_distance)
+            table.insert(table_title, object_GUID)
+          end
+
+          if object_name == 'Influence' then
+            table.insert(color_inf_serf, object_hit.getColorTint())
           end
         end
-      end
-     end
 
-       --Scan des rulers par region
-      for key, value in pairs(temp_object_hit) do
-
-        if (value.getName() == 'Influence') then
-
-          local temp_color = value.getColorTint()
-
-          --Don't count two times two same color's rulers by region
-          for i = 1,6 do
-            if temp_color == COLOR[i] then
-              if unit_region[i] == false then
-                table.insert(temp_score_region[i], unit_exist)
-                unit_region[i] = true
-              end
-            end
+        --Supprimer les lieu les plus éloignés
+        local n = #table_distance
+        while n > 1 do
+          if table_distance[1] > table_distance[2] then
+            table.remove(table_distance, 1)
+            table.remove(table_title, 1)
+          else table.remove(table_distance, 2)
+            table.remove(table_title, 2)
           end
+          n = #table_distance
         end
+        --log(table_distance,'table_distance_2')
+        --log(table_title,'table_title_2')
+
+        --Mettre en surbrillance le lieu retenu
+        local title_spoted = getObjectFromGUID(table_title[1])
+        title_spoted.highlightOn({1,1,1}, 5)
+
+        --Archiver le guid de la location
+        table.insert(title_GUID, table_title[1])
       end
     end
   end
 
-  --log(temp_score_region[1], "rose")
-  --log(temp_score_region[2], "rouge")
-  --log(temp_score_region[3], "vert")
-  --log(temp_score_region[4], "bleu")
-  --log(temp_score_region[5], "jaune")
-  --log(temp_score_region[6], "blanc")
+  return title_GUID, color_inf_serf
 
-  --convert units to points
-
-  for c = 1,6 do
-
-      local n = #temp_score_region[c]
-
-      if n == 0 then
-        table.insert(score_region, 0)
-      elseif n == 1 then
-        table.insert(score_region, 1)
-      elseif n == 2 then
-        table.insert(score_region, 3)
-      elseif n == 3 then
-        table.insert(score_region, 5)
-      elseif n == 4 then
-        table.insert(score_region, 7)
-      elseif n == 5 then
-        table.insert(score_region, 9)
-      elseif n == 6 then
-        table.insert(score_region, 11)
-      end
-    end
-  --log(score_region)
-  return score_region
 end
 
 
