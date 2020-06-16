@@ -58,3 +58,127 @@ function onload()
     --   position={-10.5, 0.2, 3.5}, rotation={0,180,0}, height=400, width=4000, font_size = 250
     -- })
 end
+
+function findObjectOnTop(pos, my_type, radius_y, radius_xz)
+
+    local my_type = (my_type or 3)
+    local radius_y = (radius_y or 1.5)
+    local radius_xz = (radius_xz or radius_y)
+
+    local objList = Physics.cast({
+        origin=pos, direction={0,1,0}, type = my_type, debug=false,
+        max_distance = 0, size={radius_xz, radius_y, radius_xz}
+    })
+
+    local refinedList = {}
+
+    for key, value in ipairs(objList) do
+      table.insert(refinedList, value.hit_object)
+    end
+
+    return refinedList
+end
+
+function getTitleType(value)
+
+  local title_type = ""
+  local temp_image = value.getCustomObject()
+  local temp_url= ""
+  if temp_image ~= nil then
+    if (temp_image['image'] ~= nil) then
+      if not value.is_face_down then
+        temp_url = temp_image['image']
+      else
+        temp_url = temp_image['image_bottom']
+      end
+      if (temp_url == 'https://i.imgur.com/hk15lLU.jpg') then
+        title_type = 'farm'
+      elseif (temp_url == 'https://i.imgur.com/yt2yOIJ.jpg') then
+        title_type = 'outpost'
+      elseif (temp_url == 'https://i.imgur.com/UirRzRn.jpg') then
+        title_type = 'town'
+
+      end
+    end
+  end
+
+  return title_type
+end
+
+function onObjectDrop( player_color,  dropped_object)
+
+  local object = dropped_object.tag
+  --log(object,'object')
+
+  if object == 'Card' then
+    if not dropped_object.is_face_down then
+
+      local table_distance = {}
+      local table_title = {}
+      local point_on_boardmap = {}
+
+      local ldscp_pos = dropped_object.getPosition()
+      --log(ldscp_pos,'ldscp_pos')
+      point_on_boardmap = {ldscp_pos[1], 1.16, ldscp_pos[3]}
+      --log(point_on_boardmap,'point_on_boardmap')
+
+      local ldscp_hit = findObjectOnTop(point_on_boardmap, 2, 5)
+      --log(ldscp_hit,'ldscp_hit')
+
+      for key, object_hit in pairs(ldscp_hit) do
+
+        local object_title = getTitleType(object_hit)
+        local object_name = object_hit.getName()
+
+        --log(object_title,'object_title')
+
+        if object_title == 'outpost' then
+          local temp_distance = ldscp_pos:distance(object_hit.getPosition())
+          local object_GUID = object_hit.getGUID()
+
+          table.insert(table_distance, temp_distance)
+          table.insert(table_title, object_GUID)
+
+        elseif object_title == 'farm' then
+          local temp_distance = ldscp_pos:distance(object_hit.getPosition())
+          local object_GUID = object_hit.getGUID()
+
+          table.insert(table_distance, temp_distance)
+          table.insert(table_title, object_GUID)
+
+        elseif object_title == 'town' then
+          local temp_distance = ldscp_pos:distance(object_hit.getPosition())
+          local object_GUID = object_hit.getGUID()
+
+          table.insert(table_distance, temp_distance)
+          table.insert(table_title, object_GUID)
+
+        elseif object_name == 'fief' then
+          local temp_distance = ldscp_pos:distance(object_hit.getPosition())
+          local object_GUID = object_hit.getGUID()
+
+          table.insert(table_distance, temp_distance)
+          table.insert(table_title, object_GUID)
+        end
+      end
+
+      local n = #table_distance
+      while n > 1 do
+        if table_distance[1] > table_distance[2] then
+          table.remove(table_distance, 1)
+          table.remove(table_title, 1)
+        else table.remove(table_distance, 2)
+          table.remove(table_title, 2)
+        end
+        n = #table_distance
+      end
+
+      --log(table_title,'table_title après remove')
+
+      --Mettre en surbrillance le lieu retenu
+      local title_spoted = getObjectFromGUID(table_title[1])
+      title_spoted.highlightOn({1,1,1}, 3)
+
+    end
+  end
+end
