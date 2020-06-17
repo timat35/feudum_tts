@@ -1,27 +1,3 @@
-
--- note general
-
--- il y a un chevauchement si un paysage est place entre 2 endroit
--- du coup, le paysage est compte deux fois, 
--- le joueur est considere dans deux zone et le paysage vaut le double 
-
--- pour eviter cela: 
--- loop sur les paysage plutot que sur les lieux (evite le double comptage)
--- searcher autour des paysage plutot et trouve le lieu le plus proche 
-
-
--- c'est une mauvaise idee de faire des boutons cameleon (couleur du fond)
--- le but d'un bouton c'est que il se voit bien et clairement
--- toi tu sais que il est la, mais les joueur ne le trouveront pas
-
--- je pense pas que il faille bloquer le pion d'epoque, il faut que les joueurs puissent 
--- revenir en arrriere si il clique sans faire expres desssus.. !!
-
--- a terme, on doit pouvoir faire apparaitre le bouton epoque que quand l'epoque se detectInfluence
-
-
-
-
 function onload()
 
   table_missing = {}
@@ -882,6 +858,102 @@ function loopInfColor(my_table, my_score, search_color)
   return my_table
 end
 
+--Repèrer les landscapes, et déterminer le lieu le plus proche. Un cercle de lumière blanche s'allume 5 secondes autour du lieu retenu.
+
+function detectNearestLocationLandscape()
+
+
+  local color_inf_serf = {}
+  local title_GUID = {}
+
+  local boardmap_zone = getObjectFromGUID('515a29')
+  local temp_table = boardmap_zone.getObjects()
+  --log(temp_table,'temp_table')
+
+  for key, temp_object in pairs(temp_table) do
+
+    local object = temp_object.tag
+
+    --log(object,'object')
+
+    if object == 'Card' then
+      if not temp_object.is_face_down then
+
+        local table_distance = {}
+        local table_title = {}
+        local ldscp_pos = temp_object.getPosition()
+        local ldscp_hit = findObjectOnTop(ldscp_pos, 2, 5)
+
+        for key, object_hit in pairs(ldscp_hit) do
+
+          local object_title = getTitleType(object_hit)
+          local object_name = object_hit.getName()
+
+          --log(object_title,'object_title')        
+
+          if object_title == 'outpost' then
+            local temp_distance = ldscp_pos:distance(object_hit.getPosition())
+            local object_GUID = object_hit.getGUID()
+
+            table.insert(table_distance, temp_distance)
+            table.insert(table_title, object_GUID)
+
+          elseif object_title == 'farm' then
+            local temp_distance = ldscp_pos:distance(object_hit.getPosition())
+            local object_GUID = object_hit.getGUID()
+
+            table.insert(table_distance, temp_distance)
+            table.insert(table_title, object_GUID)
+
+          elseif object_title == 'town' then
+            local temp_distance = ldscp_pos:distance(object_hit.getPosition())
+            local object_GUID = object_hit.getGUID()
+
+            table.insert(table_distance, temp_distance)
+            table.insert(table_title, object_GUID)
+
+          elseif object_name == 'fief' then
+
+            local temp_distance = ldscp_pos:distance(object_hit.getPosition())
+            local object_GUID = object_hit.getGUID()
+
+            table.insert(table_distance, temp_distance)
+            table.insert(table_title, object_GUID)
+          end
+
+          if object_name == 'Influence' then
+            table.insert(color_inf_serf, object_hit.getColorTint())
+          end
+        end
+
+        --Supprimer les lieu les plus éloignés
+        local n = #table_distance
+        while n > 1 do
+          if table_distance[1] > table_distance[2] then
+            table.remove(table_distance, 1)
+            table.remove(table_title, 1)
+          else table.remove(table_distance, 2)
+            table.remove(table_title, 2)
+          end
+          n = #table_distance
+        end
+        --log(table_distance,'table_distance_2')
+        --log(table_title,'table_title_2')
+
+        --Mettre en surbrillance le lieu retenu
+        local title_spoted = getObjectFromGUID(table_title[1])
+        title_spoted.highlightOn({1,1,1}, 5)
+
+        --Archiver le guid de la location
+        table.insert(title_GUID, table_title[1])
+      end
+    end
+  end
+
+  return title_GUID, color_inf_serf
+
+end
+
 
 --Calcul du score d'époque de guilde.
 function calculScoreGuild()
@@ -980,129 +1052,131 @@ function calculScoreLandscape()
 end
 
 
---Calcule le score d'époque pour le contrôle des différentes régions.
-function calculScoreRegion()
+--Cette fonction est exactement la même que la tienne, mais j'ai supprimé le changement de couleur grey => white. Fais ce que tu veux.
+function detectInfluenceFromLocation(position)
 
-  local score_region = {}
+  local color = nil
+  local table_object = findObjectOnTop({position[1],1.30 ,position[3]}, 3, radius, 0.4)
+  --log(table_object)
+  for key,value in pairs(table_object) do
+    -- print(value.getGUID())
+    if (value.getName() == 'Influence') then
+      color = value.getColorTint()
+    end
+  end
 
-  --Trouver au moins une influence "ruler", par couleur et par région
-  --création d'un tableau pour stocker les inf trouvées
+  return color
+end
 
-  local unit_exist = 1
+-- Pour attribuer les couleurs à chaque table de score.
+function loopInfColor(my_table, my_score, search_color)
 
-  local temp_score_region = {
-    {}, --pink
-    {}, --red
-    {}, --green
-    {}, --blue
-    {}, --yellow
-    {}  --white
-  }
 
-  --Scan des régions, et sélection d'une unique influence par couleur, région et landscape
+  local temp_color = search_color
+  local score = my_score
 
-  for key_region, value_region in pairs(TABLE_REGION) do
+  for i = 1,6 do
+    if temp_color == COLOR[i] then
+      my_table[i] = my_table[i] + score
+    end
+  end
+  return my_table
+end
 
-    local unit_region = {
-      false,  --mountain
-      false,  --badlands
-      false,  --desert
-      false,  --forest
-      false,  --island
-      false   --sea
-    }
+--Repèrer les landscapes, et déterminer le lieu le plus proche. Un cercle de lumière blanche s'allume 5 secondes autour du lieu retenu.
 
-    --log(unit_region)
+function detectNearestLocationLandscape()
 
-    for key_pos, value_pos in pairs(value_region) do
 
-     local temp_object_hit = findObjectOnTop(value_pos, 3, radius, 0.4)
-     local temp_landscape_hit = findObjectOnTop(value_pos, 2, 3.75)
+  local color_inf_serf = {}
+  local title_GUID = {}
 
-     --if lanscape found
+  local boardmap_zone = getObjectFromGUID('515a29')
+  local temp_table = boardmap_zone.getObjects()
+  --log(temp_table,'temp_table')
 
-     if temp_landscape_hit ~= nil then
-      for index, object in pairs(temp_landscape_hit) do
-        local type = object.tag
-        if string.find(type, 'Card') then
-          --log(object)
-          local landscape_pos = object.getPosition()
-          local inf_serf = findObjectOnTop(landscape_pos, 3, 2.1)
+  for key, temp_object in pairs(temp_table) do
 
-          for key, value in pairs (inf_serf) do
-            --log(value,'serf')
-            if (value.getName() == 'Influence') then
+    local object = temp_object.tag
 
-              local temp_color = value.getColorTint()
-              --log(temp_color,'color serf')
+    --log(object,'object')
 
-              --Don't count two times same color's serf on landscape by region
-              for i = 1,6 do
-                if temp_color == COLOR[i] then
-                  if unit_region[i] == false then
-                    table.insert(temp_score_region[i], unit_exist)
-                    unit_region[i] = true
-                  end
-                end
-              end
-            end
+    if object == 'Card' then
+      if not temp_object.is_face_down then
+
+        local table_distance = {}
+        local table_title = {}
+        local ldscp_pos = temp_object.getPosition()
+        local ldscp_hit = findObjectOnTop(ldscp_pos, 2, 5)
+
+        for key, object_hit in pairs(ldscp_hit) do
+
+          local object_title = getTitleType(object_hit)
+          local object_name = object_hit.getName()
+
+          --log(object_title,'object_title')        
+
+          if object_title == 'outpost' then
+            local temp_distance = ldscp_pos:distance(object_hit.getPosition())
+            local object_GUID = object_hit.getGUID()
+
+            table.insert(table_distance, temp_distance)
+            table.insert(table_title, object_GUID)
+
+          elseif object_title == 'farm' then
+            local temp_distance = ldscp_pos:distance(object_hit.getPosition())
+            local object_GUID = object_hit.getGUID()
+
+            table.insert(table_distance, temp_distance)
+            table.insert(table_title, object_GUID)
+
+          elseif object_title == 'town' then
+            local temp_distance = ldscp_pos:distance(object_hit.getPosition())
+            local object_GUID = object_hit.getGUID()
+
+            table.insert(table_distance, temp_distance)
+            table.insert(table_title, object_GUID)
+
+          elseif object_name == 'fief' then
+
+            local temp_distance = ldscp_pos:distance(object_hit.getPosition())
+            local object_GUID = object_hit.getGUID()
+
+            table.insert(table_distance, temp_distance)
+            table.insert(table_title, object_GUID)
+          end
+
+          if object_name == 'Influence' then
+            table.insert(color_inf_serf, object_hit.getColorTint())
           end
         end
-      end
-     end
 
-       --Scan des rulers par region
-      for key, value in pairs(temp_object_hit) do
-
-        if (value.getName() == 'Influence') then
-
-          local temp_color = value.getColorTint()
-
-          --Don't count two times two same color's rulers by region
-          for i = 1,6 do
-            if temp_color == COLOR[i] then
-              if unit_region[i] == false then
-                table.insert(temp_score_region[i], unit_exist)
-                unit_region[i] = true
-              end
-            end
+        --Supprimer les lieu les plus éloignés
+        local n = #table_distance
+        while n > 1 do
+          if table_distance[1] > table_distance[2] then
+            table.remove(table_distance, 1)
+            table.remove(table_title, 1)
+          else table.remove(table_distance, 2)
+            table.remove(table_title, 2)
           end
+          n = #table_distance
         end
+        --log(table_distance,'table_distance_2')
+        --log(table_title,'table_title_2')
+
+        --Mettre en surbrillance le lieu retenu
+        local title_spoted = getObjectFromGUID(table_title[1])
+        title_spoted.highlightOn({1,1,1}, 5)
+
+        --Archiver le guid de la location
+        table.insert(title_GUID, table_title[1])
       end
     end
   end
 
-  --log(temp_score_region[1], "rose")
-  --log(temp_score_region[2], "rouge")
-  --log(temp_score_region[3], "vert")
-  --log(temp_score_region[4], "bleu")
-  --log(temp_score_region[5], "jaune")
-  --log(temp_score_region[6], "blanc")
+  return title_GUID, color_inf_serf
 
-  --convert units to points
-
-  for c = 1,6 do
-
-      local n = #temp_score_region[c]
-
-      if n == 0 then
-        table.insert(score_region, 0)
-      elseif n == 1 then
-        table.insert(score_region, 1)
-      elseif n == 2 then
-        table.insert(score_region, 3)
-      elseif n == 3 then
-        table.insert(score_region, 5)
-      elseif n == 4 then
-        table.insert(score_region, 7)
-      elseif n == 5 then
-        table.insert(score_region, 9)
-      elseif n == 6 then
-        table.insert(score_region, 11)
-      end
-    end
-  --log(score_region)
-  return score_region
 end
 
 
@@ -1328,199 +1402,77 @@ function tempScoreOneColorIdenticalLocation(my_table)
   return score
 end
 
---Détermine le modulo d'un nombre divisé par trois.
+--Détermine le modulo d'un nombre divisé par trois, et détermine le nombre d'unités nécesaires pour arriver à 3
 function doModuloByThree(my_table)
 
   local table = my_table
   --log(table,'doModuloByThree')
-  local mod = {
-    {},
-    {},
-    {}
+  local table_ajusted = {
+    {0},
+    {0},
+    {0}
   }
 
-  local mod_1 = table[1] % 3
-  local mod_2 = table[2] % 3
-  local mod_3 = table[3] % 3
+  for i = 1,3 do
+    local temp_mod = table[i] % 3
+    table_ajusted[i] = 3 - temp_mod
+  end
 
-  mod[1] = mod_1
-  mod[2] = mod_2
-  mod[3] = mod_3
-  --log(mod,'doModuloByThree')
-  return mod
+  --log(table_ajusted,'doModuloByThree')
+  return table_ajusted
 end
 
+--Réparti les fiefs en fonction du nombre souhaité (1 ou 2)
 
---Répartis les fiefs dans les groupes des autres locations, "outpost", "farm" ou "town", de façon optimale.
---C'est à dire, voir s'il y a encore des fiefs de dispo, voir combien il en faut pour atteindre le prochain entier divisible par trois,
---Ajouter les fiefs si c'est utile (c'est à dire si on atteind le prochain entier).
---retirer ces fiefs du total de fiefs dispo.
-
-function divisionOfFief(my_table, a, type_location)
+function searchDivideFief(my_table, nb_fief_use)
 
   local table = my_table
-  local mod = doModuloByThree(table)
+  local table_ajusted = doModuloByThree(table)
 
-  if 3 - mod[type_location] == a then
-    if table[4] >= a and table[4] ~= 0 then
-      if table[type_location] + a == 3 then
-        table[type_location] = table[type_location] + a
-        table[4] = table[4] - a
-        --log(table[4],'après outpost')
-      end
+  for i = 1,3 do
+    if table[4] >= nb_fief_use and table_ajusted[i] == nb_fief_use then
+      table[i] = table[i] + nb_fief_use
+      table[4] = table[4] - nb_fief_use
     end
   end
   return table
 end
 
+--Répartition finale des fiefs
 
---Faire la division des fiefs pour les trois types de locations, et pour quelquesoit le nombre de fiefs de dispo.
-
-function divisionOfFiefByLocation(my_table, a)
-
-  local table = my_table
-  local type_location = 1
-  local a = a
-
-  --pour les outposts
-  table_1 = divisionOfFief(table, a, 1)
-
-  --pour les farms
-  table_2 = divisionOfFief(table_1, a, 2)
-
-  --pour les towns
-  table_3 = divisionOfFief(table_2, a, 3)
-
-  return table_3
-end
-
---Calculer le score d'un jouer en fonction du nombre de ses fiefs
-function nFief(my_table, a)
+function divideFief(my_table)
 
   local table = my_table
 
-  local table_1 = divisionOfFiefByLocation(table, a)
+  local table_1 = searchDivideFief(table, 1)
+  --log(table_1,'table_1')
+  local table_2 = searchDivideFief(table_1, 2)
+  --log(table_2,'table_2')
 
-  local score = tempScoreOneColorIdenticalLocation(table_1)
-  --log(score,'nFief_score')
-  --log(table_1,'nFief_table1')
-  return score, table_1
+  return table_2
 
 end
 
---Calculer les scores possibles d'un joueur s'il a deux fiefs, et choisir le meilleur.
-function calculFortwoFiefs(my_table)
+
+--Calcule un score par groupe de trois locations identiques
+function scoreOneColorIdenticalLocation(my_table)
 
   local table = my_table
-  --log(table[4],'table[4]')
-  local score_1 = nil
-  local score_2 = nil
+  local final_table = divideFief(table)
 
-  do
-    score_1 = nFief(table, 1)
-    --log(score_1,'score_1')
-  end
+  --log(table,'tempScoreOneColorIdenticalLocation')
+  local score_outpost = doResultByThree(final_table[1]) * 3
+  local score_farm = doResultByThree(final_table[2]) * 3
+  local score_town = doResultByThree(final_table[3]) * 3
+  local score_fief = doResultByThree(final_table[4]) * 3
 
-  do
-    score_2 = nFief(table, 2)
-    --log(score_2,'score_2')
-  end
+  local score = score_outpost + score_farm + score_town + score_fief
 
-  if score_1 >= score_2 then
-    score = score_1
-  else score = score_2
-  end
-  --log(score,'calculFortwoFiefs')
-  return score, table
-end
-
-
---Calculer les scores possibles d'un joueur s'il a trois fiefs, et choisir le meilleur.
-function calculForThreeFiefs(my_table)
-
-  local table = my_table
-
-  local score_1 = nil
-  local score_2 = nil
-  local score_3 = nil
-
-  do
-    local table_1 = divisionOfFiefByLocation(table, 1)
-    local table_2 = divisionOfFiefByLocation(table_1, 2)
-    score_1 = tempScoreOneColorIdenticalLocation(table_2)
-  end
-
-  do
-    score_2 = nFief(table, 3)
-  end
-
-  do
-    score_3 = tempScoreOneColorIdenticalLocation(table)
-  end
-
-  if score_1 >= score_2 and score_1 >= score_3 then
-    score = score_1
-  elseif score_2 >= score_1 and score_2 >= score_3 then
-    score = score_2
-  elseif score_3 >= score_1 and score_3 >= score_2 then
-    score = score_3
-  end
-  --log(score,'calculForThreeFiefs')
-  return score, table
-
-end
-
---Déterminer le score d'un joueur en faisant le calcul nécessaire en fonction du nombre de ses fiefs.
---Je pense que j'aurai pu encore plus optimiser là, et trouver le bon calcul en fonction du nombre de fiefs = x mais bon....
---Est-ce possible d'avoir plus de 6 fiefs pour un même joueurs??? Je me suis arrêté à 6.
---Pour info, et suite à une question que je t'avais posé, on peut rappeler plusieurs résultats par variable. L'ordre du rappel est important,
-       --et si tu ne veux utiliser que le second résultat rappelé, tu marques       _, deuxième resultat = .........
-
-function calculScoreOneColorIdenticalLocation(my_table)
-
-  local score = 0
-  local table = my_table
-  --log(table,'calculScoreOneColorIdenticalLocation')
-
-  --Si 0 fief :
-  if table[4] == 0 then
-    score = tempScoreOneColorIdenticalLocation(table, 0)
-
-  --Si 1 fief :
-  elseif table[4] == 1 then
-    score = nFief(table, 1)
-
-  --Si 2 fiefs :
-  elseif table[4] == 2 then
-    score = calculFortwoFiefs(table)
-
-  --Si 3 fiefs :
-  elseif table[4] == 3 then
-    score = calculForThreeFiefs(table)
-
-    --Si 4 fiefs :
-  elseif table[4] == 4 then
-
-    local _, table_1 = nFief(table, 1)
-    score = calculForThreeFiefs(table_1)
-
-    --Si 5 fiefs :
-  elseif table[4] == 5 then
-
-    local _, table_1 = calculFortwoFiefs(table)
-    score = calculForThreeFiefs(table_1)
-
-    --Si 6 fiefs :
-  elseif table[4] == 6 then
-
-    local _, table_1 = calculForThreeFiefs(table)
-    score = calculForThreeFiefs(table_1)
-
-  end
-  --log(score,'calculScoreOneColorIdenticalLocation')
-    --We can build more than 6 fiefs? Really?
+  --log(score,'scoreOneColorIdenticalLocation')
   return score
 end
+
+
 
 -- Déterminer le nombre de locations_ruled de chaque type et pour chaque joueur, puis lancer le calcul du score pour chaque joueur.
 function calculScoreAllColorsIdenticalLocation()
@@ -1567,7 +1519,7 @@ function calculScoreAllColorsIdenticalLocation()
   --log(table_loc_by_color,'table_loc_by_color')
 
   for i = 1,6 do
-  score_identical_location[i] = calculScoreOneColorIdenticalLocation(table_loc_by_color[i])
+  score_identical_location[i] = scoreOneColorIdenticalLocation(table_loc_by_color[i])
   end
   --log(score_identical_location,'score_identical_location')
   return score_identical_location
