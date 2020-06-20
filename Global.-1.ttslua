@@ -42,61 +42,8 @@ function onload()
         end
     end
 
-    table_score2position = {}
-
-    local table_position = {}
-    local table_rotation = {}
-    table_rotation["x"] = 0
-    table_rotation["y"] = 0
-    table_rotation["z"] = 0
-
-    for i=0,149 do
-      local x_slope = 1.318054
-      local y_slope = 1.3206
-      local x_intercept = -36.01638
-      local y_intercept = -13.2466
-      local span = 0
-
-      if i <= 20 then
-        x_slope = 0
-      elseif i > 20 and i <= 75 then
-        span = -20
-        y_intercept = y_intercept+20*y_slope
-        y_slope = 0
-      elseif i > 75 and i <= 95 then
-        x_intercept = x_intercept+55*x_slope
-        y_intercept = y_intercept+20*y_slope
-        x_slope = 0
-        y_slope = -y_slope
-        span = -75
-      elseif i > 95 then
-        x_intercept = x_intercept+55*x_slope
-        x_slope = -x_slope
-        y_slope = 0
-        span = -95
-      end
-
-      table_position["x"] = x_intercept+(i+span)*x_slope
-      table_position["y"] = 1.5
-      table_position["z"] = y_intercept+(i+span)*y_slope
-
-      table_score2position[i] = table_position
-
-      log(table_position)
-
-      self.setSnapPoints({
-        {
-          position         = table_position,-- Vector},
-          rotation         = table_rotation,-- Vector,
-          rotation_snap    = false
-        },
-      })
-
-    end
-
-
-
 end
+
 
 function findObjectOnTop(pos, my_type, radius_y, radius_xz)
 
@@ -105,7 +52,7 @@ function findObjectOnTop(pos, my_type, radius_y, radius_xz)
     local radius_xz = (radius_xz or radius_y)
 
     local objList = Physics.cast({
-        origin=pos, direction={0,1,0}, type = my_type, debug=false,
+        origin=pos, direction={0,1,0}, type = my_type, debug=true,
         max_distance = 0, size={radius_xz, radius_y, radius_xz}
     })
 
@@ -152,72 +99,63 @@ function onObjectDrop( player_color,  dropped_object)
   if object == 'Card' then
     if not dropped_object.is_face_down then
 
-      local table_distance = {}
-      local table_title = {}
-      local point_on_boardmap = {}
-
       local ldscp_pos = dropped_object.getPosition()
-      --log(ldscp_pos,'ldscp_pos')
-      point_on_boardmap = {ldscp_pos[1], 1.16, ldscp_pos[3]}
-      --log(point_on_boardmap,'point_on_boardmap')
 
-      local ldscp_hit = findObjectOnTop(point_on_boardmap, 2, 5)
-      --log(ldscp_hit,'ldscp_hit')
-
-      for key, object_hit in pairs(ldscp_hit) do
-
-        local object_title = getTitleType(object_hit)
-        local object_name = object_hit.getName()
-
-        --log(object_title,'object_title')
-
-        if object_title == 'outpost' then
-          local temp_distance = ldscp_pos:distance(object_hit.getPosition())
-          local object_GUID = object_hit.getGUID()
-
-          table.insert(table_distance, temp_distance)
-          table.insert(table_title, object_GUID)
-
-        elseif object_title == 'farm' then
-          local temp_distance = ldscp_pos:distance(object_hit.getPosition())
-          local object_GUID = object_hit.getGUID()
-
-          table.insert(table_distance, temp_distance)
-          table.insert(table_title, object_GUID)
-
-        elseif object_title == 'town' then
-          local temp_distance = ldscp_pos:distance(object_hit.getPosition())
-          local object_GUID = object_hit.getGUID()
-
-          table.insert(table_distance, temp_distance)
-          table.insert(table_title, object_GUID)
-
-        elseif object_name == 'fief' then
-          local temp_distance = ldscp_pos:distance(object_hit.getPosition())
-          local object_GUID = object_hit.getGUID()
-
-          table.insert(table_distance, temp_distance)
-          table.insert(table_title, object_GUID)
-        end
-      end
-
-      local n = #table_distance
-      while n > 1 do
-        if table_distance[1] > table_distance[2] then
-          table.remove(table_distance, 1)
-          table.remove(table_title, 1)
-        else table.remove(table_distance, 2)
-          table.remove(table_title, 2)
-        end
-        n = #table_distance
-      end
-
-      --log(table_title,'table_title après remove')
-
-      --Mettre en surbrillance le lieu retenu
-      local title_spoted = getObjectFromGUID(table_title[1])
-      title_spoted.highlightOn({1,1,1}, 1.5)
+      local table_title = detectNearestLocationLandscape(ldscp_pos)
 
     end
   end
+end
+
+function detectNearestLocationLandscape(position)
+
+  local table_distance = {}
+  local table_title = {}
+  local point_on_boardmap = {}
+
+
+  --log(ldscp_pos,'ldscp_pos')
+  point_on_boardmap = {position[1], 1.16, position[3]}
+  --log(point_on_boardmap,'point_on_boardmap')
+
+  local ldscp_hit = findObjectOnTop(point_on_boardmap, 2, 5)
+  --log(ldscp_hit,'ldscp_hit')
+
+  for key, object_hit in pairs(ldscp_hit) do
+
+    local object_title = getTitleType(object_hit)
+
+    --log(object_title,'object_title')
+
+    if (object_title == 'outpost') or (object_title == 'farm') or (object_title == 'town') or (object_title == 'fief') then
+      local temp_distance = position:distance(object_hit.getPosition())
+      local object_GUID = object_hit.getGUID()
+
+      table.insert(table_distance, temp_distance)
+      table.insert(table_title, object_GUID)
+
+    end
+  end
+
+  local n = #table_distance
+  while n > 1 do
+    if table_distance[1] > table_distance[2] then
+      table.remove(table_distance, 1)
+      table.remove(table_title, 1)
+    else table.remove(table_distance, 2)
+      table.remove(table_title, 2)
+    end
+    n = #table_distance
+  end
+
+  --log(table_title,'table_title après remove')
+  --Mettre en surbrillance le lieu retenu
+
+  local title_spoted = getObjectFromGUID(table_title[1])
+
+  if title_spoted ~= nil then
+    title_spoted.highlightOn({1,1,1}, 1.5)
+  end
+
+  return table_title[1]
 end
