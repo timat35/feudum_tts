@@ -311,7 +311,7 @@
         "scaleY": 1.0,
         "scaleZ": 0.8532884
       },
-      "Nickname": "",
+      "Nickname": "fief",
       "Description": "fief3",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -361,7 +361,7 @@
         "scaleY": 1.0,
         "scaleZ": 0.8532884
       },
-      "Nickname": "",
+      "Nickname": "fief",
       "Description": "fief1",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -411,7 +411,7 @@
         "scaleY": 1.0,
         "scaleZ": 0.8532884
       },
-      "Nickname": "",
+      "Nickname": "fief",
       "Description": "fief2",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -461,7 +461,7 @@
         "scaleY": 1.0,
         "scaleZ": 0.8532884
       },
-      "Nickname": "",
+      "Nickname": "fief",
       "Description": "fief6",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -511,7 +511,7 @@
         "scaleY": 1.0,
         "scaleZ": 0.8532884
       },
-      "Nickname": "",
+      "Nickname": "fief",
       "Description": "fief4",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -561,7 +561,7 @@
         "scaleY": 1.0,
         "scaleZ": 0.8532884
       },
-      "Nickname": "",
+      "Nickname": "fief",
       "Description": "fief5",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -6632,7 +6632,7 @@
         "scaleY": 1.0,
         "scaleZ": 0.8532884
       },
-      "Nickname": "",
+      "Nickname": "fief",
       "Description": "fief5",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -6682,7 +6682,7 @@
         "scaleY": 1.0,
         "scaleZ": 0.8532884
       },
-      "Nickname": "",
+      "Nickname": "fief",
       "Description": "fief3",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -6732,7 +6732,7 @@
         "scaleY": 1.0,
         "scaleZ": 0.8532884
       },
-      "Nickname": "",
+      "Nickname": "fief",
       "Description": "fief1",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -6782,7 +6782,7 @@
         "scaleY": 1.0,
         "scaleZ": 0.8532884
       },
-      "Nickname": "",
+      "Nickname": "fief",
       "Description": "fief2",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -6832,7 +6832,7 @@
         "scaleY": 1.0,
         "scaleZ": 0.8532884
       },
-      "Nickname": "",
+      "Nickname": "fief",
       "Description": "fief6",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -6882,7 +6882,7 @@
         "scaleY": 1.0,
         "scaleZ": 0.8532884
       },
-      "Nickname": "",
+      "Nickname": "fief",
       "Description": "fief4",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -6936,9 +6936,9 @@
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
-        "r": 1.0,
-        "g": 1.0,
-        "b": 1.0
+        "r": 0.856,
+        "g": 0.09999489,
+        "b": 0.09399488
       },
       "Locked": false,
       "Grid": true,
@@ -6986,9 +6986,9 @@
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
-        "r": 1.0,
-        "g": 1.0,
-        "b": 1.0
+        "r": 0.856,
+        "g": 0.09999489,
+        "b": 0.09399488
       },
       "Locked": false,
       "Grid": true,
@@ -7032,13 +7032,13 @@
         "scaleY": 1.0,
         "scaleZ": 0.649585247
       },
-      "Nickname": "Disc",
+      "Nickname": "",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
-        "r": 1.0,
-        "g": 1.0,
-        "b": 1.0
+        "r": 0.856,
+        "g": 0.09999489,
+        "b": 0.09399488
       },
       "Locked": false,
       "Grid": true,
@@ -7086,9 +7086,9 @@
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
-        "r": 1.0,
-        "g": 1.0,
-        "b": 1.0
+        "r": 0.5,
+        "g": 0.5,
+        "b": 0.5
       },
       "Locked": false,
       "Grid": true,
@@ -7136,9 +7136,9 @@
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
-        "r": 1.0,
-        "g": 1.0,
-        "b": 1.0
+        "r": 0.5,
+        "g": 0.5,
+        "b": 0.5
       },
       "Locked": false,
       "Grid": true,
@@ -7186,9 +7186,9 @@
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
-        "r": 1.0,
-        "g": 1.0,
-        "b": 1.0
+        "r": 0.5,
+        "g": 0.5,
+        "b": 0.5
       },
       "Locked": false,
       "Grid": true,
@@ -7236,9 +7236,9 @@
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
-        "r": 1.0,
-        "g": 1.0,
-        "b": 1.0
+        "r": 0.96,
+        "g": 0.4389947,
+        "b": 0.807
       },
       "Locked": false,
       "Grid": true,
@@ -7286,9 +7286,9 @@
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
-        "r": 1.0,
-        "g": 1.0,
-        "b": 1.0
+        "r": 0.96,
+        "g": 0.4389947,
+        "b": 0.807
       },
       "Locked": false,
       "Grid": true,
@@ -7336,9 +7336,9 @@
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
-        "r": 1.0,
-        "g": 1.0,
-        "b": 1.0
+        "r": 0.96,
+        "g": 0.4389947,
+        "b": 0.807
       },
       "Locked": false,
       "Grid": true,
@@ -7386,8 +7386,8 @@
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
-        "r": 1.0,
-        "g": 1.0,
+        "r": 0.1179947,
+        "g": 0.53,
         "b": 1.0
       },
       "Locked": false,
@@ -7436,8 +7436,8 @@
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
-        "r": 1.0,
-        "g": 1.0,
+        "r": 0.1179947,
+        "g": 0.53,
         "b": 1.0
       },
       "Locked": false,
@@ -7486,8 +7486,8 @@
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
-        "r": 1.0,
-        "g": 1.0,
+        "r": 0.1179947,
+        "g": 0.53,
         "b": 1.0
       },
       "Locked": false,
@@ -7536,9 +7536,9 @@
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
-        "r": 1.0,
-        "g": 1.0,
-        "b": 1.0
+        "r": 0.191994965,
+        "g": 0.701,
+        "b": 0.167994946
       },
       "Locked": false,
       "Grid": true,
@@ -7586,9 +7586,9 @@
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
-        "r": 1.0,
-        "g": 1.0,
-        "b": 1.0
+        "r": 0.191994965,
+        "g": 0.701,
+        "b": 0.167994946
       },
       "Locked": false,
       "Grid": true,
@@ -7636,9 +7636,9 @@
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
-        "r": 1.0,
-        "g": 1.0,
-        "b": 1.0
+        "r": 0.191994965,
+        "g": 0.701,
+        "b": 0.167994946
       },
       "Locked": false,
       "Grid": true,
@@ -7686,9 +7686,9 @@
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
-        "r": 1.0,
-        "g": 1.0,
-        "b": 1.0
+        "r": 0.905,
+        "g": 0.898,
+        "b": 0.171994954
       },
       "Locked": false,
       "Grid": true,
@@ -7736,9 +7736,9 @@
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
-        "r": 1.0,
-        "g": 1.0,
-        "b": 1.0
+        "r": 0.905,
+        "g": 0.898,
+        "b": 0.171994954
       },
       "Locked": false,
       "Grid": true,
@@ -7786,9 +7786,9 @@
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
-        "r": 1.0,
-        "g": 1.0,
-        "b": 1.0
+        "r": 0.905,
+        "g": 0.898,
+        "b": 0.171994954
       },
       "Locked": false,
       "Grid": true,
@@ -7833,7 +7833,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "red_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.856,
@@ -7881,7 +7881,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "red_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.856,
@@ -7929,7 +7929,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "red_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.856,
@@ -7977,7 +7977,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "red_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.856,
@@ -8025,7 +8025,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "red_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.856,
@@ -8073,7 +8073,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "red_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.856,
@@ -8121,7 +8121,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "red_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.856,
@@ -8169,7 +8169,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "red_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.856,
@@ -8217,7 +8217,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "red_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.856,
@@ -8265,7 +8265,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "white_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.5,
@@ -8313,7 +8313,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "white_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.5,
@@ -8361,7 +8361,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "white_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.5,
@@ -8409,7 +8409,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "white_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.5,
@@ -8457,7 +8457,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "white_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.5,
@@ -8505,7 +8505,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "white_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.5,
@@ -8553,7 +8553,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "white_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.5,
@@ -8601,7 +8601,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "blue_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.1179947,
@@ -8649,7 +8649,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "blue_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.1179947,
@@ -8697,7 +8697,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "blue_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.1179947,
@@ -8745,7 +8745,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "blue_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.1179947,
@@ -8793,7 +8793,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "blue_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.1179947,
@@ -8841,7 +8841,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "blue_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.1179947,
@@ -8889,7 +8889,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "blue_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.1179947,
@@ -8937,7 +8937,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "blue_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.1179947,
@@ -8985,7 +8985,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "blue_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.1179947,
@@ -9033,7 +9033,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "green_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.191994965,
@@ -9081,7 +9081,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "green_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.191994965,
@@ -9129,7 +9129,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "yellow_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.905,
@@ -9177,7 +9177,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "yellow_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.905,
@@ -9225,7 +9225,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "yellow_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.905,
@@ -9273,7 +9273,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "yellow_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.905,
@@ -9321,7 +9321,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "yellow_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.905,
@@ -9369,7 +9369,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "yellow_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.905,
@@ -9417,7 +9417,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "yellow_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.905,
@@ -9465,7 +9465,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "yellow_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.905,
@@ -9513,7 +9513,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "yellow_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.905,
@@ -9561,7 +9561,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "pink_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.96,
@@ -9609,7 +9609,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "pink_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.96,
@@ -9657,7 +9657,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "pink_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.96,
@@ -9705,7 +9705,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "pink_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.96,
@@ -9753,7 +9753,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "pink_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.96,
@@ -9801,7 +9801,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "pink_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.96,
@@ -9849,7 +9849,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "pink_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.96,
@@ -9897,7 +9897,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "pink_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.96,
@@ -9945,7 +9945,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "pink_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.96,
@@ -11550,7 +11550,7 @@
         "g": 1.0,
         "b": 1.0
       },
-      "Locked": false,
+      "Locked": true,
       "Grid": true,
       "Snap": true,
       "IgnoreFoW": false,
@@ -11793,7 +11793,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "green_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.191994965,
@@ -11841,7 +11841,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "green_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.191994965,
@@ -11889,7 +11889,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "green_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.191994965,
@@ -11937,7 +11937,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "green_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.191994965,
@@ -11985,7 +11985,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "green_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.191994965,
@@ -12033,7 +12033,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "green_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.191994965,
@@ -12081,7 +12081,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "green_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.191994965,
@@ -17610,7 +17610,7 @@
       "GridProjection": false,
       "HideWhenFaceDown": false,
       "Hands": false,
-      "LuaScript": "function onload()\r\nRoyalWritCards = getObjectFromGUID('0c4abd')\nRegionTiles1 = getObjectFromGUID('86cfc5')\nRegionTiles2 = getObjectFromGUID('c0d80a')\nRegionTiles3 = getObjectFromGUID('f95873')\nRegionTiles4 = getObjectFromGUID('cc7b2c')\nStartingLocationsBag = getObjectFromGUID('d42216')\nStartingLocationsPositions = {{-3.61, 1.36, 6.03}, {5.55, 1.36, 7.47}, {2.49, 1.36, 2.93},\n    {4.33, 1.36, -3.05}, {-1.79, 1.36, -6.46}, {14.44, 1.36, -0.24}}\nOtherLocationsBag = getObjectFromGUID('8b1dca')\nOtherLocationsPositions = {{-19.90, 1.16, 6.25}, {-21.64, 1.16, 1.55}, {-8.16, 1.16, 2.25},\n    {-15.10, 1.16, 2.78}, {-11.13, 1.16, -1.23}, {-20.65, 1.16, -3.76}, {-16.00, 1.16, -6.94},\n    {-12.35, 1.16, 6.99}, {-8.68, 1.16, -7.48}, {-4.67, 1.16, -2.73}, {9.53, 1.16, -6.42},\n    {12.11, 1.16, 5.57}, {8.61, 1.16, 1.61}, {16.55, 1.16, -5.27}, {20.23, 1.16, 7.23}, {21.85, 1.16, 0.80}}\n \nVesselsGUID = {'248495','ec9afb','06723e','d4ff1d','ea9f53','5f9353','2fef8c','13ac96','d9e99e'}\nVessels = {}\n    for i=1, #VesselsGUID, 1 do\n    Vessels[i] = getObjectFromGUID(VesselsGUID[i])\n    end\nVesselPositions = {{-25.19, 1.16, 10.85}, {-26.91, 1.16, 10.85}}\n\nKingsSealsBag = getObjectFromGUID('0f9375')\nKingsSealsPositions = {{27.97, 1.36, 2.46}, {29.25, 1.36, 1.24}, {30.52, 1.36, 0.08}, {30.29, 1.36, 2.46},\n    {29.78, 1.16, -6.17}, {28.72, 1.16, -6.57}, {27.57, 1.16, -7.01}, {26.56, 1.16, -7.87}, {-26.47, 1.16, -11.16}}\nHaversack = getObjectFromGUID('09678f')\nGoodsPositions = {{-29, 1.39, -7.5},{-28.5, 1.39, -7.5},{-28, 1.39, -7.5},{-27.5, 1.39, -7.5},{-27, 1.39, -7.5},\n    {-29, 1.39, -8},{-28.5, 1.39, -8},{-28, 1.39, -8},{-27.5, 1.39, -8},{-27, 1.39, -8}}\n\n\r\nself.createButton({\r\n    function_owner = self, click_function = 'StartLUA', label = 'Start', color = {0.25,0.25,0.25}, font_color = {1,1,1},\r\n    position = {0, 0.5, 0}, rotation = {0,180,0}, width = 1700, height = 650, font_size = 450\r\n    })\r\nend\n\nfunction StartLUA()\n    startLuaCoroutine(self, 'Start')\nend\n\nfunction Start()\n    RoyalWritCards.shuffle()\n    RegionTiles1.shuffle()\n    RegionTiles2.shuffle()\n    RegionTiles3.shuffle()\n    RegionTiles4.shuffle()\n    StartingLocationsBag.shuffle()\n    OtherLocationsBag.shuffle()\n    KingsSealsBag.shuffle()\n    wait(0.2)\n\n    PlayerColors = getObjectFromGUID('5254e4')\n    PlayerColors.call('RemoveUnused')\n\n    local params = {}\n    params.rotation = {0, 180, 180}\n    RegionTilesPosition = {{-6.18, 3, -11.33}, {-3.73, 3, -11.33}, {-1.29, 3, -11.33},\n    {1.83, 3, -11.33}, {4.33, 3, -11.33}, {6.79, 3, -11.33}}\n    for i=1, 6, 1 do\n    params.position = RegionTilesPosition[i]\n    RegionTiles4.takeObject(params)\n    params.position = {RegionTilesPosition[i][1], RegionTilesPosition[i][2] + 3, RegionTilesPosition[i][3]}\n    RegionTiles3.takeObject(params)\n    params.position = {RegionTilesPosition[i][1], RegionTilesPosition[i][2] + 6, RegionTilesPosition[i][3]}\n    RegionTiles2.takeObject(params)\n    params.position = {RegionTilesPosition[i][1], RegionTilesPosition[i][2] + 9, RegionTilesPosition[i][3]}\n    RegionTiles1.takeObject(params)\n    end\n\n    local params = {}\n    params.rotation = {0,180,0}\n    for i=1, 6, 1 do\n    params.position = StartingLocationsPositions[i]\n    StartingLocationsBag.takeObject(params)\n    end\n    local params = {}\n    params.rotation = {0,180,0}\n    for i=1, 16, 1 do\n    params.position = OtherLocationsPositions[i]\n    OtherLocationsBag.takeObject(params)\n    end\n    StartingLocationsBag.destruct()\n    OtherLocationsBag.destruct()\n\n    rand1 = math.random(1,9)\n    Vessels[rand1].setPosition(VesselPositions[1])\n    repeat\n    rand2 = math.random(1,9)\n    until rand2 != rand1\n    Vessels[rand2].setPosition(VesselPositions[2])\n\n    local params = {}\n    for i=1, 4, 1 do\n    params.position = KingsSealsPositions[i]\n    params.rotation = {0,270,180}\n    KingsSealsBag.takeObject(params)\n    end\n    local params = {}\n    for i=5, 9, 1 do\n    params.position = KingsSealsPositions[i]\n    params.rotation = {0,270,0}\n    if i == 9 then params.rotation = {0,90,0} end\n    KingsSealsBag.takeObject(params)\n    end\n\n    wait(0.5)\n    Haversack.shuffle()\n    wait(0.1)\n    local params = {}\n    for i=1, 10, 1 do\n    params.position = GoodsPositions[i]\n    Haversack.takeObject(params)\n    end\n    ResourceDrop = getObjectFromGUID('8d3d4e')\n    ResourceDrop.call('NDrop')\n\n    broadcastToAll('Continue setup from page 5 of rulebook - taking 3 different resources', {1,1,1})\n    PlayerColors.destruct()\n    self.destruct()\n    return 1\nend\n\nfunction wait(time)\r\n  local start = os.time()\r\n  repeat coroutine.yield(0) until os.time() > start + time\r\nend",
+      "LuaScript": "function onload()\r\nRoyalWritCards = getObjectFromGUID('0c4abd')\nRegionTiles1 = getObjectFromGUID('86cfc5')\nRegionTiles2 = getObjectFromGUID('c0d80a')\nRegionTiles3 = getObjectFromGUID('f95873')\nRegionTiles4 = getObjectFromGUID('cc7b2c')\nStartingLocationsBag = getObjectFromGUID('d42216')\nStartingLocationsPositions = {{-3.61, 1.36, 6.03}, {5.55, 1.36, 7.47}, {2.49, 1.36, 2.93},\n    {4.33, 1.36, -3.05}, {-1.79, 1.36, -6.46}, {14.44, 1.36, -0.24}}\nOtherLocationsBag = getObjectFromGUID('8b1dca')\nOtherLocationsPositions = {{-19.90, 1.16, 6.25}, {-21.64, 1.16, 1.55}, {-8.16, 1.16, 2.25},\n    {-15.10, 1.16, 2.78}, {-11.13, 1.16, -1.23}, {-20.65, 1.16, -3.76}, {-16.00, 1.16, -6.94},\n    {-12.35, 1.16, 6.99}, {-8.68, 1.16, -7.48}, {-4.67, 1.16, -2.73}, {9.53, 1.16, -6.42},\n    {12.11, 1.16, 5.57}, {8.61, 1.16, 1.61}, {16.55, 1.16, -5.27}, {20.23, 1.16, 7.23}, {21.85, 1.16, 0.80}}\n\nVesselsGUID = {'248495','ec9afb','06723e','d4ff1d','ea9f53','5f9353','2fef8c','13ac96','d9e99e'}\nVessels = {}\n    for i=1, #VesselsGUID, 1 do\n    Vessels[i] = getObjectFromGUID(VesselsGUID[i])\n    end\nVesselPositions = {{-25.19, 1.16, 10.85}, {-26.91, 1.16, 10.85}}\n\nKingsSealsBag = getObjectFromGUID('0f9375')\nKingsSealsPositions = {{27.97, 1.36, 2.46}, {29.25, 1.36, 1.24}, {30.52, 1.36, 0.08}, {30.29, 1.36, 2.46},\n    {29.78, 1.16, -6.17}, {28.72, 1.16, -6.57}, {27.57, 1.16, -7.01}, {26.56, 1.16, -7.87}, {-26.47, 1.16, -11.16}}\nHaversack = getObjectFromGUID('09678f')\nGoodsPositions = {{-29, 1.39, -7.5},{-28.5, 1.39, -7.5},{-28, 1.39, -7.5},{-27.5, 1.39, -7.5},{-27, 1.39, -7.5},\n    {-29, 1.39, -8},{-28.5, 1.39, -8},{-28, 1.39, -8},{-27.5, 1.39, -8},{-27, 1.39, -8}}\n\n\r\nself.createButton({\r\n    function_owner = self, click_function = 'StartLUA', label = 'Start', color = {0.25,0.25,0.25}, font_color = {1,1,1},\r\n    position = {0, 0.5, 0}, rotation = {0,180,0}, width = 1700, height = 650, font_size = 450\r\n    })\r\nend\n\nfunction StartLUA()\n    startLuaCoroutine(self, 'Start')\nend\n\nfunction Start()\n    RoyalWritCards.shuffle()\n    RegionTiles1.shuffle()\n    RegionTiles2.shuffle()\n    RegionTiles3.shuffle()\n    RegionTiles4.shuffle()\n    StartingLocationsBag.shuffle()\n    OtherLocationsBag.shuffle()\n    KingsSealsBag.shuffle()\n    wait(0.2)\n\n    PlayerColors = getObjectFromGUID('5254e4')\n    PlayerColors.call('RemoveUnused')\n\n    local params = {}\n    params.rotation = {0, 180, 180}\n    RegionTilesPosition = {{-6.18, 3, -11.33}, {-3.73, 3, -11.33}, {-1.29, 3, -11.33},\n    {1.83, 3, -11.33}, {4.33, 3, -11.33}, {6.79, 3, -11.33}}\n    for i=1, 6, 1 do\n    params.position = RegionTilesPosition[i]\n    RegionTiles4.takeObject(params)\n    params.position = {RegionTilesPosition[i][1], RegionTilesPosition[i][2] + 3, RegionTilesPosition[i][3]}\n    RegionTiles3.takeObject(params)\n    params.position = {RegionTilesPosition[i][1], RegionTilesPosition[i][2] + 6, RegionTilesPosition[i][3]}\n    RegionTiles2.takeObject(params)\n    params.position = {RegionTilesPosition[i][1], RegionTilesPosition[i][2] + 9, RegionTilesPosition[i][3]}\n    RegionTiles1.takeObject(params)\n    end\n\n    local params = {}\n    params.rotation = {0,180,0}\n    for i=1, 6, 1 do\n    params.position = StartingLocationsPositions[i]\n    StartingLocationsBag.takeObject(params)\n    end\n    local params = {}\n    params.rotation = {0,180,0}\n    for i=1, 16, 1 do\n    params.position = OtherLocationsPositions[i]\n    OtherLocationsBag.takeObject(params)\n    end\n    StartingLocationsBag.destruct()\n    OtherLocationsBag.destruct()\n\n    rand1 = math.random(1,9)\n    Vessels[rand1].setPosition(VesselPositions[1])\n    repeat\n    rand2 = math.random(1,9)\n    until rand2 != rand1\n    Vessels[rand2].setPosition(VesselPositions[2])\n\n    local params = {}\n    for i=1, 4, 1 do\n    params.position = KingsSealsPositions[i]\n    params.rotation = {0,270,180}\n    KingsSealsBag.takeObject(params)\n    end\n    local params = {}\n    for i=5, 9, 1 do\n    params.position = KingsSealsPositions[i]\n    params.rotation = {0,270,0}\n    if i == 9 then params.rotation = {0,90,0} end\n    KingsSealsBag.takeObject(params)\n    end\n\n    wait(0.5)\n    Haversack.shuffle()\n    wait(0.1)\n    local params = {}\n    for i=1, 10, 1 do\n    params.position = GoodsPositions[i]\n    Haversack.takeObject(params)\n    end\n    ResourceDrop = getObjectFromGUID('8d3d4e')\n    ResourceDrop.call('NDrop')\n\n    broadcastToAll('Continue setup from page 5 of rulebook - taking 3 different resources', {1,1,1})\n    PlayerColors.destruct()\n    self.destruct()\n    return 1\nend\n\nfunction wait(time)\r\n  local start = os.time()\r\n  repeat coroutine.yield(0) until os.time() > start + time\r\nend",
       "LuaScriptState": "",
       "XmlUI": "",
       "GUID": "491a00"
@@ -17652,7 +17652,6 @@
       "MeshIndex": -1,
       "LuaScript": "function onObjectEnterContainer(bag, obj)\r\n    if (bag == self) then\r\n      self.shuffle()\r\n    end\r\nend",
       "LuaScriptState": "",
-      "XmlUI": "",
       "ContainedObjects": [
         {
           "Name": "Custom_Tile",
@@ -19956,7 +19955,6 @@
       },
       "LuaScript": "function onObjectEnterContainer(bag, obj)\r\n    if (bag == self) then\r\n      self.shuffle()\r\n    end\r\nend",
       "LuaScriptState": "",
-      "XmlUI": "",
       "ContainedObjects": [
         {
           "Name": "Custom_Model",
@@ -25717,7 +25715,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "white_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.5,
@@ -25765,7 +25763,7 @@
         "scaleZ": 0.37499997
       },
       "Nickname": "Influence",
-      "Description": "",
+      "Description": "white_inf",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.5,
@@ -25842,7 +25840,7 @@
         "TypeIndex": 5,
         "CastShadows": true
       },
-      "LuaScript": "function onload()\n--[[White = true\nPink = true\nGreen = false\nRed = false\nBlue = false\nYellow = false\nColors = {White,Pink,Green,Red,Blue,Yellow}]]--\nTint1 = '0AF900'\nTint2 = 'E00200'\nTint = {Tint1,Tint1,Tint2,Tint2,Tint2,Tint2}\n\nref_Buttons1 = {\r\n    {pos={0, 0.2, -2.5}, label = '['..Tint[1]..']White'},\n    {pos={0, 0.2, -1.5}, label = '['..Tint[2]..']Pink'},\n    {pos={0, 0.2, -0.5}, label = '['..Tint[3]..']Green'},\n    {pos={0, 0.2, 0.5}, label = '['..Tint[4]..']Red'},\n    {pos={0, 0.2, 1.5}, label = '['..Tint[5]..']Blue'},\n    {pos={0, 0.2, 2.5}, label = '['..Tint[6]..']Yellow'},\r\r\n}\n\nref_Buttons2 = {\n    {val=1, pos={0, 0.1, -2.5}},\n    {val=2, pos={0, 0.1, -1.5}},\n    {val=3, pos={0, 0.1, -0.5}},\n    {val=4, pos={0, 0.1, 0.5}},\n    {val=5, pos={0, 0.1, 1.5}},\n    {val=6, pos={0, 0.1, 2.5}},\n}\n\r\n    for i, entry in ipairs(ref_Buttons1) do  \r\n    local funcName1 = 'PlayerFunction1'..i\r\n    local func = function() click_Button1(entry.val) end\r\n    self.setVar(funcName1, func)\r\n    self.createButton({\r\n    click_function=funcName1, function_owner=self, label = entry.label,\r\n    position=entry.pos, rotation={0,0,0}, height=0, width=0, font_size = 180\r\n    })\r\n    end\n\n    for i, entry in ipairs(ref_Buttons2) do  \r\n    local funcName2 = 'PlayerFunction2'..i\r\n    local func = function() click_Button2(entry.val) end\r\n    self.setVar(funcName2, func)\r\n    self.createButton({\r\n    click_function=funcName2, function_owner=self, label = entry.label,\r\n    position=entry.pos, rotation={0,0,0}, height=230, width=500\r\n    })\r\n    end\r\nend\r\n\r\nfunction click_Button1(val)\r\r\nend\n\nfunction click_Button2(val)\n    if Tint[val] == Tint1 then\n    Tint[val] = Tint2 else\n    Tint[val] = Tint1\n    end\n\n    UpdateRef1()\n    for i, entry in ipairs(ref_Buttons1) do\n    local funcName3 = 'PlayerFunction3'..i\n    local func = function() click_Button1(entry.val) end\n    self.setVar(funcName3, func)\n    self.editButton({\n    index = entry.index, label = entry.label\n    })\n    end\nend\n\nfunction UpdateRef1()\nref_Buttons1 = {\r\n    {index=0, pos={0, 0.2, -2.5}, label = '['..Tint[1]..']White'},\n    {index=1, pos={0, 0.2, -1.5}, label = '['..Tint[2]..']Pink'},\n    {index=2, pos={0, 0.2, -0.5}, label = '['..Tint[3]..']Green'},\n    {index=3, pos={0, 0.2, 0.5}, label = '['..Tint[4]..']Red'},\n    {index=4, pos={0, 0.2, 1.5}, label = '['..Tint[5]..']Blue'},\n    {index=5, pos={0, 0.2, 2.5}, label = '['..Tint[6]..']Yellow'},\r\r\n}\nend\n\nfunction RemoveUnused()\n    Haversack = getObjectFromGUID('09678f')\n    if Tint[1] == Tint2 then startLuaCoroutine(self, 'DeleteWhite') end\n    if Tint[2] == Tint2 then startLuaCoroutine(self, 'DeletePink') end\n    if Tint[3] == Tint2 then startLuaCoroutine(self, 'DeleteGreen') end\n    if Tint[4] == Tint2 then startLuaCoroutine(self, 'DeleteRed') end\n    if Tint[5] == Tint2 then startLuaCoroutine(self, 'DeleteBlue') end\n    if Tint[6] == Tint2 then startLuaCoroutine(self, 'DeleteYellow') end\nend\n\nfunction DeleteWhite()\n    Food = {'55b456', 'd1a24f', '360bde', 'ce1b29', '6d3be7', 'cf8d16', '32ef37'}\n    for i=1, 7, 1 do\n    Haversack.putObject(getObjectFromGUID(Food[i]))\n    end\n    wait(0.4)\n\n    Zone = getObjectFromGUID('e09210')\n    local obj = {}\n    obj = Zone.getObjects()\n    for i=1, #obj, 1 do\n    obj[i].destruct()\n    end\n\n    return 1\nend\n\nfunction DeletePink()\n    Food = {'2ac639', '5131a5', '5c9e9e', '9d5d0a', 'e9b514', '222488', 'dbfadf'}\n    for i=1, 7, 1 do\n    Haversack.putObject(getObjectFromGUID(Food[i]))\n    end\n    wait(0.4)\n\n    Zone = getObjectFromGUID('7cb0f1')\n    local obj = {}\n    obj = Zone.getObjects()\n    for i=1, #obj, 1 do\n    obj[i].destruct()\n    end\n\n    return 1\nend\n\nfunction DeleteGreen()\n    Food = {'cf12fa', 'bd832f', 'a41829', 'e0464a', '909727', '8d44c6', '4dcd29'}\n    for i=1, 7, 1 do\n    Haversack.putObject(getObjectFromGUID(Food[i]))\n    end\n    wait(0.4)\n\n    Zone = getObjectFromGUID('f1d518')\n    local obj = {}\n    obj = Zone.getObjects()\n    for i=1, #obj, 1 do\n    obj[i].destruct()\n    end\n\n    return 1\nend\n\nfunction DeleteRed()\n    Food = {'052ecd', 'fd90bc', '525d54', 'dfb422', '2a5fb9', '16b07a', '81b884'}\n    for i=1, 7, 1 do\n    Haversack.putObject(getObjectFromGUID(Food[i]))\n    end\n    wait(0.4)\n\n    Zone = getObjectFromGUID('28be03')\n    local obj = {}\n    obj = Zone.getObjects()\n    for i=1, #obj, 1 do\n    obj[i].destruct()\n    end\n\n    return 1\nend\n\nfunction DeleteBlue()\n    Food = {'632b69', '92bc4f', 'a35872', 'c94c60', 'ab82d7', 'afa867', '516755'}\n    for i=1, 7, 1 do\n    Haversack.putObject(getObjectFromGUID(Food[i]))\n    end\n    wait(0.4)\n\n    Zone = getObjectFromGUID('678bf3')\n    local obj = {}\n    obj = Zone.getObjects()\n    for i=1, #obj, 1 do\n    obj[i].destruct()\n    end\n\n    return 1\nend\n\nfunction DeleteYellow()\n    Food = {'481e27', 'ff3e73', 'd73001', '59b4ad', 'e50e4a', 'eae4d6', '7fad93'}\n    for i=1, 7, 1 do\n    Haversack.putObject(getObjectFromGUID(Food[i]))\n    end\n    wait(0.4)\n\n    Zone = getObjectFromGUID('35b34d')\n    local obj = {}\n    obj = Zone.getObjects()\n    for i=1, #obj, 1 do\n    obj[i].destruct()\n    end\n\n    return 1\nend\n\nfunction wait(time)\r\n  local start = os.time()\r\n  repeat coroutine.yield(0) until os.time() > start + time\r\nend",
+      "LuaScript": "function onload()\n--[[White = true\nPink = true\nGreen = false\nRed = false\nBlue = false\nYellow = false\nColors = {White,Pink,Green,Red,Blue,Yellow}]]--\nTint1 = '0AF900'\nTint2 = 'E00200'\nTint = {Tint1,Tint1,Tint2,Tint2,Tint2,Tint2}\n\nref_Buttons1 = {\r\n    {pos={0, 0.2, -2.5}, label = '['..Tint[1]..']White'},\n    {pos={0, 0.2, -1.5}, label = '['..Tint[2]..']Pink'},\n    {pos={0, 0.2, -0.5}, label = '['..Tint[3]..']Green'},\n    {pos={0, 0.2, 0.5}, label = '['..Tint[4]..']Red'},\n    {pos={0, 0.2, 1.5}, label = '['..Tint[5]..']Blue'},\n    {pos={0, 0.2, 2.5}, label = '['..Tint[6]..']Yellow'},\r\r\n}\n\nref_Buttons2 = {\n    {val=1, pos={0, 0.1, -2.5}},\n    {val=2, pos={0, 0.1, -1.5}},\n    {val=3, pos={0, 0.1, -0.5}},\n    {val=4, pos={0, 0.1, 0.5}},\n    {val=5, pos={0, 0.1, 1.5}},\n    {val=6, pos={0, 0.1, 2.5}},\n}\n\r\n    for i, entry in ipairs(ref_Buttons1) do\r\n    local funcName1 = 'PlayerFunction1'..i\r\n    local func = function() click_Button1(entry.val) end\r\n    self.setVar(funcName1, func)\r\n    self.createButton({\r\n    click_function=funcName1, function_owner=self, label = entry.label,\r\n    position=entry.pos, rotation={0,0,0}, height=0, width=0, font_size = 180\r\n    })\r\n    end\n\n    for i, entry in ipairs(ref_Buttons2) do\r\n    local funcName2 = 'PlayerFunction2'..i\r\n    local func = function() click_Button2(entry.val) end\r\n    self.setVar(funcName2, func)\r\n    self.createButton({\r\n    click_function=funcName2, function_owner=self, label = entry.label,\r\n    position=entry.pos, rotation={0,0,0}, height=230, width=500\r\n    })\r\n    end\r\nend\r\n\r\nfunction click_Button1(val)\r\r\nend\n\nfunction click_Button2(val)\n    if Tint[val] == Tint1 then\n    Tint[val] = Tint2 else\n    Tint[val] = Tint1\n    end\n\n    UpdateRef1()\n    for i, entry in ipairs(ref_Buttons1) do\n    local funcName3 = 'PlayerFunction3'..i\n    local func = function() click_Button1(entry.val) end\n    self.setVar(funcName3, func)\n    self.editButton({\n    index = entry.index, label = entry.label\n    })\n    end\nend\n\nfunction UpdateRef1()\nref_Buttons1 = {\r\n    {index=0, pos={0, 0.2, -2.5}, label = '['..Tint[1]..']White'},\n    {index=1, pos={0, 0.2, -1.5}, label = '['..Tint[2]..']Pink'},\n    {index=2, pos={0, 0.2, -0.5}, label = '['..Tint[3]..']Green'},\n    {index=3, pos={0, 0.2, 0.5}, label = '['..Tint[4]..']Red'},\n    {index=4, pos={0, 0.2, 1.5}, label = '['..Tint[5]..']Blue'},\n    {index=5, pos={0, 0.2, 2.5}, label = '['..Tint[6]..']Yellow'},\r\r\n}\nend\n\nfunction RemoveUnused()\n    Haversack = getObjectFromGUID('09678f')\n    if Tint[1] == Tint2 then startLuaCoroutine(self, 'DeleteWhite') end\n    if Tint[2] == Tint2 then startLuaCoroutine(self, 'DeletePink') end\n    if Tint[3] == Tint2 then startLuaCoroutine(self, 'DeleteGreen') end\n    if Tint[4] == Tint2 then startLuaCoroutine(self, 'DeleteRed') end\n    if Tint[5] == Tint2 then startLuaCoroutine(self, 'DeleteBlue') end\n    if Tint[6] == Tint2 then startLuaCoroutine(self, 'DeleteYellow') end\nend\n\nfunction DeleteWhite()\n    Food = {'55b456', 'd1a24f', '360bde', 'ce1b29', '6d3be7', 'cf8d16', '32ef37'}\n    for i=1, 7, 1 do\n    Haversack.putObject(getObjectFromGUID(Food[i]))\n    end\n    wait(0.4)\n\n    Zone = getObjectFromGUID('e09210')\n    local obj = {}\n    obj = Zone.getObjects()\n    for i=1, #obj, 1 do\n    obj[i].destruct()\n    end\n\n    return 1\nend\n\nfunction DeletePink()\n    Food = {'2ac639', '5131a5', '5c9e9e', '9d5d0a', 'e9b514', '222488', 'dbfadf'}\n    for i=1, 7, 1 do\n    Haversack.putObject(getObjectFromGUID(Food[i]))\n    end\n    wait(0.4)\n\n    Zone = getObjectFromGUID('7cb0f1')\n    local obj = {}\n    obj = Zone.getObjects()\n    for i=1, #obj, 1 do\n    obj[i].destruct()\n    end\n\n    return 1\nend\n\nfunction DeleteGreen()\n    Food = {'cf12fa', 'bd832f', 'a41829', 'e0464a', '909727', '8d44c6', '4dcd29'}\n    for i=1, 7, 1 do\n    Haversack.putObject(getObjectFromGUID(Food[i]))\n    end\n    wait(0.4)\n\n    Zone = getObjectFromGUID('f1d518')\n    local obj = {}\n    obj = Zone.getObjects()\n    for i=1, #obj, 1 do\n    obj[i].destruct()\n    end\n\n    return 1\nend\n\nfunction DeleteRed()\n    Food = {'052ecd', 'fd90bc', '525d54', 'dfb422', '2a5fb9', '16b07a', '81b884'}\n    for i=1, 7, 1 do\n    Haversack.putObject(getObjectFromGUID(Food[i]))\n    end\n    wait(0.4)\n\n    Zone = getObjectFromGUID('28be03')\n    local obj = {}\n    obj = Zone.getObjects()\n    for i=1, #obj, 1 do\n    obj[i].destruct()\n    end\n\n    return 1\nend\n\nfunction DeleteBlue()\n    Food = {'632b69', '92bc4f', 'a35872', 'c94c60', 'ab82d7', 'afa867', '516755'}\n    for i=1, 7, 1 do\n    Haversack.putObject(getObjectFromGUID(Food[i]))\n    end\n    wait(0.4)\n\n    Zone = getObjectFromGUID('678bf3')\n    local obj = {}\n    obj = Zone.getObjects()\n    for i=1, #obj, 1 do\n    obj[i].destruct()\n    end\n\n    return 1\nend\n\nfunction DeleteYellow()\n    Food = {'481e27', 'ff3e73', 'd73001', '59b4ad', 'e50e4a', 'eae4d6', '7fad93'}\n    for i=1, 7, 1 do\n    Haversack.putObject(getObjectFromGUID(Food[i]))\n    end\n    wait(0.4)\n\n    Zone = getObjectFromGUID('35b34d')\n    local obj = {}\n    obj = Zone.getObjects()\n    for i=1, #obj, 1 do\n    obj[i].destruct()\n    end\n\n    return 1\nend\n\nfunction wait(time)\r\n  local start = os.time()\r\n  repeat coroutine.yield(0) until os.time() > start + time\r\nend",
       "LuaScriptState": "",
       "XmlUI": "",
       "GUID": "5254e4"
@@ -26116,7 +26114,6 @@
       "Hands": false,
       "LuaScript": "function onload()\nHaversack = getObjectFromGUID('09678f')\nKingsSealsBag = getObjectFromGUID('0f9375')\nResourcePositions = {{{-20.96, 3, 5.59},{-13.41, 3, 7.70},{-13.43, 3, 2.66},\n    {4.53, 3, 8.89},{19.67, 3, 6.02},{-3.50, 3, -2.80}},\n    {{-22.60, 3, 0.62},{-14.95, 3, -8.05},{-8.57, 3, -9.07},\n    {1.23, 3, 2.54},{15.32, 3, -5.82},{20.96, 3, -0.20}},\n    {{-9.91, 3, -2.48},{-6.92, 3, 2.63},{1.13, 3, 3.12},\n    {10.74, 3, -6.92},{15.79, 3, -6.29},{21.48, 3, -0.47}},\n    {{-22.11, 3, 0.35},{-21.89, 3, -4.22},{-13.89, 3, 7.68},\n    {-9.06, 3, -9.09},{5.03, 3, 8.84},{20.17, 3, 6.03}}}\n\n    ref_Buttons = {\r\n        {val=1, pos={3.3, 0.2, 3}, label = 'S'},\n        {val=2, pos={0.3, 0.2, 2.8}, label = 'E'},\n        {val=3, pos={-2.5, 0.2, 3}, label = 'W'},\n        {val=4, pos={-0.5, 0.2, 2.6}, label = '<>'}\r\r\n\r\n    }\n\n    for i, entry in ipairs(ref_Buttons) do\r\n      local funcName = 'PlayerFunction'..i\r\n      local func = function() click_Button(entry.val) end\r\n      self.setVar(funcName, func)\r\n      self.createButton({\r\n      click_function=funcName, function_owner=self, label = entry.label,\r\n      position=entry.pos, rotation={0,180,0}, height=230, width=230, font_size = 170\r\n      })\r\n    end\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nend\n\nfunction NDrop()\n    local params = {}\n    for i=1, 6, 1 do\n    params.position = ResourcePositions[1][i]\n    Haversack.takeObject(params)\n    end\nend\n\nfunction click_Button(val)\n    local params = {}\n    if val == 1 then\n        for i=1, 6, 1 do\n        params.position = ResourcePositions[2][i]\n        Haversack.takeObject(params)\n        end\n    end\n\n    if val == 2 then\n        for i=1, 6, 1 do\n        params.position = ResourcePositions[3][i]\n        Haversack.takeObject(params)\n        end\n    end\n\n    if val == 3 then\n        for i=1, 6, 1 do\n        params.position = ResourcePositions[4][i]\n        Haversack.takeObject(params)\n        end\n    end\n\n    if val == 4 then\n    Guild1()\n    Guild2()\n    Guild3()\n    Guild4()\n    Guild5()\n    Guild6()\n    end\r\r\nend\n\nfunction Guild1()\n    local Zone = getObjectFromGUID('8d957c')\n    local k = 0\n    local obj = {}\n    obj = Zone.getObjects()\n    for i=1, #obj, 1 do\n        if obj[i].tag == 'Block' then\n        k = k+1\n        end\n    end\n\n    local params = {}\n    GoodsPositions = {{-29, 3, -7.5},{-28.5, 3, -7.5},{-28, 3, -7.5},{-27.5, 3, -7.5},{-27, 3, -7.5},\n        {-29, 3, -8},{-28.5, 3, -8},{-28, 3, -8},{-27.5, 3, -8},{-27, 3, -8}}\n    for i=k+1, 10, 1 do\n    params.position = GoodsPositions[i]\n    Haversack.takeObject(params)\n    end\nend\n\nfunction Guild2()\n    ResMZones = {'4a5fb1', 'eca746', 'b64a2b', '07c077', '46fabf'}\n    SaltpeterMPositions = {{-31.84, 1.39, -2.95},{-31.84, 1.39, -2.03},{-31.84, 1.39, -1.02}}\n    SulfurMPosition = {{-30.80, 1.39, -2.94},{-30.80, 1.39, -2.01},{-30.81, 1.39, -1.01}}\n    IronMPosition = {{-29.80, 1.39, -2.91},{-29.80, 1.39, -1.99},{-29.80, 1.39, -0.99},{-29.82, 1.39, -0.01}}\n    WoodMPositions = {{-28.71, 1.39, -2.92},{-28.71, 1.39, -2.00},{-28.71, 1.39, -1.00},{-28.73, 1.39, -0.02}}\n    FoodMPositions = {{-27.65, 1.39, -2.98},{-27.65, 1.39, -2.06},{-27.65, 1.39, -1.05},{-27.66, 1.39, -0.07}}\n    ResMType = {SaltpeterMPositions,SulfurMPosition,IronMPosition,WoodMPositions,FoodMPositions}\n    Guild = 'M'\n\n    for j=1, #ResMZones, 1 do\n        local ResPlaced = 0\n        local obj = {}\n        obj = getObjectFromGUID(ResMZones[j]).getObjects()\n        for i=1, #obj, 1 do\n            if obj[i].tag == 'Block' then\n            ResPlaced = ResPlaced + 1\n            end\n        end\n\n        for i= ResPlaced+1, #ResMType[j], 1 do\n        FindResource(j,i)\n        end\n    end\n\nend\n\nfunction Guild3()\n    ResAZones = {'611e02', '6d53b3', 'be37f7', '61f8ce', '9f4ee9'}\n    SaltpeterAPositions = {{-26.38, 1.39, 4.86},{-26.95, 1.39, 5.20},{-26.36, 1.39, 5.49}}\n    SulfurAPosition = {{-26.38, 1.39, 6.51}}\n    IronAPosition = {{-29.38, 1.39, 6.68},{-29.36, 1.39, 7.28},{-29.37, 1.39, 7.89}}\n    WoodAPositions = {{-30.36, 1.39, 6.66},{-30.33, 1.39, 7.26},{-30.34, 1.39, 7.86}}\n    FoodAPositions = {{-28.43, 1.39, 6.66}}\n    ResAType = {SaltpeterAPositions,SulfurAPosition,IronAPosition,WoodAPositions,FoodAPositions}\n    Guild = 'A'\n\n    for j=1, #ResAZones, 1 do\n        local ResPlaced = 0\n        local obj = {}\n        obj = getObjectFromGUID(ResAZones[j]).getObjects()\n        for i=1, #obj, 1 do\n            if obj[i].tag == 'Block' then\n            ResPlaced = ResPlaced + 1\n            end\n        end\n\n        for i= ResPlaced+1, #ResAType[j], 1 do\n        FindResource(j,i)\n        end\n    end\n\n    ShipZone = '997677'\n    NewShipZone = 'c65496'\n    local ShipPlaced = 0\n    local obj = {}\n    obj = getObjectFromGUID(ShipZone).getObjects()\n    for i=1, #obj, 1 do\n        if obj[i].tag == 'Tile' then\n        ShipPlaced = ShipPlaced + 1\n        end\n    end\n\n    local obj = {}\n    obj = getObjectFromGUID(NewShipZone).getObjects()\n    rand1 = math.random(1, #obj)\n    tt=0\n    repeat rand2 = math.random(1, #obj)\n    tt = tt+1\n    until rand2 != rand1 or tt == 100\n    rand = {rand1, rand2}\n\n    for i= ShipPlaced+1, 2, 1 do\n        if (obj[rand[i]].tag == 'Tile') and (obj[rand[i]].getName() != '') then\n        obj[rand[i]].setPosition{-28.8+1.8*i, 1.7, 10.8}\n        end\n    end\nend\n\nfunction Guild4()\n    InfZones = {'a83131','7bf5c6','f85387','9454bf','358495','977bf6'}\n    InfBagGreen = getObjectFromGUID('b80e85')\n    InfBagPink = getObjectFromGUID('ecda3f')\n    InfBagWhite = getObjectFromGUID('4b5c12')\n    InfBagRed = getObjectFromGUID('673e6f')\n    InfBagBlue = getObjectFromGUID('5fd7df')\n    InfBagYellow = getObjectFromGUID('10d1c0')\n    InfBag = {InfBagGreen, InfBagPink, InfBagWhite, InfBagRed, InfBagBlue, InfBagYellow}\n    InfPositionsGreen = {{27.22, 1.35, 11.83},{27.23, 1.35, 10.86}}\n    InfPositionsPink = {{28.03, 1.35, 11.84},{28.03, 1.35, 10.87}}\n    InfPositionsWhite = {{28.90, 1.35, 11.81},{28.90, 1.35, 10.84}}\n    InfPositionsRed = {{29.72, 1.35, 11.82},{29.72, 1.35, 10.85}}\n    InfPositionsBlue = {{30.54, 1.35, 11.85},{30.54, 1.35, 10.88}}\n    InfPositionsYellow = {{31.45, 1.35, 11.84},{31.45, 1.35, 10.87}}\n    InfPositions = {InfPositionsGreen,InfPositionsPink,InfPositionsWhite,InfPositionsRed,InfPositionsBlue,InfPositionsYellow}\n\n    for j=1, #InfBag, 1 do\n        InfPlaced = 0\n        local obj = {}\n        obj = getObjectFromGUID(InfZones[j]).getObjects()\n        for i=1, #obj, 1 do\n            if obj[i].tag == 'Generic' then\n            InfPlaced = InfPlaced + 1\n            end\n        end\n\n        params = {}\n        params.rotation = {0,90,0}\n        for i= InfPlaced+1, 2, 1 do\n        params.position = (InfPositions[j])[i]\n            if InfBag[j] != nil then\n            InfBag[j].takeObject(params)\n            end\n        end\n    end\nend\n\nfunction Guild5()\n    KSZones = {'4230af', '1515e0', '261940', '894424'}\n    KSPositions = {{27.97, 1.6, 2.46}, {30.52, 1.6, 0.08}, {30.29, 1.6, 2.46}, {29.25, 1.6, 1.24}}\n\n    for j=1, #KSZones, 1 do\n        local TokenPlaced = 0\n        local obj = {}\n        obj = getObjectFromGUID(KSZones[j]).getObjects()\n        for i=1, #obj, 1 do\n            if obj[i].tag == 'Tile' then\n            TokenPlaced = 1\n            break\n            end\n        end\n\n        if TokenPlaced == 0 then\n        local params = {}\n        params.position = KSPositions[j]\n        params.rotation = {0,270,180}\n        KingsSealsBag.takeObject(params)\n        end\n    end\nend\n\nfunction Guild6()\n    local Zone = getObjectFromGUID('7c6941')\n    local k = 0\n    local obj = {}\n    obj = Zone.getObjects()\n    for i=1, #obj, 1 do\n        if (obj[i].tag == 'Tile') and (obj[i].getName() == 'Kings Seal / Rosary Bead') then\n        k = k+1\n        end\n    end\n\n    local params = {}\n    params.rotation = {0,270,0}\n    KingsSealsPositions = {{29.78, 3, -6.17}, {28.72, 3, -6.57}, {27.57, 3, -7.01}, {26.56, 3, -7.87}}\n    for i=k+1, 4, 1 do\n    params.position = KingsSealsPositions[i]\n    KingsSealsBag.takeObject(params)\n    end\nend\n\nfunction FindResource(j,k)\n    local obj = {}\n    local color = {}\n    local HaversackInsides = {}\n    ResourceType = {'Saltpeter','Sulfur','Iron','Wood','Food'}\n    local params = {}\n    params.rotation = {0,0,0}\n    resTaken = false\n\n    local HaversackInsides = Haversack.getObjects()\n    for i,v in ipairs(HaversackInsides) do\n        if (v.name == ResourceType[j]) and (resTaken == false) then\n        params.index = v.index\n            if Guild == 'M' then params.position = (ResMType[j])[k] end\n            if Guild == 'A' then params.position = (ResAType[j])[k] end\n        Haversack.takeObject(params)\n        resTaken = true\n        end\n    end\nend",
       "LuaScriptState": "",
-      "XmlUI": "",
       "GUID": "8d3d4e"
     },
     {
@@ -26440,7 +26437,6 @@
       },
       "LuaScript": "function onObjectEnterContainer(bag, obj)\r\n    if (bag == self) then\r\n      self.shuffle()\r\n    end\r\nend",
       "LuaScriptState": "",
-      "XmlUI": "",
       "GUID": "fc8e77"
     },
     {
@@ -26491,7 +26487,6 @@
       },
       "LuaScript": "function onObjectEnterContainer(bag, obj)\r\n    if (bag == self) then\r\n      self.shuffle()\r\n    end\r\nend",
       "LuaScriptState": "",
-      "XmlUI": "",
       "GUID": "32a5fd"
     },
     {
@@ -27454,7 +27449,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "red_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.856,
@@ -27501,7 +27496,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "red_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.856,
@@ -27548,7 +27543,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "red_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.856,
@@ -27595,7 +27590,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "red_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.856,
@@ -27642,7 +27637,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "red_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.856,
@@ -27689,7 +27684,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "red_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.856,
@@ -27736,7 +27731,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "red_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.856,
@@ -27783,7 +27778,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "red_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.856,
@@ -27830,7 +27825,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "red_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.856,
@@ -27877,7 +27872,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "red_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.856,
@@ -27924,7 +27919,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "red_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.856,
@@ -28023,7 +28018,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "blue_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.117996581,
@@ -28070,7 +28065,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "blue_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.117996581,
@@ -28117,7 +28112,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "blue_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.117996581,
@@ -28164,7 +28159,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "blue_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.117996581,
@@ -28211,7 +28206,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "blue_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.117996581,
@@ -28258,7 +28253,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "blue_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.117996581,
@@ -28305,7 +28300,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "blue_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.117996581,
@@ -28352,7 +28347,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "blue_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.117996581,
@@ -28399,7 +28394,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "blue_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.117996581,
@@ -28446,7 +28441,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "blue_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.117996581,
@@ -28493,7 +28488,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "blue_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.117996581,
@@ -28592,7 +28587,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "yellow_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.905,
@@ -28639,7 +28634,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "yellow_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.905,
@@ -28686,7 +28681,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "yellow_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.905,
@@ -28733,7 +28728,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "yellow_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.905,
@@ -28780,7 +28775,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "yellow_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.905,
@@ -28827,7 +28822,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "yellow_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.905,
@@ -28874,7 +28869,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "yellow_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.905,
@@ -28921,7 +28916,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "yellow_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.905,
@@ -28968,7 +28963,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "yellow_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.905,
@@ -29015,7 +29010,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "yellow_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.905,
@@ -29062,7 +29057,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "yellow_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.905,
@@ -29161,7 +29156,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "green_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.191996753,
@@ -29208,7 +29203,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "green_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.191996753,
@@ -29255,7 +29250,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "green_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.191996753,
@@ -29302,7 +29297,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "green_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.191996753,
@@ -29349,7 +29344,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "green_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.191996753,
@@ -29396,7 +29391,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "green_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.191996753,
@@ -29443,7 +29438,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "green_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.191996753,
@@ -29490,7 +29485,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "green_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.191996753,
@@ -29537,7 +29532,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "green_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.191996753,
@@ -29584,7 +29579,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "green_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.191996753,
@@ -29631,7 +29626,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "green_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.191996753,
@@ -29730,7 +29725,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "pink_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.96,
@@ -29777,7 +29772,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "pink_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.96,
@@ -29824,7 +29819,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "pink_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.96,
@@ -29871,7 +29866,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "pink_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.96,
@@ -29918,7 +29913,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "pink_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.96,
@@ -29965,7 +29960,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "pink_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.96,
@@ -30012,7 +30007,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "pink_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.96,
@@ -30059,7 +30054,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "pink_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.96,
@@ -30106,7 +30101,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "pink_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.96,
@@ -30153,7 +30148,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "pink_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.96,
@@ -30200,7 +30195,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "pink_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.96,
@@ -30299,7 +30294,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "white_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5,
@@ -30346,7 +30341,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "white_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5,
@@ -30393,7 +30388,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "white_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5,
@@ -30440,7 +30435,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "white_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5,
@@ -30487,7 +30482,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "white_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5,
@@ -30534,7 +30529,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "white_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5,
@@ -30581,7 +30576,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "white_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5,
@@ -30628,7 +30623,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "white_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5,
@@ -30675,7 +30670,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "white_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5,
@@ -30722,7 +30717,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "white_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5,
@@ -30769,7 +30764,7 @@
             "scaleZ": 0.37499997
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "white_inf",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5,
@@ -30916,9 +30911,8 @@
       "GridProjection": false,
       "HideWhenFaceDown": false,
       "Hands": false,
-      "LuaScript": "function onload()\r\n\r\n  table_missing = {}\r\n  table_missing[\"White\"] = false\r\n  table_missing[\"Pink\"] = false\r\n  table_missing[\"Green\"] = false\r\n  table_missing[\"Yellow\"] = false\r\n  table_missing[\"Red\"] = false\r\n  table_missing[\"Blue\"] = false\r\n\r\n\r\n  table_zone = {}\r\n  table_zone[\"White\"] = 'e09210'\r\n  table_zone[\"Pink\"] = '7cb0f1'\r\n  table_zone[\"Green\"] = 'f1d518'\r\n  table_zone[\"Red\"] = '28be03'\r\n  table_zone[\"Blue\"] = '678bf3'\r\n  table_zone[\"Yellow\"] = '35b34d'\r\n\r\n  table_token_moving = {}\r\n\r\n  bool_4player = true\r\n\r\n  guild_position =\r\n  {\r\n    { --alchemistes\r\n      {-33.15,  3,  9.70},\r\n      { -33.15, 3,  6.96},\r\n      { -33.15, 3,  6.13}\r\n    },\r\n    { -- knight\r\n      {33.57, 3,  6.89},\r\n      {33.57, 3,  9.59},\r\n      {33.57, 3,  10.47}\r\n    },\r\n    { --merchant\r\n      {-33.15,  3,  1.05},\r\n      { -33.15, 3,  -1.39},\r\n      { -33.15, 3,  -2.21}\r\n    },\r\n    { -- monk\r\n      {33.57, 3,  -9.77},\r\n      {33.57, 3,  -7.09},\r\n      {33.57, 3,  -6.22}\r\n\r\n    },\r\n    { --noble\r\n      {33.57, 3,  -1.45},\r\n      {33.57, 3,  1.29},\r\n      {33.57, 3,  2.15}\r\n    },\r\n    { -- farmer\r\n      {-33.15,  3,  -7.02},\r\n      {-33.15,  3,  -9.73},\r\n      {-33.15,  3,  -10.61}\r\n    }\r\n  }\r\n\r\n    ref_Buttons = {\r\n        {val=1, pos={3.3, 0.2, 3}, label = 'S'},\r\n        {val=2, pos={0.3, 0.2, 2.8}, label = 'E'},\r\n        {val=3, pos={-2.5, 0.2, 3}, label = 'W'},\r\n        {val=4, pos={-0.5, 0.2, 2.6}, label = '<>'}\r\n\r\n\r\n    }\r\n\r\n    local funcName = 'updateGuild'\r\n    local func = function()\r\n      for i=1,6 do\r\n        local table_point = guildCount(i)\r\n        updateGuildInfluence(table_point, i)\r\n      end\r\n    end\r\n    self.setVar(funcName, func)\r\n    self.createButton({\r\n    click_function=funcName, function_owner=self, label = 'Update Guild Position',\r\n    position={0,1.5,0}, rotation={0,180,0}, height=400, width=5000, font_size = 250\r\n    })\r\n\r\nend\r\n\r\n\r\n-- function to launch guild update (numpad1)\r\nfunction onScriptingButtonUp(index, color)\r\n    if index == 1 then\r\n      for i=1,6 do\r\n        local table_point = guildCount(i)\r\n        updateGuildInfluence(table_point, i)\r\n      end\r\n    end\r\nend\r\n\r\n-- helper to find object on top of position\r\nfunction findObjectOnTop(pos, radius)\r\n\r\n    local radius = (radius or 1.5)\r\n    local objList = Physics.cast({\r\n        origin=pos, direction={0,1,0}, type=2, debug=false,\r\n        size={radius,radius,radius}\r\n    })\r\n\r\n    local refinedList = {}\r\n\r\n    for key, value in ipairs(objList) do\r\n      table.insert(refinedList, value.hit_object)\r\n    end\r\n\r\n    return refinedList\r\nend\r\n\r\n\r\n\r\nfunction getTitleType(value)\r\n  local title_type = \"\"\r\n  local temp_image = value.getCustomObject()\r\n  local temp_url= \"\"\r\n  if temp_image ~= nil then\r\n    if (temp_image['image'] ~= nil) then\r\n      if not value.is_face_down then\r\n        temp_url = temp_image['image']\r\n      else\r\n        temp_url = temp_image['image_bottom']\r\n      end\r\n      if (temp_url == 'https://i.imgur.com/hk15lLU.jpg') then\r\n        title_type = 'farm'\r\n      elseif (temp_url == 'https://i.imgur.com/yt2yOIJ.jpg') then\r\n        title_type = 'tower'\r\n      elseif (temp_url == 'https://i.imgur.com/UirRzRn.jpg') then\r\n        title_type = 'town'\r\n      end\r\n    end\r\n  end\r\n\r\n  return title_type\r\nend\r\n\r\nfunction detectInfluence(title)\r\n\r\n  local color = {}\r\n  local position = title.getPosition()\r\n  local table_object = findObjectOnTop(position)\r\n\r\n  for key,value in pairs(table_object) do\r\n    -- print(value.getGUID())\r\n    if (value.getName() == 'Influence') then\r\n      color = value.getColorTint()\r\n    end\r\n  end\r\n\r\n  -- Grey color to white\r\n  if color[1] == 0.5 and color[2] == 0.5 and color[3] == 0.5 then\r\n    color[1] = 1\r\n    color[2] = 1\r\n    color[3] = 1\r\n   end\r\n\r\n   return(color)\r\n\r\nend\r\n\r\nfunction detectInfluenceFromPosition(position, radius)\r\n\r\n  local color = {}\r\n  local table_object = findObjectOnTop({position[1],1.30 ,position[3]}, radius)\r\n\r\n  for key,value in pairs(table_object) do\r\n    -- print(value.getGUID())\r\n    if (value.getName() == 'Influence') then\r\n      color = value.getColorTint()\r\n    end\r\n  end\r\n\r\n  -- Grey color to white\r\n  if color[1] == 0.5 and color[2] == 0.5 and color[3] == 0.5 then\r\n    color[1] = 1\r\n    color[2] = 1\r\n    color[3] = 1\r\n   end\r\n\r\n   return(color)\r\n\r\nend\r\n\r\nfunction getInfluenceFromPosition(position, radius)\r\n\r\n  local obj = nil\r\n  local table_object = findObjectOnTop({position[1],1.30 ,position[3]}, radius)\r\n\r\n  for key,value in pairs(table_object) do\r\n    -- print(value.getGUID())\r\n    if (value.getName() == 'Influence') then\r\n      obj = value\r\n      break\r\n    end\r\n  end\r\n\r\n   return(obj)\r\n\r\nend\r\n\r\n\r\nfunction getGuildName(guild_number)\r\n\r\n  local guild_name = \"\"\r\n  if guild_number == 1 then guild_name = 'Alchemist'\r\n  elseif guild_number == 2 then guild_name = 'Knight'\r\n  elseif guild_number == 3 then guild_name = 'Merchant'\r\n  elseif guild_number == 4 then guild_name = 'Monk'\r\n  elseif guild_number == 5 then guild_name = 'Noble'\r\n  elseif guild_number == 6 then guild_name = 'Farmer'\r\n  end\r\n\r\n  return(guild_name)\r\nend\r\n\r\nfunction guildCount(guild_number)\r\n\r\n    -- get boardmap_zonesd\r\n  local boardmap_zone = getObjectFromGUID('515a29')\r\n  local temp_table = boardmap_zone.getObjects()\r\n\r\n  local nb_player = 0\r\n\r\n  -- create table for point and update number of players\r\n  local table_point = {}\r\n  if getObjectFromGUID('c2feb3') ~= nil then\r\n    table_point['Green'] = 0\r\n    nb_player = nb_player+1\r\n  end\r\n  if getObjectFromGUID('610c42') ~= nil then\r\n    table_point['Pink'] = 0\r\n    nb_player = nb_player+1\r\n  end\r\n  if getObjectFromGUID('401fca') ~= nil then\r\n    table_point['White'] = 0\r\n    nb_player = nb_player+1\r\n  end\r\n  if getObjectFromGUID('5df877') ~= nil then\r\n    table_point['Red'] = 0\r\n    nb_player = nb_player+1\r\n  end\r\n  if getObjectFromGUID('66e1c5') ~= nil then\r\n    table_point['Blue'] = 0\r\n    nb_player = nb_player+1\r\n  end\r\n  if getObjectFromGUID('0dda34') ~= nil then\r\n    table_point['Yellow'] = 0\r\n    nb_player = nb_player+1\r\n  end\r\n\r\n  if nb_player < 4 then\r\n    bool_4player = false\r\n  end\r\n\r\n\r\n  local guild_name = getGuildName(guild_number)\r\n\r\n  -- add 1 point for each  dice (6)\r\n  for key,value in pairs(temp_table) do --actualcode\r\n      if value.name == 'Custom_Dice' then\r\n        if value.getDescription() ~= \"\" then\r\n          if value.getValue() == guild_number then\r\n             table_point[value.getDescription()] =  table_point[value.getDescription()] + 1\r\n          end\r\n        end\r\n      end\r\n  end\r\n\r\n   -- add 3 point for each fief 6\r\n  for key,value in pairs(temp_table) do --actualcode\r\n      if value.getDescription() == 'fief'..guild_number then\r\n        local color = detectInfluence(value)\r\n        if next(color) ~= nil then\r\n          for key_point,value_point in pairs(table_point) do\r\n            if stringColorToRGB(key_point) == color then\r\n              table_point[key_point] = table_point[key_point] + 3\r\n            end\r\n          end\r\n        end\r\n      end\r\n  end\r\n\r\n\r\n  for key,value in pairs(temp_table) do --actualcode\r\n    local title_type =  getTitleType(value)\r\n    if title_type ~= nil then\r\n      local color = detectInfluence(value)\r\n      if next(color) ~= nil then\r\n        for key_point,value_point in pairs(table_point) do\r\n          if stringColorToRGB(key_point) == color then\r\n            if table_point[key_point] > 0 then\r\n              if (guild_number == 1 or guild_number == 4) and title_type == 'tower' then\r\n                table_point[key_point] = table_point[key_point] + 1\r\n              elseif (guild_number == 2 or guild_number == 6) and title_type == 'farm' then\r\n                table_point[key_point] = table_point[key_point] + 1\r\n              elseif (guild_number == 3 or guild_number == 5) and title_type == 'town' then\r\n                table_point[key_point] = table_point[key_point] + 1\r\n              end\r\n            end\r\n          end\r\n        end\r\n      end\r\n    end\r\n\r\n\r\n  end\r\n\r\n\r\n  -- print point\r\n  -- print(guild_name)\r\n  -- for i,v in pairs(table_point) do\r\n  --   print(i,':',v)\r\n  -- end\r\n\r\n\r\n  return(table_point)\r\n\r\nend\r\n\r\nfunction setInfluenceGuild(guild_number,guild_level, object_influence)\r\n\r\n  object_influence.setPositionSmooth(guild_position[guild_number][guild_level], false, true)\r\n\r\nend\r\n\r\nfunction setInfluenceToPlayer(obj)\r\n\r\n  -- get player zone\r\n  local color = obj.getColorTint()\r\n  local x_lag = 0\r\n  local y_lag = 0\r\n\r\n  if color[1] == 0.5 and color[2] == 0.5 and color[3] == 0.5 then\r\n    zoneGuid = table_zone[\"White\"]\r\n    x_lag = -7.5\r\n    y_lag = 6\r\n  elseif  color == stringColorToRGB(\"Pink\") then\r\n    zoneGuid = table_zone[\"Pink\"]\r\n    x_lag = -7\r\n    y_lag = 6\r\n  elseif  color == stringColorToRGB(\"Green\") then\r\n    zoneGuid = table_zone[\"Green\"]\r\n    x_lag = -7\r\n    y_lag = 6\r\n  elseif  color == stringColorToRGB(\"Red\") then\r\n    zoneGuid = table_zone[\"Red\"]\r\n    x_lag = 7.5\r\n    y_lag = -6\r\n  elseif  color == stringColorToRGB(\"Blue\") then\r\n    zoneGuid = table_zone[\"Blue\"]\r\n    x_lag = 7\r\n    y_lag = -6\r\n  elseif  color == stringColorToRGB(\"Yellow\") then\r\n    zoneGuid = table_zone[\"Yellow\"]\r\n    x_lag = 7\r\n    y_lag = -6\r\n  end\r\n\r\n  local pos1 = getObjectFromGUID(zoneGuid).getPosition()[1]+x_lag\r\n  local pos2 = getObjectFromGUID(zoneGuid).getPosition()[2]+2\r\n  local pos3 = getObjectFromGUID(zoneGuid).getPosition()[3]+y_lag\r\n\r\n  obj.setPositionSmooth({pos1,pos2,pos3}, false, true)\r\n\r\n\r\n\r\n\r\nend\r\n\r\nfunction updateGuildLevel(table_point, guild_number, guild_level)\r\n\r\n  -- if less than 4 player and guild level 3, no third position\r\n  if (bool_4player == false) then\r\n    if (guild_level == 3) then\r\n      for key, value in pairs(table_point) do\r\n        if (value ~= nil) then\r\n          if (value > 0) then\r\n            table_point[key] = 0\r\n          end\r\n        end\r\n      end\r\n    end\r\n  end\r\n\r\n  -- get actual guild position\r\n  table_old = getGuildPosition(guild_number)\r\n  -- get color to update\r\n  temp_color = getFirstPlayerColor(table_point, table_old)\r\n  -- for update guild level 1,2,3\r\n  if guild_level > 0 then\r\n  -- if there is a player in this position\r\n    if temp_color ~= nil then\r\n      -- if no influence in this position\r\n      if (table_old[guild_level] == nil) then\r\n        local token = getInfluenceFromZone(temp_color)\r\n        if token ~= nil then\r\n          setInfluenceGuild(guild_number,guild_level,token)\r\n        else\r\n          table_missing[temp_color] = true\r\n          table_point[temp_color] = nil\r\n          temp_color = getFirstPlayerColor(table_point, table_old)\r\n          local bool_while = (temp_color ~= nil)\r\n          while bool_while do\r\n            token = getInfluenceFromZone(temp_color)\r\n            if token ~= nil then\r\n              setInfluenceGuild(guild_number,guild_level,token)\r\n              bool_while = false\r\n            else\r\n              table_missing[temp_color] = true\r\n              table_point[temp_color] = nil\r\n              temp_color = getFirstPlayerColor(table_point, table_old)\r\n              if temp_color == nil then\r\n                bool_while = false\r\n              end\r\n            end\r\n          end\r\n        end\r\n      else\r\n        -- if  influence is correct\r\n          if (stringColorToRGB(temp_color) == table_old[guild_level]) then\r\n          -- if influence need update\r\n          else\r\n            local table_token = {\r\n              getInfluenceFromGuild(guild_number,1),\r\n              getInfluenceFromGuild(guild_number,2),\r\n              getInfluenceFromGuild(guild_number,3)\r\n            }\r\n\r\n            -- case 1 <->2 or 2 <->3\r\n            if guild_level < 3 then\r\n              if (stringColorToRGB(temp_color) == table_old[guild_level+1]) then\r\n                setInfluenceGuild(guild_number,guild_level,table_token[guild_level+1])\r\n                setInfluenceGuild(guild_number,guild_level+1,table_token[guild_level])\r\n              end\r\n            end\r\n\r\n            -- case first token in third position\r\n            if guild_level == 1 then\r\n              if (stringColorToRGB(temp_color) == table_old[3]) then\r\n                setInfluenceGuild(guild_number,1,table_token[3])\r\n                setInfluenceGuild(guild_number,3,table_token[2])\r\n                setInfluenceGuild(guild_number,2,table_token[1])\r\n              end\r\n            end\r\n\r\n            -- cases token not on guild\r\n            if (stringColorToRGB(temp_color) ~= table_old[2] and stringColorToRGB(temp_color) ~= table_old[3]) then\r\n\r\n              local token = getInfluenceFromZone(temp_color)\r\n              if token == nil then\r\n                table_missing[temp_color] = true\r\n              else\r\n              -- if third token on guild, get it back\r\n                if (table_token[3] ~= nil) then\r\n                  setInfluenceToPlayer(table_token[3])\r\n                end\r\n\r\n                if guild_level < 3 then\r\n                  if (table_token[2] ~= nil) then\r\n                    setInfluenceGuild(guild_number,3,table_token[2])\r\n                  end\r\n                end\r\n\r\n                if guild_level == 1 then\r\n                  setInfluenceGuild(guild_number,2,table_token[1])\r\n                end\r\n\r\n                setInfluenceGuild(guild_number,guild_level,token)\r\n\r\n\r\n              end\r\n\r\n            end\r\n          end\r\n\r\n      end\r\n    end\r\n\r\n    if (temp_color ~= nil) then\r\n      table_point[temp_color] = nil\r\n    end\r\n\r\n\r\n\r\n  -- remove guild token with 0 point\r\n  else\r\n    for key, value in pairs(table_point) do\r\n      if (value ==0) then\r\n        for key_token, value_token in pairs(table_old) do\r\n          if (stringColorToRGB(key) == value_token) then\r\n            setInfluenceToPlayer(getInfluenceFromGuild(guild_number,key_token))\r\n          end\r\n        end\r\n      end\r\n    end\r\n  end\r\n\r\n\r\n\r\n\r\nend\r\n\r\n\r\nfunction updateGuildInfluence(table_point, guild_number)\r\n\r\n\r\n  table_old = nil\r\n  temp_color = nil\r\n\r\n\r\n  table_old = getGuildPosition(guild_number)\r\n  local color_expect1 = stringColorToRGB(getFirstPlayerColor(table_point, table_old))\r\n\r\n  updateGuildLevel(table_point, guild_number, 1)\r\n  local color_expect2 = stringColorToRGB(getFirstPlayerColor(table_point, table_old))\r\n  local color_expect3 = nil\r\n\r\n  Wait.condition(\r\n      function()\r\n        updateGuildLevel(table_point, guild_number, 2)\r\n        color_expect3 = stringColorToRGB(getFirstPlayerColor(table_point, table_old))\r\n      end,\r\n      function()\r\n        return checkGuild(guild_number,1,color_expect1)\r\n      end\r\n    )\r\n\r\n\r\n    Wait.condition(\r\n        function() updateGuildLevel(table_point, guild_number, 3) end,\r\n        function()\r\n          return checkGuild(guild_number,2,color_expect2) and checkGuild(guild_number,1,color_expect1)\r\n        end\r\n      )\r\n\r\n\r\n\r\n\r\n  Wait.condition(\r\n      function()  updateGuildLevel(table_point, guild_number, 0) end,\r\n      function() return checkGuild(guild_number,3,color_expect3) and checkGuild(guild_number,2,color_expect2) and checkGuild(guild_number,1,color_expect1) end,\r\n      1,\r\n      function() updateGuildLevel(table_point, guild_number, 0) end\r\n    )\r\n\r\n\r\n\r\n  Wait.frames(function () table_token_moving = {} end, 100)\r\n\r\nend\r\n\r\nfunction checkGuild(guild_number,guild_level, color_expect)\r\n  local color_actual = detectInfluenceFromPosition(guild_position[guild_number][guild_level],0)\r\n  local bool = false\r\n  if color_expect == nil then\r\n    bool = true\r\n  else\r\n    bool = color_expect == color_actual\r\n  end\r\n  return bool\r\nend\r\n\r\n\r\n\r\n\r\n\r\nfunction getInfluenceFromGuild(guild_number, guild_level)\r\n\r\n  local obj = getInfluenceFromPosition(guild_position[guild_number][guild_level],0)\r\n  return obj\r\nend\r\n\r\nfunction getInfluenceFromZone(color)\r\n\r\n  local zoneGUID = table_zone[color]\r\n  local token = nil\r\n\r\n  local player_zone = getObjectFromGUID(zoneGUID)\r\n  local temp_table = player_zone.getObjects()\r\n\r\n  for key,value in pairs(temp_table) do --actualcode\r\n    if (value.getName() == 'Influence') then\r\n      token = value\r\n      local bool = true\r\n      if next(table_token_moving) ~= nil then\r\n        for key_token,value_token in pairs(table_token_moving) do\r\n          if token == value_token then\r\n            bool = false\r\n            token = nil\r\n          end\r\n        end\r\n      end\r\n\r\n      if bool then\r\n        table.insert(table_token_moving, token)\r\n        break\r\n      end\r\n    end\r\n  end\r\n\r\n  return(token)\r\n\r\nend\r\n\r\n\r\n\r\nfunction getGuildPosition(guild_number)\r\n\r\n    local table_old = {}\r\n    local color = detectInfluenceFromPosition(guild_position[guild_number][1],0)\r\n    if next(color) ~= nil then\r\n      table_old[1] = color\r\n    end\r\n    color = detectInfluenceFromPosition(guild_position[guild_number][2],0)\r\n    if next(color) ~= nil then\r\n      table_old[2] = color\r\n    end\r\n    color = detectInfluenceFromPosition(guild_position[guild_number][3],0)\r\n    if next(color) ~= nil then\r\n      table_old[3] = color\r\n    end\r\n\r\n    return(table_old)\r\nend\r\n\r\n\r\nfunction getFirstPlayerColor(table_point, table_old)\r\n\r\n  local table_old = (table_old or nil)\r\n\r\n  local color = nil\r\n  local temp = 0\r\n  for key, value in pairs(table_point) do\r\n    if value > 0 then\r\n      if value > temp then\r\n        color = key\r\n        temp = value\r\n        -- log(temp)\r\n      elseif value == temp then\r\n        if (stringColorToRGB(key) == table_old[1]) then\r\n          color = key\r\n          temp = value\r\n        elseif stringColorToRGB(color) ~= table_old[1] and stringColorToRGB(key) == table_old[2] then\r\n          color = key\r\n          temp = value\r\n        elseif stringColorToRGB(color) ~= table_old[2] and stringColorToRGB(key) == table_old[3] then\r\n          color = key\r\n          temp = value\r\n        end\r\n      end\r\n    end\r\n  end\r\n\r\n  return color\r\nend\r\n\r\nfunction onObjectDrop(player_color, dropped_object  )\r\n\r\n  local bool_update_guild = false\r\n\r\n  -- log('onObjectDrop')\r\n\r\n  for key, value in pairs(table_missing) do\r\n    -- if there is an influence missing\r\n    if value then\r\n      -- if the object frop is an influence\r\n      if dropped_object.getName() == 'Influence' then\r\n        local token_color = dropped_object.getColorTint()\r\n        if token_color[1]==token_color[2] and token_color[1]==token_color[3] and token_color[1] == 0.5 then\r\n          token_color = stringColorToRGB(\"White\")\r\n        end\r\n\r\n        local temp_zone = getObjectFromGUID(table_zone[key])\r\n        local temp_table = temp_zone.getObjects()\r\n\r\n        -- check if influence if correct color\r\n        if token_color ==stringColorToRGB(key) then\r\n\r\n          -- check influence is drop in his the zone\r\n          for key_zone, value_zone in pairs(temp_table) do\r\n            if value_zone == dropped_object then\r\n              broadcastToAll(\"influence have been place immediatly on guild\\n\")\r\n              broadcastToAll(key, stringColorToRGB(key))\r\n              bool_update_guild = true\r\n              break\r\n            end\r\n          end\r\n        end\r\n      end\r\n    end\r\n  end\r\n\r\n  if bool_update_guild then\r\n    -- reset table_missing\r\n    for key, value in pairs(table_missing) do\r\n      table_missing[key] = false\r\n    end\r\n\r\n    for i=1,6 do\r\n      table_point = guildCount(i)\r\n      updateGuildInfluence(table_point, i)\r\n    end\r\n  end\r\n\r\nend",
+      "LuaScript": "function onload()\r\n\r\n  table_missing = {}\r\n  table_missing[\"White\"] = false\r\n  table_missing[\"Pink\"] = false\r\n  table_missing[\"Green\"] = false\r\n  table_missing[\"Yellow\"] = false\r\n  table_missing[\"Red\"] = false\r\n  table_missing[\"Blue\"] = false\r\n\r\n\r\n  table_zone = {}\r\n  table_zone[\"White\"] = 'e09210'\r\n  table_zone[\"Pink\"] = '7cb0f1'\r\n  table_zone[\"Green\"] = 'f1d518'\r\n  table_zone[\"Red\"] = '28be03'\r\n  table_zone[\"Blue\"] = '678bf3'\r\n  table_zone[\"Yellow\"] = '35b34d'\r\n\r\n  table_token_moving = {}\r\n\r\n  bool_4player = true\r\n\r\n  BOARDMAP_ZONE = getObjectFromGUID('515a29')\r\n\r\n  table_points = {}\r\n  table_points['pink'] = 0\r\n  table_points['red'] = 0\r\n  table_points['green'] = 0\r\n  table_points['blue'] = 0\r\n  table_points['yellow'] = 0\r\n  table_points['white'] = 0\r\n\r\n  guild_position =\r\n  {\r\n    { --alchemistes\r\n      {-33.15,  3,  9.70},\r\n      { -33.15, 3,  6.96},\r\n      { -33.15, 3,  6.13}\r\n    },\r\n    { -- knight\r\n      {33.57, 3,  6.89},\r\n      {33.57, 3,  9.59},\r\n      {33.57, 3,  10.47}\r\n    },\r\n    { --merchant\r\n      {-33.15,  3,  1.05},\r\n      { -33.15, 3,  -1.39},\r\n      { -33.15, 3,  -2.21}\r\n    },\r\n    { -- monk\r\n      {33.57, 3,  -9.77},\r\n      {33.57, 3,  -7.09},\r\n      {33.57, 3,  -6.22}\r\n\r\n    },\r\n    { --noble\r\n      {33.57, 3,  -1.45},\r\n      {33.57, 3,  1.29},\r\n      {33.57, 3,  2.15}\r\n    },\r\n    { -- farmer\r\n      {-33.15,  3,  -7.02},\r\n      {-33.15,  3,  -9.73},\r\n      {-33.15,  3,  -10.61}\r\n    }\r\n  }\r\n\r\n    ref_Buttons = {\r\n        {val=1, pos={3.3, 0.2, 3}, label = 'S'},\r\n        {val=2, pos={0.3, 0.2, 2.8}, label = 'E'},\r\n        {val=3, pos={-2.5, 0.2, 3}, label = 'W'},\r\n        {val=4, pos={-0.5, 0.2, 2.6}, label = '<>'}\r\n\r\n\r\n    }\r\n\r\n    local funcName = 'updateGuild'\r\n    local func = function()\r\n      for i=1,6 do\r\n        local table_point = guildCount(i)\r\n        updateGuildInfluence(table_point, i)\r\n      end\r\n    end\r\n    self.setVar(funcName, func)\r\n    self.createButton({\r\n    click_function=funcName, function_owner=self, label = 'Update Guild Position',\r\n    position={0,1.5,0}, rotation={0,180,0}, height=400, width=5000, font_size = 250,\r\n    color = {0.89, 0.43, 0.51}, font_color = {0,0,0}\r\n    })\r\n\r\n    TABLE_REGION = {}\r\n    TABLE_REGION[\"mountain_region\"] = {{20.23, 1.16, 7.23}, {21.85, 1.16, 0.80}}\r\n    TABLE_REGION[\"badlands_region\"] = {{5.55, 1.36, 7.47}, {12.11, 1.16, 5.57}, {14.44, 1.36, -0.24}, {16.55, 1.16, -5.27}, {8.61, 1.16, 1.61}}\r\n    TABLE_REGION[\"desert_region\"] = {{-8.68, 1.16, -7.48}, {-4.67, 1.16, -2.73}, {9.53, 1.16, -6.42}, {-1.79, 1.36, -6.46}, {4.33, 1.36, -3.05}}\r\n    TABLE_REGION[\"forest_region\"] = {{-3.61, 1.36, 6.03}, {2.49, 1.36, 2.93}, {-12.35, 1.16, 6.99}}\r\n    TABLE_REGION[\"island_region\"] = {{-15.10, 1.16, 2.78}, {-11.13, 1.16, -1.23}, {-20.65, 1.16, -3.76}, {-16.00, 1.16, -6.94}}\r\n    TABLE_REGION[\"sea_region\"] = {{-19.90, 1.16, 6.25}, {-21.64, 1.16, 1.55}, {-8.16, 1.16, 2.25}}\r\n\r\n\r\n    EPIC_VOYAGE = {{10.79, 1.16, 9.85}, {12.22, 1.16, 10.46}, {15.40, 1.16, 10.42}, {16.90, 1.16, 10.69}, {20.05, 1.16, 10.34}, {21.50, 1.16, 10.87}, {22.76, 1.16, 11.66}}\r\n\r\n    MILITARY_SERVICE = {{-16.43, 1.16, -11.76}, {-13.46, 1.16, -11.38}, {-10.79, 1.16, -10.79}}\r\n\r\n    EPOCH_MARKER = {{-11.72, 1.16, 9.35}, {-10.51, 1.16, 9.98}, {-8.82, 1.16, 10.13}, {-7.24, 1.16, 9.92}, {-5.92, 1.16, 9.29}}\r\n\r\n\r\n    params = {\r\n        click_function = \"centralizedButton\",\r\n        function_owner = self,\r\n        label          = \"Next Epoch\",\r\n        position       = {11, 1.16, -2.33},\r\n        rotation       = {0, 180, 0},\r\n        width          = 750,\r\n        height         = 300,\r\n        font_size      = 125,\r\n        color          = {0.97, 0.51, 0.22},\r\n        font_color     = {0, 0, 0},\r\n        tooltip        = \"\",\r\n    }\r\n    self.createButton(params)\r\n\r\n\r\n    --Colors are always in this order : 1) pink 2) red 3)green 4)blue 5)yellow 6)white\r\n\r\n  COLOR = {}\r\n\r\n\r\n  local pink_object = getObjectFromGUID('740bb1')\r\n  local pink = pink_object.getColorTint()\r\n  table.insert(COLOR, 1, pink)\r\n  local red_object = getObjectFromGUID('1b257c')\r\n  local red = red_object.getColorTint()\r\n  table.insert(COLOR, 2, red)\r\n  local green_object = getObjectFromGUID('e74e7f')\r\n  local green = green_object.getColorTint()\r\n  table.insert(COLOR, 3, green)\r\n  local blue_object = getObjectFromGUID('850665')\r\n  local blue = blue_object.getColorTint()\r\n  table.insert(COLOR, 4, blue)\r\n  local yellow_object = getObjectFromGUID('3f489d')\r\n  local yellow = yellow_object.getColorTint()\r\n  table.insert(COLOR, 5, yellow)\r\n  local white_object = getObjectFromGUID('6c0762')\r\n  local white = white_object.getColorTint()\r\n  table.insert(COLOR, 6, white)\r\n\r\n  --log(COLOR, 'general')\r\n  --log(COLOR[2],'rouge')\r\n\r\n\r\n\r\n\r\nend\r\n\r\n\r\n\r\n-- function to launch guild update (numpad1)\r\nfunction onScriptingButtonUp(index, color)\r\n    if index == 1 then\r\n      for i=1,6 do\r\n        local table_point = guildCount(i)\r\n        updateGuildInfluence(table_point, i)\r\n      end\r\n    end\r\nend\r\n\r\n-- helper to find object on top of position\r\nfunction findObjectOnTop(pos, my_type, radius, radius_1)\r\n\r\n    local radius = (radius or 1.5)\r\n    if radius_1 == nil then\r\n      radius_1 = radius\r\n    end\r\n    local objList = Physics.cast({\r\n        origin=pos, direction={0,1,0}, type = my_type, debug=true,\r\n        max_distance = 0, size={radius_1, radius, radius_1}\r\n    })\r\n\r\n    local refinedList = {}\r\n\r\n    for key, value in ipairs(objList) do\r\n      table.insert(refinedList, value.hit_object)\r\n    end\r\n\r\n    return refinedList\r\nend\r\n\r\n\r\n\r\nfunction getTitleType(value)\r\n  local title_type = \"\"\r\n  local temp_image = value.getCustomObject()\r\n  local temp_url= \"\"\r\n  if temp_image ~= nil then\r\n    if (temp_image['image'] ~= nil) then\r\n      if not value.is_face_down then\r\n        temp_url = temp_image['image']\r\n      else\r\n        temp_url = temp_image['image_bottom']\r\n      end\r\n      if (temp_url == 'https://i.imgur.com/hk15lLU.jpg') then\r\n        title_type = 'farm'\r\n      elseif (temp_url == 'https://i.imgur.com/yt2yOIJ.jpg') then\r\n        title_type = 'outpost'\r\n      elseif (temp_url == 'https://i.imgur.com/UirRzRn.jpg') then\r\n        title_type = 'town'\r\n      end\r\n    end\r\n  end\r\n\r\n  return title_type\r\nend\r\n\r\nfunction detectInfluence(title)\r\n\r\n  local color = {}\r\n  local position = title.getPosition()\r\n  local table_object = findObjectOnTop(position, 3, radius, 0.4)\r\n\r\n  for key,value in pairs(table_object) do\r\n    -- print(value.getGUID())\r\n    if (value.getName() == 'Influence') then\r\n      color = value.getColorTint()\r\n    end\r\n  end\r\n\r\n  -- Grey color to white\r\n  if color[1] == 0.5 and color[2] == 0.5 and color[3] == 0.5 then\r\n    color[1] = 1\r\n    color[2] = 1\r\n    color[3] = 1\r\n   end\r\n\r\n   return(color)\r\n\r\nend\r\n\r\nfunction detectInfluenceFromPosition(position, radius)\r\n\r\n  local color = {}\r\n  local table_object = findObjectOnTop({position[1],1.30 ,position[3]}, 3, radius, 0.4)\r\n\r\n  --log(table_object)\r\n\r\n  for key,value in pairs(table_object) do\r\n    -- print(value.getGUID())\r\n    if (value.getName() == 'Influence') then\r\n      color = value.getColorTint()\r\n    end\r\n  end\r\n\r\n  -- Grey color to white\r\n  if color[1] == 0.5 and color[2] == 0.5 and color[3] == 0.5 then\r\n    color[1] = 1\r\n    color[2] = 1\r\n    color[3] = 1\r\n   end\r\n\r\n   return(color)\r\n\r\nend\r\n\r\nfunction getInfluenceFromPosition(position, radius)\r\n\r\n  local obj = nil\r\n  local table_object = findObjectOnTop({position[1],1.30 ,position[3]}, 3, radius, 0.4)\r\n\r\n  for key,value in pairs(table_object) do\r\n    -- print(value.getGUID())\r\n    if (value.getName() == 'Influence') then\r\n      obj = value\r\n      break\r\n    end\r\n  end\r\n\r\n   return(obj)\r\n\r\nend\r\n\r\n\r\nfunction getGuildName(guild_number)\r\n\r\n  local guild_name = \"\"\r\n  if guild_number == 1 then guild_name = 'Alchemist'\r\n  elseif guild_number == 2 then guild_name = 'Knight'\r\n  elseif guild_number == 3 then guild_name = 'Merchant'\r\n  elseif guild_number == 4 then guild_name = 'Monk'\r\n  elseif guild_number == 5 then guild_name = 'Noble'\r\n  elseif guild_number == 6 then guild_name = 'Farmer'\r\n  end\r\n\r\n  return(guild_name)\r\nend\r\n\r\nfunction guildCount(guild_number)\r\n\r\n    -- get boardmap_zonesd\r\n\r\n  local temp_table = BOARDMAP_ZONE.getObjects()\r\n\r\n  local nb_player = 0\r\n\r\n  -- create table for point and update number of players\r\n  local table_point = {}\r\n  if getObjectFromGUID('c2feb3') ~= nil then\r\n    table_point['Green'] = 0\r\n    nb_player = nb_player+1\r\n  end\r\n  if getObjectFromGUID('610c42') ~= nil then\r\n    table_point['Pink'] = 0\r\n    nb_player = nb_player+1\r\n  end\r\n  if getObjectFromGUID('401fca') ~= nil then\r\n    table_point['White'] = 0\r\n    nb_player = nb_player+1\r\n  end\r\n  if getObjectFromGUID('5df877') ~= nil then\r\n    table_point['Red'] = 0\r\n    nb_player = nb_player+1\r\n  end\r\n  if getObjectFromGUID('66e1c5') ~= nil then\r\n    table_point['Blue'] = 0\r\n    nb_player = nb_player+1\r\n  end\r\n  if getObjectFromGUID('0dda34') ~= nil then\r\n    table_point['Yellow'] = 0\r\n    nb_player = nb_player+1\r\n  end\r\n\r\n  if nb_player < 4 then\r\n    bool_4player = false\r\n  end\r\n\r\n\r\n  local guild_name = getGuildName(guild_number)\r\n\r\n  -- add 1 point for each  dice (6)\r\n  for key,value in pairs(temp_table) do --actualcode\r\n      if value.name == 'Custom_Dice' then\r\n        if value.getDescription() ~= \"\" then\r\n          if value.getValue() == guild_number then\r\n             table_point[value.getDescription()] =  table_point[value.getDescription()] + 1\r\n          end\r\n        end\r\n      end\r\n  end\r\n\r\n   -- add 3 point for each fief 6\r\n  for key,value in pairs(temp_table) do --actualcode\r\n      if value.getDescription() == 'fief'..guild_number then\r\n        local color = detectInfluence(value)\r\n        if next(color) ~= nil then\r\n          for key_point,value_point in pairs(table_point) do\r\n            if stringColorToRGB(key_point) == color then\r\n              table_point[key_point] = table_point[key_point] + 3\r\n            end\r\n          end\r\n        end\r\n      end\r\n  end\r\n\r\n\r\n  for key,value in pairs(temp_table) do --actualcode\r\n    local title_type =  getTitleType(value)\r\n    if title_type ~= nil then\r\n      local color = detectInfluence(value)\r\n      if next(color) ~= nil then\r\n        for key_point,value_point in pairs(table_point) do\r\n          if stringColorToRGB(key_point) == color then\r\n            if table_point[key_point] > 0 then\r\n              if (guild_number == 1 or guild_number == 4) and title_type == 'outpost' then\r\n                table_point[key_point] = table_point[key_point] + 1\r\n              elseif (guild_number == 2 or guild_number == 6) and title_type == 'farm' then\r\n                table_point[key_point] = table_point[key_point] + 1\r\n              elseif (guild_number == 3 or guild_number == 5) and title_type == 'town' then\r\n                table_point[key_point] = table_point[key_point] + 1\r\n              end\r\n            end\r\n          end\r\n        end\r\n      end\r\n    end\r\n\r\n\r\n  end\r\n\r\n\r\n  -- print point\r\n  -- print(guild_name)\r\n  -- for i,v in pairs(table_point) do\r\n  --   print(i,':',v)\r\n  -- end\r\n\r\n\r\n  return(table_point)\r\n\r\nend\r\n\r\nfunction setInfluenceGuild(guild_number,guild_level, object_influence)\r\n\r\n  object_influence.setPositionSmooth(guild_position[guild_number][guild_level], false, true)\r\n\r\nend\r\n\r\nfunction setInfluenceToPlayer(obj)\r\n\r\n  -- get player zone\r\n  local color = obj.getColorTint()\r\n  local x_lag = 0\r\n  local y_lag = 0\r\n\r\n  if color[1] == 0.5 and color[2] == 0.5 and color[3] == 0.5 then\r\n    zoneGuid = table_zone[\"White\"]\r\n    x_lag = -7.5\r\n    y_lag = 6\r\n  elseif  color == stringColorToRGB(\"Pink\") then\r\n    zoneGuid = table_zone[\"Pink\"]\r\n    x_lag = -7\r\n    y_lag = 6\r\n  elseif  color == stringColorToRGB(\"Green\") then\r\n    zoneGuid = table_zone[\"Green\"]\r\n    x_lag = -7\r\n    y_lag = 6\r\n  elseif  color == stringColorToRGB(\"Red\") then\r\n    zoneGuid = table_zone[\"Red\"]\r\n    x_lag = 7.5\r\n    y_lag = -6\r\n  elseif  color == stringColorToRGB(\"Blue\") then\r\n    zoneGuid = table_zone[\"Blue\"]\r\n    x_lag = 7\r\n    y_lag = -6\r\n  elseif  color == stringColorToRGB(\"Yellow\") then\r\n    zoneGuid = table_zone[\"Yellow\"]\r\n    x_lag = 7\r\n    y_lag = -6\r\n  end\r\n\r\n  local pos1 = getObjectFromGUID(zoneGuid).getPosition()[1]+x_lag\r\n  local pos2 = getObjectFromGUID(zoneGuid).getPosition()[2]+2\r\n  local pos3 = getObjectFromGUID(zoneGuid).getPosition()[3]+y_lag\r\n\r\n  obj.setPositionSmooth({pos1,pos2,pos3}, false, true)\r\n\r\n\r\n\r\n\r\nend\r\n\r\nfunction updateGuildLevel(table_point, guild_number, guild_level)\r\n\r\n  -- if less than 4 player and guild level 3, no third position\r\n  if (bool_4player == false) then\r\n    if (guild_level == 3) then\r\n      for key, value in pairs(table_point) do\r\n        if (value ~= nil) then\r\n          if (value > 0) then\r\n            table_point[key] = 0\r\n          end\r\n        end\r\n      end\r\n    end\r\n  end\r\n\r\n  -- get actual guild position\r\n  table_old = getGuildPosition(guild_number)\r\n  -- get color to update\r\n  temp_color = getFirstPlayerColor(table_point, table_old)\r\n  -- for update guild level 1,2,3\r\n  if guild_level > 0 then\r\n  -- if there is a player in this position\r\n    if temp_color ~= nil then\r\n      -- if no influence in this position\r\n      if (table_old[guild_level] == nil) then\r\n        local token = getInfluenceFromZone(temp_color)\r\n        if token ~= nil then\r\n          setInfluenceGuild(guild_number,guild_level,token)\r\n        else\r\n          table_missing[temp_color] = true\r\n          table_point[temp_color] = nil\r\n          temp_color = getFirstPlayerColor(table_point, table_old)\r\n          local bool_while = (temp_color ~= nil)\r\n          while bool_while do\r\n            token = getInfluenceFromZone(temp_color)\r\n            if token ~= nil then\r\n              setInfluenceGuild(guild_number,guild_level,token)\r\n              bool_while = false\r\n            else\r\n              table_missing[temp_color] = true\r\n              table_point[temp_color] = nil\r\n              temp_color = getFirstPlayerColor(table_point, table_old)\r\n              if temp_color == nil then\r\n                bool_while = false\r\n              end\r\n            end\r\n          end\r\n        end\r\n      else\r\n        -- if  influence is correct\r\n          if (stringColorToRGB(temp_color) == table_old[guild_level]) then\r\n          -- if influence need update\r\n          else\r\n            local table_token = {\r\n              getInfluenceFromGuild(guild_number,1),\r\n              getInfluenceFromGuild(guild_number,2),\r\n              getInfluenceFromGuild(guild_number,3)\r\n            }\r\n\r\n            -- case 1 <->2 or 2 <->3\r\n            if guild_level < 3 then\r\n              if (stringColorToRGB(temp_color) == table_old[guild_level+1]) then\r\n                setInfluenceGuild(guild_number,guild_level,table_token[guild_level+1])\r\n                setInfluenceGuild(guild_number,guild_level+1,table_token[guild_level])\r\n              end\r\n            end\r\n\r\n            -- case first token in third position\r\n            if guild_level == 1 then\r\n              if (stringColorToRGB(temp_color) == table_old[3]) then\r\n                setInfluenceGuild(guild_number,1,table_token[3])\r\n                setInfluenceGuild(guild_number,3,table_token[2])\r\n                setInfluenceGuild(guild_number,2,table_token[1])\r\n              end\r\n            end\r\n\r\n            -- cases token not on guild\r\n            if (stringColorToRGB(temp_color) ~= table_old[2] and stringColorToRGB(temp_color) ~= table_old[3]) then\r\n\r\n              local token = getInfluenceFromZone(temp_color)\r\n              if token == nil then\r\n                table_missing[temp_color] = true\r\n              else\r\n              -- if third token on guild, get it back\r\n                if (table_token[3] ~= nil) then\r\n                  setInfluenceToPlayer(table_token[3])\r\n                end\r\n\r\n                if guild_level < 3 then\r\n                  if (table_token[2] ~= nil) then\r\n                    setInfluenceGuild(guild_number,3,table_token[2])\r\n                  end\r\n                end\r\n\r\n                if guild_level == 1 then\r\n                  setInfluenceGuild(guild_number,2,table_token[1])\r\n                end\r\n\r\n                setInfluenceGuild(guild_number,guild_level,token)\r\n\r\n\r\n              end\r\n\r\n            end\r\n          end\r\n\r\n      end\r\n    end\r\n\r\n    if (temp_color ~= nil) then\r\n      table_point[temp_color] = nil\r\n    end\r\n\r\n\r\n\r\n  -- remove guild token with 0 point\r\n  else\r\n    for key, value in pairs(table_point) do\r\n      if (value ==0) then\r\n        for key_token, value_token in pairs(table_old) do\r\n          if (stringColorToRGB(key) == value_token) then\r\n            setInfluenceToPlayer(getInfluenceFromGuild(guild_number,key_token))\r\n          end\r\n        end\r\n      end\r\n    end\r\n  end\r\n\r\n\r\n\r\n\r\nend\r\n\r\n\r\nfunction updateGuildInfluence(table_point, guild_number)\r\n\r\n\r\n  table_old = nil\r\n  temp_color = nil\r\n\r\n\r\n  table_old = getGuildPosition(guild_number)\r\n  local color_expect1 = stringColorToRGB(getFirstPlayerColor(table_point, table_old))\r\n\r\n  updateGuildLevel(table_point, guild_number, 1)\r\n  local color_expect2 = stringColorToRGB(getFirstPlayerColor(table_point, table_old))\r\n  local color_expect3 = nil\r\n\r\n  Wait.condition(\r\n      function()\r\n        updateGuildLevel(table_point, guild_number, 2)\r\n        color_expect3 = stringColorToRGB(getFirstPlayerColor(table_point, table_old))\r\n      end,\r\n      function()\r\n        return checkGuild(guild_number,1,color_expect1)\r\n      end\r\n    )\r\n\r\n\r\n    Wait.condition(\r\n        function() updateGuildLevel(table_point, guild_number, 3) end,\r\n        function()\r\n          return checkGuild(guild_number,2,color_expect2) and checkGuild(guild_number,1,color_expect1)\r\n        end\r\n      )\r\n\r\n\r\n\r\n\r\n  Wait.condition(\r\n      function()  updateGuildLevel(table_point, guild_number, 0) end,\r\n      function() return checkGuild(guild_number,3,color_expect3) and checkGuild(guild_number,2,color_expect2) and checkGuild(guild_number,1,color_expect1) end,\r\n      1,\r\n      function() updateGuildLevel(table_point, guild_number, 0) end\r\n    )\r\n\r\n\r\n\r\n  Wait.frames(function () table_token_moving = {} end, 100)\r\n\r\nend\r\n\r\nfunction checkGuild(guild_number,guild_level, color_expect)\r\n  local color_actual = detectInfluenceFromPosition(guild_position[guild_number][guild_level],0)\r\n  local bool = false\r\n  if color_expect == nil then\r\n    bool = true\r\n  else\r\n    bool = color_expect == color_actual\r\n  end\r\n  return bool\r\nend\r\n\r\n\r\n\r\n\r\n\r\nfunction getInfluenceFromGuild(guild_number, guild_level)\r\n\r\n  local obj = getInfluenceFromPosition(guild_position[guild_number][guild_level],0)\r\n  return obj\r\nend\r\n\r\nfunction getInfluenceFromZone(color)\r\n\r\n  local zoneGUID = table_zone[color]\r\n  local token = nil\r\n\r\n  local player_zone = getObjectFromGUID(zoneGUID)\r\n  local temp_table = player_zone.getObjects()\r\n\r\n  for key,value in pairs(temp_table) do --actualcode\r\n    if (value.getName() == 'Influence') then\r\n      token = value\r\n      local bool = true\r\n      if next(table_token_moving) ~= nil then\r\n        for key_token,value_token in pairs(table_token_moving) do\r\n          if token == value_token then\r\n            bool = false\r\n            token = nil\r\n          end\r\n        end\r\n      end\r\n\r\n      if bool then\r\n        table.insert(table_token_moving, token)\r\n        break\r\n      end\r\n    end\r\n  end\r\n\r\n  return(token)\r\n\r\nend\r\n\r\n\r\n\r\nfunction getGuildPosition(guild_number)\r\n\r\n    local table_old = {}\r\n    local color = detectInfluenceFromPosition(guild_position[guild_number][1],0)\r\n    if next(color) ~= nil then\r\n      table_old[1] = color\r\n    end\r\n    color = detectInfluenceFromPosition(guild_position[guild_number][2],0)\r\n    if next(color) ~= nil then\r\n      table_old[2] = color\r\n    end\r\n    color = detectInfluenceFromPosition(guild_position[guild_number][3],0)\r\n    if next(color) ~= nil then\r\n      table_old[3] = color\r\n    end\r\n\r\n    return(table_old)\r\nend\r\n\r\n\r\nfunction getFirstPlayerColor(table_point, table_old)\r\n\r\n  local table_old = (table_old or nil)\r\n\r\n  local color = nil\r\n  local temp = 0\r\n  for key, value in pairs(table_point) do\r\n    if value > 0 then\r\n      if value > temp then\r\n        color = key\r\n        temp = value\r\n        -- log(temp)\r\n      elseif value == temp then\r\n        if (stringColorToRGB(key) == table_old[1]) then\r\n          color = key\r\n          temp = value\r\n        elseif stringColorToRGB(color) ~= table_old[1] and stringColorToRGB(key) == table_old[2] then\r\n          color = key\r\n          temp = value\r\n        elseif stringColorToRGB(color) ~= table_old[2] and stringColorToRGB(key) == table_old[3] then\r\n          color = key\r\n          temp = value\r\n        end\r\n      end\r\n    end\r\n  end\r\n\r\n  return color\r\nend\r\n\r\nfunction onObjectDrop(player_color, dropped_object  )\r\n\r\n  local bool_update_guild = false\r\n\r\n  -- log('onObjectDrop')\r\n\r\n  for key, value in pairs(table_missing) do\r\n    -- if there is an influence missing\r\n    if value then\r\n      -- if the object frop is an influence\r\n      if dropped_object.getName() == 'Influence' then\r\n        local token_color = dropped_object.getColorTint()\r\n        if token_color[1]==token_color[2] and token_color[1]==token_color[3] and token_color[1] == 0.5 then\r\n          token_color = stringColorToRGB(\"White\")\r\n        end\r\n\r\n        local temp_zone = getObjectFromGUID(table_zone[key])\r\n        local temp_table = temp_zone.getObjects()\r\n\r\n        -- check if influence if correct color\r\n        if token_color ==stringColorToRGB(key) then\r\n\r\n          -- check influence is drop in his the zone\r\n          for key_zone, value_zone in pairs(temp_table) do\r\n            if value_zone == dropped_object then\r\n              broadcastToAll(\"influence have been place immediatly on guild\\n\")\r\n              broadcastToAll(key, stringColorToRGB(key))\r\n              bool_update_guild = true\r\n              break\r\n            end\r\n          end\r\n        end\r\n      end\r\n    end\r\n  end\r\n\r\n  if bool_update_guild then\r\n    -- reset table_missing\r\n    for key, value in pairs(table_missing) do\r\n      table_missing[key] = false\r\n    end\r\n\r\n    for i=1,6 do\r\n      table_point = guildCount(i)\r\n      updateGuildInfluence(table_point, i)\r\n    end\r\n  end\r\nend\r\n\r\n\r\n\r\n\r\n\r\n----------------------------------------------------------------------\r\n--UPDATE SCORE-----------------------------------------------------------------------\r\n---------------UPDATE SCORE-----------------------------------------------------------------\r\n---------------------------UPDATE SCORE----------------------------------------\r\n----------------------------------------UPDATE SCORE---------------------------------------\r\n----------------------------------------------------UPDATE SCORE--------------------------\r\n-----------------------------------------------------------------UPDATE SCORE------------\r\n\r\n\r\n\r\n\r\n\r\n\r\n--detecte le colortint des disques scores du palteau de jeu.\r\nfunction detectDiscColor(position)\r\n\r\n  local color_disc_list = {}\r\n  local temp_object = findObjectOnTop({position[1],1.30 ,position[3]}, 3, 0.4)\r\n\r\n  for k, value in pairs(temp_object) do\r\n\r\n    local disc = value.getName()\r\n    if value.getName() == 'Reeve/Disc' or 'Disc' then\r\n\r\n      local color_disc = value.getColorTint()\r\n\r\n      for x = 1,6 do\r\n        if color_disc == COLOR[x] then\r\n          table.insert(color_disc_list, COLOR[x])\r\n        end\r\n      end\r\n    end\r\n  end\r\n  --log(color_disc_list,'color_disc_list 2eme')\r\n  return color_disc_list\r\nend\r\n\r\n\r\n--Cette fonction est exactement la même que la tienne, mais j'ai supprimé le changement de couleur grey => white. Fais ce que tu veux.\r\nfunction detectInfluenceFromLocation(position)\r\n\r\n  local color = nil\r\n  local table_object = findObjectOnTop({position[1],1.30 ,position[3]}, 3, radius, 0.4)\r\n  --log(table_object)\r\n  for key,value in pairs(table_object) do\r\n    -- print(value.getGUID())\r\n    if (value.getName() == 'Influence') then\r\n      color = value.getColorTint()\r\n    end\r\n  end\r\n\r\n  return(color)\r\nend\r\n\r\n-- Pour attribuer les couleurs à chaque table de score.\r\nfunction loopInfColor(my_table, my_score, search_color)\r\n\r\n\r\n  local temp_color = search_color\r\n  local score = my_score\r\n\r\n  for i = 1,6 do\r\n    if temp_color == COLOR[i] then\r\n      my_table[i] = my_table[i] + score\r\n    end\r\n  end\r\n  return my_table\r\nend\r\n\r\n\r\n--Calcul du score d'époque de guilde.\r\nfunction calculScoreGuild()\r\n\r\n  local score_guild = {\r\n    0,\r\n    0,\r\n    0,\r\n    0,\r\n    0,\r\n    0\r\n  }\r\n\r\n  for key, type_guild in pairs(guild_position) do\r\n\r\n    --Search the masters\r\n    local score = 5\r\n    score_guild = loopInfColor(score_guild, score, detectInfluenceFromLocation(type_guild[1]))\r\n\r\n    --Search the journeymen\r\n    local score = 3\r\n    score_guild = loopInfColor(score_guild, score, detectInfluenceFromLocation(type_guild[2]))\r\n\r\n    --Search the apprenties\r\n    local score = 1\r\n    score_guild = loopInfColor(score_guild, score, detectInfluenceFromLocation(type_guild[3]))\r\n  end\r\n  --log(score_guild,'final')\r\n  return score_guild\r\nend\r\n\r\n\r\n-- Calcul du score d'époque des paysages vides ou pleins.\r\nfunction calculScoreLandscape()\r\n\r\n  local score_ldscp = {\r\n    0,\r\n    0,\r\n    0,\r\n    0,\r\n    0,\r\n    0\r\n  }\r\n\r\n  --Scan regions and determine pts, empty (2) or full (4).\r\n\r\n  for key_region, value_region in pairs(TABLE_REGION) do\r\n    for key_pos, value_pos in pairs(value_region) do\r\n\r\n      local temp_hit = findObjectOnTop(value_pos, 2, 3.75)\r\n      for key, value_hit in pairs(temp_hit) do\r\n\r\n        local type = value_hit.tag\r\n        if string.find(type, 'Card') then\r\n\r\n          local ldscp_full = false\r\n          local landscape_pos = value_hit.getPosition()\r\n          local object_on_landscape = findObjectOnTop(landscape_pos, 3, 2.1)\r\n\r\n          for key, value in pairs(object_on_landscape) do\r\n            --log(ldscp_full,'1er')\r\n            if value.getName() == 'Food' then\r\n              ldscp_full = true\r\n            elseif value.getName() == 'Archery Target' then\r\n              ldscp_full = true\r\n            elseif value.getName() == 'Shilling' then\r\n              ldscp_full = true\r\n            elseif value.getName() == 'Sulfur' then\r\n              ldscp_full = true\r\n            end\r\n            --log(ldscp_full,'bonus ou non')\r\n          end\r\n\r\n          for key, value in pairs(object_on_landscape) do\r\n            if value.getName() == 'Influence' then\r\n\r\n              local score = 0\r\n              if ldscp_full == true then\r\n                 score = 4\r\n               elseif ldscp_full == false then\r\n                 score = 2\r\n              end\r\n              --log(score,'score')\r\n\r\n    --Insert score on score_ldscp table.\r\n              score_ldscp = loopInfColor(score_ldscp, score, value.getColorTint())\r\n            end\r\n          end\r\n        end\r\n      end\r\n    end\r\n  end\r\n  --log(score_ldscp,'final')\r\n\r\n  return score_ldscp\r\nend\r\n\r\n\r\n--Calcule le score d'époque pour le contrôle des différentes régions.\r\nfunction calculScoreRegion()\r\n\r\n  local score_region = {}\r\n\r\n  --Trouver au moins une influence \"ruler\", par couleur et par région\r\n  --création d'un tableau pour stocker les inf trouvées\r\n\r\n  local unit_exist = 1\r\n\r\n  local temp_score_region = {\r\n    {}, --pink\r\n    {}, --red\r\n    {}, --green\r\n    {}, --blue\r\n    {}, --yellow\r\n    {}  --white\r\n  }\r\n\r\n  --Scan des régions, et sélection d'une unique influence par couleur, région et landscape\r\n\r\n  for key_region, value_region in pairs(TABLE_REGION) do\r\n\r\n    local unit_region = {\r\n      false,  --mountain\r\n      false,  --badlands\r\n      false,  --desert\r\n      false,  --forest\r\n      false,  --island\r\n      false   --sea\r\n    }\r\n\r\n    --log(unit_region)\r\n\r\n    for key_pos, value_pos in pairs(value_region) do\r\n\r\n     local temp_object_hit = findObjectOnTop(value_pos, 3, radius, 0.4)\r\n     local temp_landscape_hit = findObjectOnTop(value_pos, 2, 3.75)\r\n\r\n     --if lanscape found\r\n\r\n     if temp_landscape_hit ~= nil then\r\n      for index, object in pairs(temp_landscape_hit) do\r\n        local type = object.tag\r\n        if string.find(type, 'Card') then\r\n          --log(object)\r\n          local landscape_pos = object.getPosition()\r\n          local inf_serf = findObjectOnTop(landscape_pos, 3, 2.1)\r\n\r\n          for key, value in pairs (inf_serf) do\r\n            --log(value,'serf')\r\n            if (value.getName() == 'Influence') then\r\n\r\n              local temp_color = value.getColorTint()\r\n              --log(temp_color,'color serf')\r\n\r\n              --Don't count two times same color's serf on landscape by region\r\n              for i = 1,6 do\r\n                if temp_color == COLOR[i] then\r\n                  if unit_region[i] == false then\r\n                    table.insert(temp_score_region[i], unit_exist)\r\n                    unit_region[i] = true\r\n                  end\r\n                end\r\n              end\r\n            end\r\n          end\r\n        end\r\n      end\r\n     end\r\n\r\n       --Scan des rulers par region\r\n      for key, value in pairs(temp_object_hit) do\r\n\r\n        if (value.getName() == 'Influence') then\r\n\r\n          local temp_color = value.getColorTint()\r\n\r\n          --Don't count two times two same color's rulers by region\r\n          for i = 1,6 do\r\n            if temp_color == COLOR[i] then\r\n              if unit_region[i] == false then\r\n                table.insert(temp_score_region[i], unit_exist)\r\n                unit_region[i] = true\r\n              end\r\n            end\r\n          end\r\n        end\r\n      end\r\n    end\r\n  end\r\n\r\n  --log(temp_score_region[1], \"rose\")\r\n  --log(temp_score_region[2], \"rouge\")\r\n  --log(temp_score_region[3], \"vert\")\r\n  --log(temp_score_region[4], \"bleu\")\r\n  --log(temp_score_region[5], \"jaune\")\r\n  --log(temp_score_region[6], \"blanc\")\r\n\r\n  --convert units to points\r\n\r\n  for c = 1,6 do\r\n\r\n      local n = #temp_score_region[c]\r\n\r\n      if n == 0 then\r\n        table.insert(score_region, 0)\r\n      elseif n == 1 then\r\n        table.insert(score_region, 1)\r\n      elseif n == 2 then\r\n        table.insert(score_region, 3)\r\n      elseif n == 3 then\r\n        table.insert(score_region, 5)\r\n      elseif n == 4 then\r\n        table.insert(score_region, 7)\r\n      elseif n == 5 then\r\n        table.insert(score_region, 9)\r\n      elseif n == 6 then\r\n        table.insert(score_region, 11)\r\n      end\r\n    end\r\n  --log(score_region)\r\n  return score_region\r\nend\r\n\r\n\r\n--Calcul du score final pour chaque location ruled. 1 pts for each or 3 pts for each fief.\r\nfunction calculEachStandardLocationRuled()\r\n\r\n  local each_standard_location_ruled = {\r\n    0,\r\n    0,\r\n    0,\r\n    0,\r\n    0,\r\n    0\r\n  }\r\n\r\n\r\n  for key_region, value_region in pairs(TABLE_REGION) do\r\n    for key_pos, value_pos in pairs(value_region) do\r\n\r\n      local color_ruler = detectInfluenceFromLocation(value_pos)\r\n\r\n      if color_ruler ~= nil then\r\n\r\n        local fief = false\r\n        local hit_location_ruler = findObjectOnTop({value_pos[1],1.30 ,value_pos[3]}, 3, radius, 0.4)\r\n\r\n        for k, value in pairs(hit_location_ruler) do\r\n\r\n          if value.getName() == 'fief' then\r\n            fief = true\r\n            each_standard_location_ruled = loopInfColor(each_standard_location_ruled, 3, color_ruler)\r\n          end\r\n        end\r\n\r\n        if fief == false then\r\n          each_standard_location_ruled = loopInfColor(each_standard_location_ruled, 1, color_ruler)\r\n        end\r\n      end\r\n    end\r\n  end\r\n  --log(each_standard_location_ruled,'each_standard_location_ruled')\r\n  return each_standard_location_ruled\r\n\r\nend\r\n\r\n--Calcul du score final du voyage épique.\r\nfunction calculScoreEpicVoyage()\r\n\r\n  local score_epic_voyage = {\r\n    0,\r\n    0,\r\n    0,\r\n    0,\r\n    0,\r\n    0\r\n  }\r\n\r\n  for i = 1,7 do\r\n\r\n    local color_disc_list = detectDiscColor(EPIC_VOYAGE[i])\r\n    --log(EPIC_VOYAGE[i],'EPIC_VOYAGE[i]')\r\n    --log(color_disc_list,'color_disc_list')\r\n    if color_disc_list ~= nil then\r\n      if i ~= 7 then\r\n        for k,value in pairs(color_disc_list) do\r\n          --log(value,'value1')\r\n          local pts = i*2 + 1\r\n          score_epic_voyage = loopInfColor(score_epic_voyage, pts, value)\r\n        end\r\n\r\n      elseif i == 7 then\r\n        for k,value in pairs(color_disc_list) do\r\n          --log(value, 'value17')\r\n          local pts = 17\r\n          score_epic_voyage = loopInfColor(score_epic_voyage, pts, value)\r\n        end\r\n      end\r\n    end\r\n end\r\n --log(score_epic_voyage,'score_epic_voyage')\r\n return score_epic_voyage\r\nend\r\n\r\n--Fonction secondaire qui sert à déterminer le malus éventuel d'un joueur en fonction de l'époque.\r\nfunction checkMilitaryServicePerformed(military_service)\r\n\r\n  local military_service_performed = {\r\n    true,\r\n    true,\r\n    true,\r\n    true,\r\n    true,\r\n    true\r\n  }\r\n\r\n  local malus_service_false = 0\r\n\r\n  if military_service == MILITARY_SERVICE[1] then\r\n    malus_service_false = -3\r\n  elseif military_service == MILITARY_SERVICE[2] then\r\n    malus_service_false = -4\r\n  elseif military_service == MILITARY_SERVICE[3] then\r\n    malus_service_false = -5\r\n  end\r\n\r\n  local temp_table = BOARDMAP_ZONE.getObjects()\r\n  for key,value in pairs(temp_table) do\r\n\r\n    --Search if 'fief' on zoneboard and his ruler.\r\n\r\n      if value.getName() == 'fief' then\r\n\r\n        local temp_military_service_performed = false\r\n        local pos_fief = value.getPosition()\r\n        local color_ruler_fief = detectInfluenceFromLocation(pos_fief)\r\n\r\n              --Search all markers in one MILITARY_SERVICE\r\n        local color_disc_list = detectDiscColor(military_service)\r\n\r\n        if color_disc_list ~= nil then\r\n          for k,value in pairs(color_disc_list) do\r\n            if value == color_ruler_fief then\r\n              temp_military_service_performed = true\r\n            end\r\n          end\r\n\r\n          --log(temp_military_service_performed,'temp_military_service_performed')\r\n          if temp_military_service_performed == false then\r\n\r\n            for x = 1,6 do\r\n              if color_ruler_fief == COLOR[x] then\r\n                military_service_performed[x] = false\r\n              end\r\n            end\r\n          end\r\n        end\r\n      end\r\n  end\r\n  --log(military_service_performed)\r\n  --log(malus_service_false,'malus_service_false')\r\n  for i = 1,6 do\r\n    if military_service_performed[i] == false then\r\n      military_service_performed[i] = malus_service_false\r\n    else military_service_performed[i] = 0\r\n    end\r\n  end\r\n  --log(military_service_performed,'military_service_performed')\r\n  return military_service_performed\r\nend\r\n\r\n-- divise un nombre par trois, arrondis à l'entier inférieur.\r\nfunction doResultByThree(unit)\r\n\r\n  local mod_unit = unit % 3\r\n  local temp_unit = unit - mod_unit\r\n  local total = temp_unit / 3\r\n\r\n  return total\r\nend\r\n\r\n\r\n--Calcul du score pour la quantité de Shillings détenu dans la zone d'un joueurs (1 pt par tranche complète de 3 shillings)\r\nfunction calculScoreShillingByZone(color_zone)\r\n  --Shilling\r\n  local nb_shilling = 0\r\n\r\n  local zone = color_zone\r\n  local hit_in_zone = zone.getObjects()\r\n\r\n  for k, value in pairs(hit_in_zone) do\r\n    if value.getName() == 'Shilling' then\r\n      nb_shilling = nb_shilling + 1\r\n    end\r\n  end\r\n\r\n  local color_score_shilling = doResultByThree(nb_shilling)\r\n  --log(color_score_shilling)\r\n  return color_score_shilling\r\nend\r\n\r\n--Déterminer le score final de shilling de chaque joueur\r\nfunction calculScoreShilling()\r\n\r\n  local pts = 0\r\n  local score_shilling = {\r\n    pts,\r\n    pts,\r\n    pts,\r\n    pts,\r\n    pts,\r\n    pts\r\n  }\r\n\r\n  score_shilling[1] = calculScoreShillingByZone(getObjectFromGUID('7cb0f1'))\r\n  score_shilling[2] = calculScoreShillingByZone(getObjectFromGUID('28be03'))\r\n  score_shilling[3] = calculScoreShillingByZone(getObjectFromGUID('f1d518'))\r\n  score_shilling[4] = calculScoreShillingByZone(getObjectFromGUID('678bf3'))\r\n  score_shilling[5] = calculScoreShillingByZone(getObjectFromGUID('35b34d'))\r\n  score_shilling[6] = calculScoreShillingByZone(getObjectFromGUID('e09210'))\r\n\r\n  --log(score_shilling)\r\n  return score_shilling\r\n\r\nend\r\n\r\n\r\n--Calcule un score temporaire par groupe de trois locations identiques\r\nfunction tempScoreOneColorIdenticalLocation(my_table)\r\n\r\n  local table = my_table\r\n\r\n  --log(table,'tempScoreOneColorIdenticalLocation')\r\n  local score_outpost = doResultByThree(table[1]) * 3\r\n  local score_farm = doResultByThree(table[2]) * 3\r\n  local score_town = doResultByThree(table[3]) * 3\r\n  local score_fief = doResultByThree(table[4]) * 3\r\n\r\n  local score = score_outpost + score_farm + score_town + score_fief\r\n\r\n  --log(score,'tempScoreOneColorIdenticalLocation')\r\n  return score\r\nend\r\n\r\n--Détermine le modulo d'un nombre divisé par trois.\r\nfunction doModuloByThree(my_table)\r\n\r\n  local table = my_table\r\n  --log(table,'doModuloByThree')\r\n  local mod = {\r\n    {},\r\n    {},\r\n    {}\r\n  }\r\n\r\n  local mod_1 = table[1] % 3\r\n  local mod_2 = table[2] % 3\r\n  local mod_3 = table[3] % 3\r\n\r\n  mod[1] = mod_1\r\n  mod[2] = mod_2\r\n  mod[3] = mod_3\r\n  --log(mod,'doModuloByThree')\r\n  return mod\r\nend\r\n\r\n\r\n--Répartis les fiefs dans les groupes des autres locations, \"outpost\", \"farm\" ou \"town\", de façon optimale.\r\n--C'est à dire, voir s'il y a encore des fiefs de dispo, voir combien il en faut pour atteindre le prochain entier divisible par trois,\r\n--Ajouter les fiefs si c'est utile (c'est à dire si on atteind le prochain entier).\r\n--retirer ces fiefs du total de fiefs dispo.\r\n\r\nfunction divisionOfFief(my_table, a, type_location)\r\n\r\n  local table = my_table\r\n  local mod = doModuloByThree(table)\r\n\r\n  if 3 - mod[type_location] == a then\r\n    if table[4] >= a and table[4] ~= 0 then\r\n      if table[type_location] + a == 3 then\r\n        table[type_location] = table[type_location] + a\r\n        table[4] = table[4] - a\r\n        --log(table[4],'après outpost')\r\n      end\r\n    end\r\n  end\r\n  return table\r\nend\r\n\r\n\r\n--Faire la division des fiefs pour les trois types de locations, et pour quelquesoit le nombre de fiefs de dispo.\r\n\r\nfunction divisionOfFiefByLocation(my_table, a)\r\n\r\n  local table = my_table\r\n  local type_location = 1\r\n  local a = a\r\n\r\n  --pour les outposts\r\n  table_1 = divisionOfFief(table, a, 1)\r\n\r\n  --pour les farms\r\n  table_2 = divisionOfFief(table_1, a, 2)\r\n\r\n  --pour les towns\r\n  table_3 = divisionOfFief(table_2, a, 3)\r\n\r\n  return table_3\r\nend\r\n\r\n--Calculer le score d'un jouer en fonction du nombre de ses fiefs\r\nfunction nFief(my_table, a)\r\n\r\n  local table = my_table\r\n\r\n  local table_1 = divisionOfFiefByLocation(table, a)\r\n\r\n  local score = tempScoreOneColorIdenticalLocation(table_1)\r\n  --log(score,'nFief_score')\r\n  --log(table_1,'nFief_table1')\r\n  return score, table_1\r\n\r\nend\r\n\r\n--Calculer les scores possibles d'un joueur s'il a deux fiefs, et choisir le meilleur.\r\nfunction calculFortwoFiefs(my_table)\r\n\r\n  local table = my_table\r\n  --log(table[4],'table[4]')\r\n  local score_1 = nil\r\n  local score_2 = nil\r\n\r\n  do\r\n    score_1 = nFief(table, 1)\r\n    --log(score_1,'score_1')\r\n  end\r\n\r\n  do\r\n    score_2 = nFief(table, 2)\r\n    --log(score_2,'score_2')\r\n  end\r\n\r\n  if score_1 >= score_2 then\r\n    score = score_1\r\n  else score = score_2\r\n  end\r\n  --log(score,'calculFortwoFiefs')\r\n  return score, table\r\nend\r\n\r\n\r\n--Calculer les scores possibles d'un joueur s'il a trois fiefs, et choisir le meilleur.\r\nfunction calculForThreeFiefs(my_table)\r\n\r\n  local table = my_table\r\n\r\n  local score_1 = nil\r\n  local score_2 = nil\r\n  local score_3 = nil\r\n\r\n  do\r\n    local table_1 = divisionOfFiefByLocation(table, 1)\r\n    local table_2 = divisionOfFiefByLocation(table_1, 2)\r\n    score_1 = tempScoreOneColorIdenticalLocation(table_2)\r\n  end\r\n\r\n  do\r\n    score_2 = nFief(table, 3)\r\n  end\r\n\r\n  do\r\n    score_3 = tempScoreOneColorIdenticalLocation(table)\r\n  end\r\n\r\n  if score_1 >= score_2 and score_1 >= score_3 then\r\n    score = score_1\r\n  elseif score_2 >= score_1 and score_2 >= score_3 then\r\n    score = score_2\r\n  elseif score_3 >= score_1 and score_3 >= score_2 then\r\n    score = score_3\r\n  end\r\n  --log(score,'calculForThreeFiefs')\r\n  return score, table\r\n\r\nend\r\n\r\n--Déterminer le score d'un joueur en faisant le calcul nécessaire en fonction du nombre de ses fiefs.\r\n--Je pense que j'aurai pu encore plus optimiser là, et trouver le bon calcul en fonction du nombre de fiefs = x mais bon....\r\n--Est-ce possible d'avoir plus de 6 fiefs pour un même joueurs??? Je me suis arrêté à 6.\r\n--Pour info, et suite à une question que je t'avais posé, on peut rappeler plusieurs résultats par variable. L'ordre du rappel est important,\r\n       --et si tu ne veux utiliser que le second résultat rappelé, tu marques       _, deuxième resultat = .........\r\n\r\nfunction calculScoreOneColorIdenticalLocation(my_table)\r\n\r\n  local score = 0\r\n  local table = my_table\r\n  --log(table,'calculScoreOneColorIdenticalLocation')\r\n\r\n  --Si 0 fief :\r\n  if table[4] == 0 then\r\n    score = tempScoreOneColorIdenticalLocation(table, 0)\r\n\r\n  --Si 1 fief :\r\n  elseif table[4] == 1 then\r\n    score = nFief(table, 1)\r\n\r\n  --Si 2 fiefs :\r\n  elseif table[4] == 2 then\r\n    score = calculFortwoFiefs(table)\r\n\r\n  --Si 3 fiefs :\r\n  elseif table[4] == 3 then\r\n    score = calculForThreeFiefs(table)\r\n\r\n    --Si 4 fiefs :\r\n  elseif table[4] == 4 then\r\n\r\n    local _, table_1 = nFief(table, 1)\r\n    score = calculForThreeFiefs(table_1)\r\n\r\n    --Si 5 fiefs :\r\n  elseif table[4] == 5 then\r\n\r\n    local _, table_1 = calculFortwoFiefs(table)\r\n    score = calculForThreeFiefs(table_1)\r\n\r\n    --Si 6 fiefs :\r\n  elseif table[4] == 6 then\r\n\r\n    local _, table_1 = calculForThreeFiefs(table)\r\n    score = calculForThreeFiefs(table_1)\r\n\r\n  end\r\n  --log(score,'calculScoreOneColorIdenticalLocation')\r\n    --We can build more than 6 fiefs? Really?\r\n  return score\r\nend\r\n\r\n-- Déterminer le nombre de locations_ruled de chaque type et pour chaque joueur, puis lancer le calcul du score pour chaque joueur.\r\nfunction calculScoreAllColorsIdenticalLocation()\r\n\r\n  local score_identical_location = {0}\r\n\r\n  local loc = 0\r\n\r\n  local table_loc_by_color = {\r\n    {loc,loc,loc,loc}, --pink {outpost/farm/town/fief}\r\n    {loc,loc,loc,loc}, --red {outpost/farm/town/fief}\r\n    {loc,loc,loc,loc}, --green {outpost/farm/town/fief}\r\n    {loc,loc,loc,loc}, --blue {outpost/farm/town/fief}\r\n    {loc,loc,loc,loc}, --yellow {outpost/farm/town/fief}\r\n    {loc,loc,loc,loc} --white {outpost/farm/town/fief}\r\n  }\r\n\r\n\r\n  for k_region, value_region in pairs(TABLE_REGION) do\r\n    for k_pos, value_pos in pairs(value_region) do\r\n      local color_ruler = detectInfluenceFromLocation(value_pos)\r\n      if color_ruler ~= nil then\r\n        for i = 1,6 do\r\n          if color_ruler == COLOR[i] then\r\n            local hit_pos = findObjectOnTop({value_pos[1],1.30 ,value_pos[3]}, 3, radius, 0.4)\r\n            for k, value in pairs(hit_pos) do\r\n              local hit_location = getTitleType(value)\r\n              if hit_location == 'outpost' then\r\n                table_loc_by_color[i][1] = table_loc_by_color[i][1] + 1\r\n              elseif hit_location == 'farm' then\r\n                table_loc_by_color[i][2] = table_loc_by_color[i][2] + 1\r\n              elseif hit_location == 'town' then\r\n                table_loc_by_color[i][3] = table_loc_by_color[i][3] + 1\r\n              elseif value.getName() == 'fief' then\r\n                table_loc_by_color[i][4] = table_loc_by_color[i][4] + 1\r\n              end\r\n            end\r\n          end\r\n        end\r\n      end\r\n    end\r\n  end\r\n\r\n  --log(table_loc_by_color,'table_loc_by_color')\r\n\r\n  for i = 1,6 do\r\n  score_identical_location[i] = calculScoreOneColorIdenticalLocation(table_loc_by_color[i])\r\n  end\r\n  --log(score_identical_location,'score_identical_location')\r\n  return score_identical_location\r\nend\r\n\r\n--Ici, je détermine la fonction \"addition\" de ma métatable. j'ai essayé de faire l'addition de trois tables. J'ai pas réussi.\r\n--Je ne sais pas si c'est parce que c'est impossible ou si c'est parce que je n'ai pas correctement config la fonction.\r\nfunction addTwoScores(my_table1, my_table2)\r\n\r\n  local total   = {}\r\n  local t1 = my_table1\r\n  local t2 = my_table2\r\n\r\n  local mt = {}    -- Construction de la table qui servira de métatable.\r\n\r\n  mt.__add = function(a, b)    -- Création de l'opération d'addition (__add)\r\n    for i = 1,6 do\r\n      total[i] = a[i] + b[i]\r\n    end\r\n  end\r\n\r\n  setmetatable(t1, mt)    -- Association de la mt à score_region\r\n\r\n  local function addition(a, b)    -- On ajoute un message d'erreur ... au cas ou!\r\n    if (getmetatable(a) == nil) and (getmetatable(b) == nil) then\r\n      error(\"Vous essayez d'additionner 2 tables sans métatable.\")\r\n    else\r\n      local t = a + b\r\n    end\r\n  end\r\n\r\n  addition(t1,t2)   -- On lance l'addition.\r\n\r\n  return total\r\nend\r\n\r\n\r\n\r\n--Là, j'additionne les scores des régions, guildes et landscapes qui seront rappelés à chaque passage d'époque.\r\nfunction calculScoreRegLdscpGuild()\r\n\r\n  local score_reg_ldscp_guild = {}\r\n\r\n  local score_region = calculScoreRegion()\r\n  local score_ldscp = calculScoreLandscape()\r\n  local score_guild = calculScoreGuild()\r\n\r\n  local total_1 = addTwoScores(score_region, score_ldscp)\r\n\r\n  score_reg_ldscp_guild = addTwoScores(total_1, score_guild)\r\n\r\n  return score_reg_ldscp_guild\r\nend\r\n\r\n--Là, l'addition des scores qui renverra le score final qui sera ajouté après le score d'époque de l'âge 5.\r\nfunction calculFinalScoring()\r\n\r\n  local final_scoring = {}\r\n\r\n  local score_epic_voyage = calculScoreEpicVoyage()\r\n  local score_shilling = calculScoreShilling()\r\n  local score_ident_loc = calculScoreAllColorsIdenticalLocation()\r\n  local score_each_loc_ruled = calculEachStandardLocationRuled()\r\n\r\n  local total_1 = addTwoScores(score_epic_voyage, score_shilling)\r\n  local large_empire = addTwoScores(score_each_loc_ruled, score_ident_loc)\r\n\r\n  final_scoring = addTwoScores(total_1, large_empire)\r\n\r\n  return final_scoring\r\nend\r\n\r\n--La fonction qui bouge le marqueur époque vers son époque suivante. Cette fonction renvoie aussi la nouvelle position du marqueur.\r\nfunction moveEpochMarker()\r\n\r\n  local new_pos = {}\r\n\r\n  for i = 1,5 do\r\n    local hit_value = findObjectOnTop(EPOCH_MARKER[i], 3, radius, 0.4)\r\n    for k,value in pairs(hit_value) do\r\n      if value.getName() == 'Epoch Marker' then\r\n        if i ~= 5 then\r\n          local obj_marker = getObjectFromGUID('3976bc')\r\n          obj_marker.setPositionSmooth(EPOCH_MARKER[i+1], false, false)\r\n          new_pos = EPOCH_MARKER[i+1]\r\n        end\r\n      end\r\n    end\r\n  end\r\n  return new_pos\r\nend\r\n\r\n--Determine l'époque à prendre en compte pour calculer le malus éventuel des services militaires\r\nfunction calculScoreMilitaryService(epoch_marker_pos)\r\n\r\n  local total_score_milit = {}\r\n  local pos = epoch_marker_pos\r\n\r\n  if pos == EPOCH_MARKER[2] then\r\n    total_score_milit = checkMilitaryServicePerformed(MILITARY_SERVICE[1])\r\n  end\r\n\r\n  if pos == EPOCH_MARKER[4] then\r\n    local total_1 = checkMilitaryServicePerformed(MILITARY_SERVICE[1])\r\n    local total_2 = checkMilitaryServicePerformed(MILITARY_SERVICE[2])\r\n    total_score_milit = addTwoScores(total_1, total_2)\r\n  end\r\n\r\n  if pos == EPOCH_MARKER[5] then\r\n    local total_1 = checkMilitaryServicePerformed(MILITARY_SERVICE[1])\r\n    local total_2 = checkMilitaryServicePerformed(MILITARY_SERVICE[2])\r\n    local total_3 = addTwoScores(total_1, total_2)\r\n    local total_4 = checkMilitaryServicePerformed(MILITARY_SERVICE[3])\r\n    total_score_milit = addTwoScores(total_3, total_4)\r\n  end\r\n\r\n  return total_score_milit\r\nend\r\n\r\n--Renvoi le score époque définitif, avec l'éventuel calcul du malus adéquat, si besoin est.\r\nfunction scoreEpoch(new_pos_marker)\r\n\r\n  local score_epoch = {}\r\n  local new_pos = new_pos_marker\r\n\r\n  if new_pos == EPOCH_MARKER[2] then\r\n    local score_milit = calculScoreMilitaryService(EPOCH_MARKER[2])\r\n    score_epoch = addTwoScores(score_milit, calculScoreRegLdscpGuild())\r\n  elseif new_pos == EPOCH_MARKER[3] then\r\n    score_epoch = calculScoreRegLdscpGuild()\r\n  elseif new_pos == EPOCH_MARKER[4] then\r\n    local score_milit = calculScoreMilitaryService(EPOCH_MARKER[4])\r\n    score_epoch = addTwoScores(score_milit, calculScoreRegLdscpGuild())\r\n  elseif new_pos == EPOCH_MARKER[5] then\r\n    local score_milit = calculScoreMilitaryService(EPOCH_MARKER[5])\r\n    score_epoch = addTwoScores(score_milit, calculScoreRegLdscpGuild())\r\n  end\r\n\r\n  return score_epoch\r\nend\r\n\r\n--Définir la fonction qui imprimera les scores sur le chat\r\nfunction printScore(my_table)\r\n\r\n  local color = {\r\n    'pink',\r\n    'red',\r\n    'green',\r\n    'blue',\r\n    'yellow',\r\n    'white',\r\n  }\r\n\r\n  local affichage = ''\r\n  for i = 6, 1, -1 do\r\n    affichage = color[i]..\" = \"..my_table[i]..\"\\n\"..affichage\r\n    end\r\n  printToAll(affichage)\r\nend\r\n\r\n--Déterminer la fonction du bouton centralisé :\r\n\r\n            --Bouger le marqueur\r\n            --Calculer le score Epoch adéquat\r\n            --Calculer le score final si nous sommes en fin de partie.\r\n\r\n                     --(Attention pour bouger le pion score du bord du plateau, il n'y a qu'un score à prendre en compte)\r\n                     --(car l'addition du score d'époque et du score final est déjà faite.)\r\n                     --(J'ai volontairement séparé les affichages des deux scores car )\r\n                            --Ils sont séparés dans les règles.)\r\n                            --Ce sera plus facile aux joueurs de contrôler les scores calculés.)\r\n\r\n            -- J'aimerai aussi activer les fonctions de réapprovisionnement lorsque nécessaire aux bonnes époques.\r\n              --J'arrive pas à le faire, si tu peux m'aider stp.\r\n\r\n            --Afficher un petit message sur la fenêtre principale du jouer, mais ça s'efface de suite. Y a pas une fonction qui permet de garder\r\n              --l'affichage genre une minute? Du coup, je ne suis pas sûr que mon choix de couleur soit optimal. Je veux du voyant sans être flash.\r\n\r\nfunction centralizedButton()\r\n\r\n  local new_pos_marker = moveEpochMarker()\r\n  local score = {}\r\n\r\n  if new_pos_marker ~= EPOCH_MARKER[5] then\r\n    score = scoreEpoch(new_pos_marker)\r\n    printToAll('Score epoch')\r\n    printScore(score)\r\n\r\n  elseif new_pos_marker == EPOCH_MARKER[5] then\r\n\r\n    local score_epoch = scoreEpoch(new_pos_marker)\r\n    printToAll('Score epoch')\r\n    printScore(score_epoch)\r\n\r\n    local final_scoring = calculFinalScoring()\r\n    printToAll('Final scoring')\r\n    printScore(final_scoring)\r\n\r\n    score = addTwoScores(score_epoch, final_scoring)\r\n\r\n    local msg = \"Game over. Don't forget to add your royal writ with king's seal !!  Thanks\"\r\n    local rgb = {r=0.14, g=0.18, b=0.26}\r\n    broadcastToAll(msg, rgb)\r\n\r\n  end\r\n\r\n    --if new_pos_marker == EPOCH_MARKER[2] then\r\n    --  Global.click_Button(1)\r\n    --end\r\n\r\n    --if new_pos_marker == EPOCH_MARKER[3] then\r\n    --  Global.click_Button(2)\r\n    --end\r\n\r\n    --if new_pos_marker == EPOCH_MARKER[4] then\r\n    --  Global.click_Button(3)\r\n    --end\r\n\r\n    --if new_pos_marker == EPOCH_MARKER[3] then\r\n    --  Global.click_Button(4)\r\n    --end\r\n\r\nend",
       "LuaScriptState": "",
-      "XmlUI": "",
       "GUID": "d27e5c"
     },
     {
@@ -35072,7 +35066,7 @@
       "GridProjection": false,
       "HideWhenFaceDown": false,
       "Hands": false,
-      "LuaScript": "SETTINGS={\r\n    NAME=\"Rules\",\r\n    SCALE=0.75,\r\n    WIDTH=1341,\r\n    HEIGHT=2012,\r\n    SLIDER_HEIGHT=100,\r\n    SLIDER_BG_COLOR=\"#000000\",\r\n    SLIDER_FILL_COLOR=\"#424242\",\r\n    SLIDER_HANDLE_COLOR=\"#8B0A0A\",\r\n    SINGLE_PAGE=false,\r\n    FIRST_PAGE_SINGLE=true,\r\n    PERMANENT=false,\r\n    PAGES={\r\n        'https://i.imgur.com/LYf9gmq.jpg',\n        'https://i.imgur.com/Ye6i9EP.jpg',\n        'https://i.imgur.com/NzLoenY.jpg',\n        'https://i.imgur.com/6QOpjVi.jpg',\n        'https://i.imgur.com/RblQnwh.jpg',\n        'https://i.imgur.com/Saf9YKC.jpg',\n        'https://i.imgur.com/fapwYIa.jpg',\n        'https://i.imgur.com/tIB8RWX.jpg',\n        'https://i.imgur.com/aGjtiVS.jpg',\n        'https://i.imgur.com/TRFhAsZ.jpg',\n        'https://i.imgur.com/XhwxkiA.jpg',\n        'https://i.imgur.com/TActOES.jpg',\n        'https://i.imgur.com/jcL2PCV.jpg',\n        'https://i.imgur.com/CexyRcY.jpg',\n        'https://i.imgur.com/TBwhyyJ.jpg',\n        'https://i.imgur.com/sr1o6Ys.jpg',\n        'https://i.imgur.com/kbKcvLF.jpg',\n        'https://i.imgur.com/dTpeAo6.jpg',\n        'https://i.imgur.com/h9gkEtl.jpg',\n        'https://i.imgur.com/V7bzNk3.jpg',\n        'https://i.imgur.com/dN9H8MP.jpg'\r\n         },\r\n    MAX_VAL = 0\r\n    }\r\n\r\nCURRENT_PAGE = 1\r\r\r\nfunction onLoad(save_state)\r\n    if save_state ~= '' then\r\n        SETTINGS = JSON.decode(save_state)\r\n    end\r\n    if SETTINGS.PERMANENT then\r\n        createRules()\r\n    else\r\n        SettingMenu()\r\n    end\r\nend\r\r\n\r\nfunction createRules()\r\n    if #SETTINGS.PAGES==0 then\r\n        startLuaCoroutine(self, 'SettingMenu')\r\n        return\r\n    end\r\n    CURRENT_PAGE=1\r\n    assets = {\r\n        {\r\n            name=\"left\",\r\n            url=\"http://cloud-3.steamusercontent.com/ugc/916924328390814774/D9639CAE37C1976D117AF135C96B872A963FBFD1/\"\r\n        },\r\n        {\r\n            name=\"right\",\r\n            url=\"http://cloud-3.steamusercontent.com/ugc/916924328390815613/E351065E777FEADEBCA0F495FA90F97A00E01817/\"\r\n        },\r\n        {\r\n            name=\"gear\",\r\n            url=\"https://i.imgur.com/p1g8sza.png\"\r\n        }\r\n    }\r\n    for page, asset in ipairs(SETTINGS.PAGES) do\r\n        assets[#assets+1] = {name=SETTINGS.NAME..tostring(page),url=asset}\r\n    end\r\n    self.UI.setCustomAssets(assets)\r\n    if SETTINGS.SINGLE_PAGE then\r\n        SETTINGS.MAX_VAL = #SETTINGS.PAGES\r\n    elseif SETTINGS.FIRST_PAGE_SINGLE then\r\n        if (#SETTINGS.PAGES-1)%2 == 0 then\r\n            SETTINGS.MAX_VAL = 1+math.floor((#SETTINGS.PAGES-1)/2)\r\n        else\r\n            SETTINGS.MAX_VAL = 2+math.floor((#SETTINGS.PAGES-1)/2)\r\n        end\r\n    else\r\n        if #SETTINGS.PAGES%2==0 then\r\n            SETTINGS.MAX_VAL = #SETTINGS.PAGES/2\r\n        else\r\n            SETTINGS.MAX_VAL = math.floor(#SETTINGS.PAGES/2)+1\r\n        end\r\n    end\r\n    ui_table={\r\n        {tag=\"Panel\", attributes={id=SETTINGS.NAME..\"Panel\", position=\"0 0 -20\", scale=tostring(SETTINGS.SCALE)..\" \"..tostring(SETTINGS.SCALE), rotation=\"0 0 0\", width=SETTINGS.SINGLE_PAGE and SETTINGS.WIDTH or SETTINGS.WIDTH*2, height=SETTINGS.HEIGHT+SETTINGS.SLIDER_HEIGHT,}, children={\r\n            {tag=\"Image\", attributes={id=SETTINGS.NAME..\"LeftImage\", height=SETTINGS.HEIGHT, image=\"\", preserveAspect=\"True\", rectAlignment=\"UpperLeft\", active=not (SETTINGS.SINGLE_PAGE or SETTINGS.FIRST_PAGE_SINGLE)}},\r\n            {tag=\"Image\", attributes={id=SETTINGS.NAME..\"RightImage\", height=SETTINGS.HEIGHT, image=\"\", preserveAspect=\"True\", rectAlignment=\"UpperRight\", active=not (SETTINGS.SINGLE_PAGE or SETTINGS.FIRST_PAGE_SINGLE)}},\r\n            {tag=\"Image\", attributes={id=SETTINGS.NAME..\"SingleImage\", height=SETTINGS.HEIGHT, image=\"\", preserveAspect=true, rectAlignment=\"UpperCenter\", active=(SETTINGS.SINGLE_PAGE or SETTINGS.FIRST_PAGE_SINGLE),}},\r\n            {tag=\"Button\", attributes={id=SETTINGS.NAME..\"Setting\", icon=\"gear\", height=SETTINGS.SLIDER_HEIGHT, width=SETTINGS.SLIDER_HEIGHT, rectAlignment=\"UpperRight\", onClick=\"SettingMenu\", color=\"rgba(1,1,1,0)\", active=not SETTINGS.PERMANENT}},\r\n            {tag=\"Button\", attributes={icon=\"left\", height=SETTINGS.SLIDER_HEIGHT, width=SETTINGS.SLIDER_HEIGHT, rectAlignment=\"Lowerleft\", offsetXY=\"0\", onClick=\"buttonPage(-1)\", color=SETTINGS.SLIDER_HANDLE_COLOR}},\r\n            {tag=\"Slider\", attributes={minValue=\"1\", maxValue=SETTINGS.MAX_VAL, wholeNumbers=\"True\", height=SETTINGS.SLIDER_HEIGHT, width=SETTINGS.SINGLE_PAGE and SETTINGS.WIDTH-(2*SETTINGS.SLIDER_HEIGHT) or SETTINGS.WIDTH*2-(2*SETTINGS.SLIDER_HEIGHT),\r\n                                       value=\"1\", onValueChanged=\"changePage\", rectAlignment=\"LowerCenter\", id=SETTINGS.NAME..\"PageSelector\", backgroundColor=SETTINGS.SLIDER_BG_COLOR, fillColor=SETTINGS.SLIDER_FILL_COLOR, handleColor=SETTINGS.SLIDER_HANDLE_COLOR}},\r\n            {tag=\"Button\", attributes={icon=\"right\", width=SETTINGS.SLIDER_HEIGHT, height=SETTINGS.SLIDER_HEIGHT, rectAlignment=\"LowerRight\", onClick=\"buttonPage(1)\", color=SETTINGS.SLIDER_HANDLE_COLOR}}\r\n        }}}\r\n    Wait.frames(||self.UI.setXmlTable(ui_table), 10)\r\n    self.setName(SETTINGS.NAME)\r\n    Wait.frames(||changePage(nil, \"1\", nil), 20)\r\nend\r\n\r\nfunction permanentSave(player, value, id)\r\n    if make_permanent then\r\n        SETTINGS.PERMANENT = true\r\n        updateSave()\r\n        createRules()\r\n    else\r\n        broadcastToColor(\"Are you sure to make this permanent? Can not be easily changed afterwards. Click again within 5 seconds if you're sure\", player.color, \"Red\")\r\n        make_permanent = true\r\n        self.UI.setAttribute(\"makePermanent\", \"colors\", 'Red|Red|#808080|#606060')\r\n        function reset()\r\n            make_permanent = false\r\n            self.UI.setAttribute(\"makePermanent\", \"colors\", '#dddddd|#ffffff|#808080|#606060')\r\n        end\r\n        Wait.time(reset, 5)\r\n    end\r\nend\r\n\r\nfunction updateSave()\r\n    saved_data = JSON.encode(SETTINGS)\r\n    self.script_state = saved_data\r\nend\r\n\r\nfunction setVar(player, value, id)\r\n    SETTINGS[id] = value\r\n    updateSave()\r\nend\r\n\r\nfunction setColor(player, value, id)\r\n    setVar(nil, value, id)\r\n    self.UI.setAttribute(self.UI.getAttribute(id, 'comp'), 'colors', SETTINGS[id]..\"|\"..SETTINGS[id]..\"|#808080|#40404040\")\r\nend\r\n\r\nfunction toggleVar(player, value, id)\r\n    setVar(nil, not SETTINGS[id], id)\r\n    self.UI.setAttributes(\"SINGLE_PAGE\", {image=(SETTINGS.SINGLE_PAGE and 'ui_check_on' or 'ui_check_off')})\r\n    self.UI.setAttributes(\"FIRST_PAGE_SINGLE\", {image=((SETTINGS.FIRST_PAGE_SINGLE or SETTINGS.SINGLE_PAGE) and 'ui_check_on' or 'ui_check_off'), onClick=(SETTINGS.SINGLE_PAGE and '' or 'toggleVar')})\r\nend\r\n\r\nfunction setPages(player, value, id)\r\n    SETTINGS.PAGES = {}\r\n    for w in value:gmatch(\"%S+\") do\r\n        SETTINGS.PAGES[#SETTINGS.PAGES+1] = w\r\n    end\r\n    updateSave()\r\nend\r\n\r\nfunction SettingMenu(player, value, id)\r\n    self.UI.setCustomAssets({\r\n        {\r\n            name=\"ui_drop\",\r\n            url=\"http://cloud-3.steamusercontent.com/ugc/795365490130624255/A8EECA6326DB4A0AD40B2717123EF9D8B62A4DB9/\"\r\n        },\r\n        {\r\n            name=\"ui_check_on\",\r\n            url=\"http://cloud-3.steamusercontent.com/ugc/795365490130735160/9B69A887F05A9898E082259FA7A05CD0672039ED/\"\r\n        },\r\n        {\r\n            name=\"ui_check_off\",\r\n            url=\"http://cloud-3.steamusercontent.com/ugc/795365490130735396/18D994B6680FECDC9AF3C2C0C0716EA471BE9588/\"\r\n        },\r\n    })\r\n    lines = \"\"\r\n    for _, page in ipairs(SETTINGS.PAGES) do\r\n        lines = lines..page..\"\\n\"\r\n    end\r\n    local settings_menu={\r\n        {tag='Defaults', children={\r\n            {tag='Text', attributes={color='#cccccc', fontSize='18', alignment='MiddleLeft'}},\r\n            {tag='InputField', attributes={fontSize='24', preferredHeight='40'}},\r\n            {tag='Button', attributes={fontSize='18', preferredHeight='40', colors='#dddddd|#ffffff|#808080|#606060'}},\r\n        }},\r\n        {tag='Panel', attributes={position='0 0 -20', height='1800', width='1500'}, children={\r\n            {tag='VerticalLayout', attributes={childForceExpandHeight=false, minHeight='0', spacing=5, rectAlignment='UpperCenter'}, children={\r\n                {tag='HorizontalLayout', attributes={preferredHeight=80, childForceExpandWidth=false, flexibleHeight=0, spacing=20, padding='10 10 10 10'}, children={\r\n                    {tag='Button', attributes={fontSize='22', text='Show', onClick='createRules', flexibleWidth=1}},\r\n                    {tag='Button', attributes={fontSize='22', id=\"makePermanent\", text='Make permanent', onClick='permanentSave', flexibleWidth=1}},\r\n                }},\r\n                {tag='VerticalLayout', attributes={spacing='5', flexibleHeight=0, padding='5 5 5 5', color='black'}, children={\r\n                    {tag='HorizontalLayout', attributes={preferredHeight=30}, children={\r\n                        {tag='Text', attributes={preferredWidth=1000, alignment='UpperLeft', fontSize='24', text='Options', preferredHeight='40'}},\r\n                    }},\r\n                    {tag='VerticalLayout', attributes={color='#404040', padding='10 10 10 10', spacing='5', childForceExpandHeight=false}, children={\r\n                        {tag='HorizontalLayout', attributes={preferredHeight=60}, children={\r\n                            {tag='Text', attributes={preferredWidth=1000, alignment='Lowerleft', fontSize='24', text='Width and height of the image in pixels and scale you want to show it at.'}},\r\n                        }},\r\n                        {tag='HorizontalLayout', attributes={spacing='5'}, children={\r\n                            {tag='VerticalLayout', attributes={flexibleWidth=0, preferredWidth=300}, children={\r\n                                {tag='Text', attributes={text='Name'}},\r\n                                {tag='InputField', attributes={id='NAME', text=SETTINGS.NAME, onEndEdit='setVar'}},\r\n                            }},\r\n                            {tag='VerticalLayout', attributes={flexibleWidth=0, preferredWidth=300}, children={\r\n                                {tag='Text',attributes={text='Width'}},\r\n                                {tag='InputField', attributes={id='WIDTH', text=SETTINGS.WIDTH, onEndEdit='setVar', characterValidation='Integer'}},\r\n                            }},\r\n                            {tag='VerticalLayout', attributes={flexibleWidth=0, preferredWidth=300}, children={\r\n                                {tag='Text', attributes={text='Height'}},\r\n                                {tag='InputField', attributes={id='HEIGHT', text=SETTINGS.HEIGHT, onEndEdit='setVar', characterValidation='Integer'}},\r\n                            }},\r\n                            {tag='VerticalLayout', attributes={flexibleWidth=0, preferredWidth=300}, children={\r\n                                {tag='Text', attributes={text='Scale'}},\r\n                                {tag='InputField', attributes={id='SCALE', text=SETTINGS.SCALE, onEndEdit='setVar', characterValidation='Decimal'}},\r\n                            }},\r\n                        }},\r\n                        {tag='HorizontalLayout', attributes={preferredHeight=60}, children={\r\n                            {tag='Text', attributes={preferredWidth=1000, alignment='Lowerleft', fontSize='24', text='Colors as HEX values (#AABB55)'}},\r\n                        }},\r\n                        {tag='HorizontalLayout', attributes={spacing='5'}, children={\r\n                            {tag='VerticalLayout', attributes={flexibleWidth=0, preferredWidth=300}, children={\r\n                                {tag='Text', attributes={text='Slider Background'}},\r\n                                {tag=\"HorizontalLayout\", attributes={spacing='5'}, children={\r\n                                    {tag='InputField', attributes={id='SLIDER_BG_COLOR', text=SETTINGS.SLIDER_BG_COLOR, comp=\"imSliderBg\", onEndEdit='setColor', preferredWidth=1000}},\r\n                                    {tag='Button', attributes={image='ui_drop', preferredWidth=150, colors=SETTINGS.SLIDER_BG_COLOR..\"|\"..SETTINGS.SLIDER_BG_COLOR..\"|#808080|#40404040\", id=\"imSliderBg\"}},\r\n                                }},\r\n                            }},\r\n                            {tag='VerticalLayout', attributes={flexibleWidth=0, preferredWidth=300}, children={\r\n                                {tag='Text', attributes={text='Silder Fill'}},\r\n                                {tag=\"HorizontalLayout\", attributes={spacing='5'}, children={\r\n                                    {tag='InputField', attributes={id='SLIDER_FILL_COLOR', text=SETTINGS.SLIDER_FILL_COLOR, comp=\"imSliderFill\", onEndEdit='setColor', preferredWidth=1000}},\r\n                                    {tag='Button', attributes={image='ui_drop', preferredWidth=150, colors=SETTINGS.SLIDER_FILL_COLOR..\"|\"..SETTINGS.SLIDER_FILL_COLOR..\"|#808080|#40404040\", id=\"imSliderFill\"}}\r\n                                }},\r\n                            }},\r\n                            {tag='VerticalLayout', attributes={flexibleWidth=0, preferredWidth=300}, children={\r\n                                {tag='Text', attributes={text='Silder Handle'}},\r\n                                {tag=\"HorizontalLayout\", attributes={spacing='5'}, children={\r\n                                    {tag='InputField', attributes={id='SLIDER_HANDLE_COLOR', text=SETTINGS.SLIDER_HANDLE_COLOR, comp=\"imSliderHandle\", onEndEdit='setColor', preferredWidth=1000}},\r\n                                    {tag='Button', attributes={image='ui_drop', preferredWidth=150, colors=SETTINGS.SLIDER_HANDLE_COLOR..\"|\"..SETTINGS.SLIDER_HANDLE_COLOR..\"|#808080|#40404040\", id=\"imSliderHandle\"}},\r\n                                }},\r\n                            }},\r\n                            {tag='VerticalLayout', attributes={flexibleWidth=0, preferredWidth=300}, children={\r\n                                {tag='Text', attributes={text='Silder Height'}},\r\n                                {tag='InputField', attributes={id='silderHandleColor', text=SETTINGS.SLIDER_HEIGHT}},\r\n                            }},\r\n                        }},\r\n                        {tag='HorizontalLayout', attributes={preferredHeight=60}, children={\r\n                            {tag='Text', attributes={preferredWidth=1000, alignment='Lowerleft', fontSize='24', text='Page preferences'}},\r\n                        }},\r\n                        {tag='HorizontalLayout', attributes={preferredHeight=30}, children={\r\n                            {tag='Text', attributes={preferredWidth=1800, alignment='UpperLeft', fontSize='24', text='Single Page width', onClick='toggleToolip()'}},\r\n                            {tag='Button', attributes={id=\"SINGLE_PAGE\", minWidth=30, preferredWidth=30, image=(SETTINGS.SINGLE_PAGE and 'ui_check_on' or 'ui_check_off'), onClick='toggleVar'}},\r\n                        }},\r\n                        {tag='HorizontalLayout', attributes={preferredHeight=30}, children={\r\n                            {tag='Text', attributes={preferredWidth=1800, alignment='UpperLeft', fontSize='24', text='First page is single', onClick='toggleToolip()'}},\r\n                            {tag='Button', attributes={id=\"FIRST_PAGE_SINGLE\", minWidth=30, preferredWidth=30, image=((SETTINGS.FIRST_PAGE_SINGLE or SETTINGS.SINGLE_PAGE) and 'ui_check_on' or 'ui_check_off'), onClick=(SETTINGS.SINGLE_PAGE and '' or 'toggleVar')}},\r\n                        }},\r\n                        {tag='HorizontalLayout', attributes={preferredHeight=60}, children={\r\n                            {tag='Text', attributes={preferredWidth=1000, alignment='Lowerleft', fontSize='24', text='Pages urls:'}},\r\n                        }},\r\n                        {tag='HorizontalLayout', attributes={preferredHeight=600}, children={\r\n                            {tag=\"InputField\", attributes={lineType=\"MultiLineNewLine\", placeholder=\"http://firstpage\\nhttp://secondpage\", text=lines, onEndEdit='setPages'}},\r\n                        }},\r\n                    }},\r\n                }},\r\n            }},\r\n        }},\r\n    }\r\n    Wait.frames(||self.UI.setXmlTable(settings_menu), 5)\r\n    return 1\r\nend\r\n\r\nfunction buttonPage(player, value, id)\r\n    val = tonumber(value)\r\n    CURRENT_PAGE = CURRENT_PAGE+val\r\n    if (CURRENT_PAGE < 1) then CURRENT_PAGE=1 end\r\n    if (CURRENT_PAGE > SETTINGS.MAX_VAL) then CURRENT_PAGE=SETTINGS.MAX_VAL end\r\n    changePage(nil, CURRENT_PAGE, nil)\r\nend\r\n\r\nfunction changePage(player, value, id)\r\n    if id==nil then\r\n        self.UI.setAttribute(SETTINGS.NAME..\"PageSelector\", \"value\", tostring(value))\r\n    else\r\n        CURRENT_PAGE = tonumber(value)\r\n    end\r\n    if SETTINGS.SINGLE_PAGE then\r\n        self.UI.setAttribute(SETTINGS.NAME..'SingleImage', 'image', SETTINGS.NAME..tostring(CURRENT_PAGE))\r\n    elseif SETTINGS.FIRST_PAGE_SINGLE and CURRENT_PAGE==1 then\r\n        self.UI.setAttribute(SETTINGS.NAME..'LeftImage', 'active', 'False')\r\n        self.UI.setAttribute(SETTINGS.NAME..'RightImage', 'active', 'False')\r\n        self.UI.setAttributes(SETTINGS.NAME..'SingleImage', {image=SETTINGS.NAME..tostring(CURRENT_PAGE), active=\"True\"})\r\n    elseif SETTINGS.FIRST_PAGE_SINGLE and CURRENT_PAGE==SETTINGS.MAX_VAL and #SETTINGS.PAGES%2==0 then\r\n        self.UI.setAttributes(SETTINGS.NAME..'SingleImage', {image=SETTINGS.NAME..tostring((CURRENT_PAGE-1)*2), active=\"True\"})\r\n        self.UI.setAttribute(SETTINGS.NAME..'LeftImage', 'active', 'False')\r\n        self.UI.setAttribute(SETTINGS.NAME..'RightImage', 'active', 'False')\r\n    elseif SETTINGS.FIRST_PAGE_SINGLE then\r\n        self.UI.setAttribute(SETTINGS.NAME..'SingleImage', 'active', 'False')\r\n        self.UI.setAttributes(SETTINGS.NAME..'LeftImage', {image=SETTINGS.NAME..tostring((CURRENT_PAGE-1)*2), active=\"True\"})\r\n        self.UI.setAttributes(SETTINGS.NAME..'RightImage', {image=SETTINGS.NAME..tostring((CURRENT_PAGE-1)*2+1), active=\"True\"})\r\n    elseif CURRENT_PAGE==SETTINGS.MAX_VAL and #SETTINGS.PAGES%2==1 then\r\n        self.UI.setAttributes(SETTINGS.NAME..'SingleImage', {image=SETTINGS.NAME..tostring(CURRENT_PAGE*2-1), active=\"True\"})\r\n        self.UI.setAttribute(SETTINGS.NAME..'LeftImage', 'active', 'False')\r\n        self.UI.setAttribute(SETTINGS.NAME..'RightImage', 'active', 'False')\r\n    else\r\n        self.UI.setAttribute(SETTINGS.NAME..'SingleImage', 'active', 'False')\r\n        self.UI.setAttributes(SETTINGS.NAME..'LeftImage', {image=SETTINGS.NAME..tostring(CURRENT_PAGE*2-1), active=\"True\"})\r\n        self.UI.setAttributes(SETTINGS.NAME..'RightImage', {image=SETTINGS.NAME..tostring(CURRENT_PAGE*2), active=\"True\"})\r\n    end\r\nend\r\n",
+      "LuaScript": "SETTINGS={\r\n    NAME=\"Rules\",\r\n    SCALE=0.75,\r\n    WIDTH=1341,\r\n    HEIGHT=2012,\r\n    SLIDER_HEIGHT=100,\r\n    SLIDER_BG_COLOR=\"#000000\",\r\n    SLIDER_FILL_COLOR=\"#424242\",\r\n    SLIDER_HANDLE_COLOR=\"#8B0A0A\",\r\n    SINGLE_PAGE=false,\r\n    FIRST_PAGE_SINGLE=true,\r\n    PERMANENT=false,\r\n    PAGES={\r\n        'https://i.imgur.com/LYf9gmq.jpg',\n        'https://i.imgur.com/Ye6i9EP.jpg',\n        'https://i.imgur.com/NzLoenY.jpg',\n        'https://i.imgur.com/6QOpjVi.jpg',\n        'https://i.imgur.com/RblQnwh.jpg',\n        'https://i.imgur.com/Saf9YKC.jpg',\n        'https://i.imgur.com/fapwYIa.jpg',\n        'https://i.imgur.com/tIB8RWX.jpg',\n        'https://i.imgur.com/aGjtiVS.jpg',\n        'https://i.imgur.com/TRFhAsZ.jpg',\n        'https://i.imgur.com/XhwxkiA.jpg',\n        'https://i.imgur.com/TActOES.jpg',\n        'https://i.imgur.com/jcL2PCV.jpg',\n        'https://i.imgur.com/CexyRcY.jpg',\n        'https://i.imgur.com/TBwhyyJ.jpg',\n        'https://i.imgur.com/sr1o6Ys.jpg',\n        'https://i.imgur.com/kbKcvLF.jpg',\n        'https://i.imgur.com/dTpeAo6.jpg',\n        'https://i.imgur.com/h9gkEtl.jpg',\n        'https://i.imgur.com/V7bzNk3.jpg',\n        'https://i.imgur.com/dN9H8MP.jpg'\r\n         },\r\n    MAX_VAL = 0\r\n    }\r\n\r\nCURRENT_PAGE = 1\r\r\r\nfunction onLoad(save_state)\r\n    if save_state ~= '' then\r\n        SETTINGS = JSON.decode(save_state)\r\n    end\r\n    if SETTINGS.PERMANENT then\r\n        createRules()\r\n    else\r\n        SettingMenu()\r\n    end\r\nend\r\r\n\r\nfunction createRules()\r\n    if #SETTINGS.PAGES==0 then\r\n        startLuaCoroutine(self, 'SettingMenu')\r\n        return\r\n    end\r\n    CURRENT_PAGE=1\r\n    assets = {\r\n        {\r\n            name=\"left\",\r\n            url=\"http://cloud-3.steamusercontent.com/ugc/916924328390814774/D9639CAE37C1976D117AF135C96B872A963FBFD1/\"\r\n        },\r\n        {\r\n            name=\"right\",\r\n            url=\"http://cloud-3.steamusercontent.com/ugc/916924328390815613/E351065E777FEADEBCA0F495FA90F97A00E01817/\"\r\n        },\r\n        {\r\n            name=\"gear\",\r\n            url=\"https://i.imgur.com/p1g8sza.png\"\r\n        }\r\n    }\r\n    for page, asset in ipairs(SETTINGS.PAGES) do\r\n        assets[#assets+1] = {name=SETTINGS.NAME..tostring(page),url=asset}\r\n    end\r\n    self.UI.setCustomAssets(assets)\r\n    if SETTINGS.SINGLE_PAGE then\r\n        SETTINGS.MAX_VAL = #SETTINGS.PAGES\r\n    elseif SETTINGS.FIRST_PAGE_SINGLE then\r\n        if (#SETTINGS.PAGES-1)%2 == 0 then\r\n            SETTINGS.MAX_VAL = 1+math.floor((#SETTINGS.PAGES-1)/2)\r\n        else\r\n            SETTINGS.MAX_VAL = 2+math.floor((#SETTINGS.PAGES-1)/2)\r\n        end\r\n    else\r\n        if #SETTINGS.PAGES%2==0 then\r\n            SETTINGS.MAX_VAL = #SETTINGS.PAGES/2\r\n        else\r\n            SETTINGS.MAX_VAL = math.floor(#SETTINGS.PAGES/2)+1\r\n        end\r\n    end\r\n    ui_table={\r\n        {tag=\"Panel\", attributes={id=SETTINGS.NAME..\"Panel\", position=\"0 0 -20\", scale=tostring(SETTINGS.SCALE)..\" \"..tostring(SETTINGS.SCALE), rotation=\"0 0 0\", width=SETTINGS.SINGLE_PAGE and SETTINGS.WIDTH or SETTINGS.WIDTH*2, height=SETTINGS.HEIGHT+SETTINGS.SLIDER_HEIGHT,}, children={\r\n            {tag=\"Image\", attributes={id=SETTINGS.NAME..\"LeftImage\", height=SETTINGS.HEIGHT, image=\"\", preserveAspect=\"True\", rectAlignment=\"UpperLeft\", active=not (SETTINGS.SINGLE_PAGE or SETTINGS.FIRST_PAGE_SINGLE)}},\r\n            {tag=\"Image\", attributes={id=SETTINGS.NAME..\"RightImage\", height=SETTINGS.HEIGHT, image=\"\", preserveAspect=\"True\", rectAlignment=\"UpperRight\", active=not (SETTINGS.SINGLE_PAGE or SETTINGS.FIRST_PAGE_SINGLE)}},\r\n            {tag=\"Image\", attributes={id=SETTINGS.NAME..\"SingleImage\", height=SETTINGS.HEIGHT, image=\"\", preserveAspect=true, rectAlignment=\"UpperCenter\", active=(SETTINGS.SINGLE_PAGE or SETTINGS.FIRST_PAGE_SINGLE),}},\r\n            {tag=\"Button\", attributes={id=SETTINGS.NAME..\"Setting\", icon=\"gear\", height=SETTINGS.SLIDER_HEIGHT, width=SETTINGS.SLIDER_HEIGHT, rectAlignment=\"UpperRight\", onClick=\"SettingMenu\", color=\"rgba(1,1,1,0)\", active=not SETTINGS.PERMANENT}},\r\n            {tag=\"Button\", attributes={icon=\"left\", height=SETTINGS.SLIDER_HEIGHT, width=SETTINGS.SLIDER_HEIGHT, rectAlignment=\"Lowerleft\", offsetXY=\"0\", onClick=\"buttonPage(-1)\", color=SETTINGS.SLIDER_HANDLE_COLOR}},\r\n            {tag=\"Slider\", attributes={minValue=\"1\", maxValue=SETTINGS.MAX_VAL, wholeNumbers=\"True\", height=SETTINGS.SLIDER_HEIGHT, width=SETTINGS.SINGLE_PAGE and SETTINGS.WIDTH-(2*SETTINGS.SLIDER_HEIGHT) or SETTINGS.WIDTH*2-(2*SETTINGS.SLIDER_HEIGHT),\r\n                                       value=\"1\", onValueChanged=\"changePage\", rectAlignment=\"LowerCenter\", id=SETTINGS.NAME..\"PageSelector\", backgroundColor=SETTINGS.SLIDER_BG_COLOR, fillColor=SETTINGS.SLIDER_FILL_COLOR, handleColor=SETTINGS.SLIDER_HANDLE_COLOR}},\r\n            {tag=\"Button\", attributes={icon=\"right\", width=SETTINGS.SLIDER_HEIGHT, height=SETTINGS.SLIDER_HEIGHT, rectAlignment=\"LowerRight\", onClick=\"buttonPage(1)\", color=SETTINGS.SLIDER_HANDLE_COLOR}}\r\n        }}}\r\n    Wait.frames(||self.UI.setXmlTable(ui_table), 10)\r\n    self.setName(SETTINGS.NAME)\r\n    Wait.frames(||changePage(nil, \"1\", nil), 20)\r\nend\r\n\r\nfunction permanentSave(player, value, id)\r\n    if make_permanent then\r\n        SETTINGS.PERMANENT = true\r\n        updateSave()\r\n        createRules()\r\n    else\r\n        broadcastToColor(\"Are you sure to make this permanent? Can not be easily changed afterwards. Click again within 5 seconds if you're sure\", player.color, \"Red\")\r\n        make_permanent = true\r\n        self.UI.setAttribute(\"makePermanent\", \"colors\", 'Red|Red|#808080|#606060')\r\n        function reset()\r\n            make_permanent = false\r\n            self.UI.setAttribute(\"makePermanent\", \"colors\", '#dddddd|#ffffff|#808080|#606060')\r\n        end\r\n        Wait.time(reset, 5)\r\n    end\r\nend\r\n\r\nfunction updateSave()\r\n    saved_data = JSON.encode(SETTINGS)\r\n    self.script_state = saved_data\r\nend\r\n\r\nfunction setVar(player, value, id)\r\n    SETTINGS[id] = value\r\n    updateSave()\r\nend\r\n\r\nfunction setColor(player, value, id)\r\n    setVar(nil, value, id)\r\n    self.UI.setAttribute(self.UI.getAttribute(id, 'comp'), 'colors', SETTINGS[id]..\"|\"..SETTINGS[id]..\"|#808080|#40404040\")\r\nend\r\n\r\nfunction toggleVar(player, value, id)\r\n    setVar(nil, not SETTINGS[id], id)\r\n    self.UI.setAttributes(\"SINGLE_PAGE\", {image=(SETTINGS.SINGLE_PAGE and 'ui_check_on' or 'ui_check_off')})\r\n    self.UI.setAttributes(\"FIRST_PAGE_SINGLE\", {image=((SETTINGS.FIRST_PAGE_SINGLE or SETTINGS.SINGLE_PAGE) and 'ui_check_on' or 'ui_check_off'), onClick=(SETTINGS.SINGLE_PAGE and '' or 'toggleVar')})\r\nend\r\n\r\nfunction setPages(player, value, id)\r\n    SETTINGS.PAGES = {}\r\n    for w in value:gmatch(\"%S+\") do\r\n        SETTINGS.PAGES[#SETTINGS.PAGES+1] = w\r\n    end\r\n    updateSave()\r\nend\r\n\r\nfunction SettingMenu(player, value, id)\r\n    self.UI.setCustomAssets({\r\n        {\r\n            name=\"ui_drop\",\r\n            url=\"http://cloud-3.steamusercontent.com/ugc/795365490130624255/A8EECA6326DB4A0AD40B2717123EF9D8B62A4DB9/\"\r\n        },\r\n        {\r\n            name=\"ui_check_on\",\r\n            url=\"http://cloud-3.steamusercontent.com/ugc/795365490130735160/9B69A887F05A9898E082259FA7A05CD0672039ED/\"\r\n        },\r\n        {\r\n            name=\"ui_check_off\",\r\n            url=\"http://cloud-3.steamusercontent.com/ugc/795365490130735396/18D994B6680FECDC9AF3C2C0C0716EA471BE9588/\"\r\n        },\r\n    })\r\n    lines = \"\"\r\n    for _, page in ipairs(SETTINGS.PAGES) do\r\n        lines = lines..page..\"\\n\"\r\n    end\r\n    local settings_menu={\r\n        {tag='Defaults', children={\r\n            {tag='Text', attributes={color='#cccccc', fontSize='18', alignment='MiddleLeft'}},\r\n            {tag='InputField', attributes={fontSize='24', preferredHeight='40'}},\r\n            {tag='Button', attributes={fontSize='18', preferredHeight='40', colors='#dddddd|#ffffff|#808080|#606060'}},\r\n        }},\r\n        {tag='Panel', attributes={position='0 0 -20', height='1800', width='1500'}, children={\r\n            {tag='VerticalLayout', attributes={childForceExpandHeight=false, minHeight='0', spacing=5, rectAlignment='UpperCenter'}, children={\r\n                {tag='HorizontalLayout', attributes={preferredHeight=80, childForceExpandWidth=false, flexibleHeight=0, spacing=20, padding='10 10 10 10'}, children={\r\n                    {tag='Button', attributes={fontSize='22', text='Show', onClick='createRules', flexibleWidth=1}},\r\n                    {tag='Button', attributes={fontSize='22', id=\"makePermanent\", text='Make permanent', onClick='permanentSave', flexibleWidth=1}},\r\n                }},\r\n                {tag='VerticalLayout', attributes={spacing='5', flexibleHeight=0, padding='5 5 5 5', color='black'}, children={\r\n                    {tag='HorizontalLayout', attributes={preferredHeight=30}, children={\r\n                        {tag='Text', attributes={preferredWidth=1000, alignment='UpperLeft', fontSize='24', text='Options', preferredHeight='40'}},\r\n                    }},\r\n                    {tag='VerticalLayout', attributes={color='#404040', padding='10 10 10 10', spacing='5', childForceExpandHeight=false}, children={\r\n                        {tag='HorizontalLayout', attributes={preferredHeight=60}, children={\r\n                            {tag='Text', attributes={preferredWidth=1000, alignment='Lowerleft', fontSize='24', text='Width and height of the image in pixels and scale you want to show it at.'}},\r\n                        }},\r\n                        {tag='HorizontalLayout', attributes={spacing='5'}, children={\r\n                            {tag='VerticalLayout', attributes={flexibleWidth=0, preferredWidth=300}, children={\r\n                                {tag='Text', attributes={text='Name'}},\r\n                                {tag='InputField', attributes={id='NAME', text=SETTINGS.NAME, onEndEdit='setVar'}},\r\n                            }},\r\n                            {tag='VerticalLayout', attributes={flexibleWidth=0, preferredWidth=300}, children={\r\n                                {tag='Text',attributes={text='Width'}},\r\n                                {tag='InputField', attributes={id='WIDTH', text=SETTINGS.WIDTH, onEndEdit='setVar', characterValidation='Integer'}},\r\n                            }},\r\n                            {tag='VerticalLayout', attributes={flexibleWidth=0, preferredWidth=300}, children={\r\n                                {tag='Text', attributes={text='Height'}},\r\n                                {tag='InputField', attributes={id='HEIGHT', text=SETTINGS.HEIGHT, onEndEdit='setVar', characterValidation='Integer'}},\r\n                            }},\r\n                            {tag='VerticalLayout', attributes={flexibleWidth=0, preferredWidth=300}, children={\r\n                                {tag='Text', attributes={text='Scale'}},\r\n                                {tag='InputField', attributes={id='SCALE', text=SETTINGS.SCALE, onEndEdit='setVar', characterValidation='Decimal'}},\r\n                            }},\r\n                        }},\r\n                        {tag='HorizontalLayout', attributes={preferredHeight=60}, children={\r\n                            {tag='Text', attributes={preferredWidth=1000, alignment='Lowerleft', fontSize='24', text='Colors as HEX values (#AABB55)'}},\r\n                        }},\r\n                        {tag='HorizontalLayout', attributes={spacing='5'}, children={\r\n                            {tag='VerticalLayout', attributes={flexibleWidth=0, preferredWidth=300}, children={\r\n                                {tag='Text', attributes={text='Slider Background'}},\r\n                                {tag=\"HorizontalLayout\", attributes={spacing='5'}, children={\r\n                                    {tag='InputField', attributes={id='SLIDER_BG_COLOR', text=SETTINGS.SLIDER_BG_COLOR, comp=\"imSliderBg\", onEndEdit='setColor', preferredWidth=1000}},\r\n                                    {tag='Button', attributes={image='ui_drop', preferredWidth=150, colors=SETTINGS.SLIDER_BG_COLOR..\"|\"..SETTINGS.SLIDER_BG_COLOR..\"|#808080|#40404040\", id=\"imSliderBg\"}},\r\n                                }},\r\n                            }},\r\n                            {tag='VerticalLayout', attributes={flexibleWidth=0, preferredWidth=300}, children={\r\n                                {tag='Text', attributes={text='Silder Fill'}},\r\n                                {tag=\"HorizontalLayout\", attributes={spacing='5'}, children={\r\n                                    {tag='InputField', attributes={id='SLIDER_FILL_COLOR', text=SETTINGS.SLIDER_FILL_COLOR, comp=\"imSliderFill\", onEndEdit='setColor', preferredWidth=1000}},\r\n                                    {tag='Button', attributes={image='ui_drop', preferredWidth=150, colors=SETTINGS.SLIDER_FILL_COLOR..\"|\"..SETTINGS.SLIDER_FILL_COLOR..\"|#808080|#40404040\", id=\"imSliderFill\"}}\r\n                                }},\r\n                            }},\r\n                            {tag='VerticalLayout', attributes={flexibleWidth=0, preferredWidth=300}, children={\r\n                                {tag='Text', attributes={text='Silder Handle'}},\r\n                                {tag=\"HorizontalLayout\", attributes={spacing='5'}, children={\r\n                                    {tag='InputField', attributes={id='SLIDER_HANDLE_COLOR', text=SETTINGS.SLIDER_HANDLE_COLOR, comp=\"imSliderHandle\", onEndEdit='setColor', preferredWidth=1000}},\r\n                                    {tag='Button', attributes={image='ui_drop', preferredWidth=150, colors=SETTINGS.SLIDER_HANDLE_COLOR..\"|\"..SETTINGS.SLIDER_HANDLE_COLOR..\"|#808080|#40404040\", id=\"imSliderHandle\"}},\r\n                                }},\r\n                            }},\r\n                            {tag='VerticalLayout', attributes={flexibleWidth=0, preferredWidth=300}, children={\r\n                                {tag='Text', attributes={text='Silder Height'}},\r\n                                {tag='InputField', attributes={id='silderHandleColor', text=SETTINGS.SLIDER_HEIGHT}},\r\n                            }},\r\n                        }},\r\n                        {tag='HorizontalLayout', attributes={preferredHeight=60}, children={\r\n                            {tag='Text', attributes={preferredWidth=1000, alignment='Lowerleft', fontSize='24', text='Page preferences'}},\r\n                        }},\r\n                        {tag='HorizontalLayout', attributes={preferredHeight=30}, children={\r\n                            {tag='Text', attributes={preferredWidth=1800, alignment='UpperLeft', fontSize='24', text='Single Page width', onClick='toggleToolip()'}},\r\n                            {tag='Button', attributes={id=\"SINGLE_PAGE\", minWidth=30, preferredWidth=30, image=(SETTINGS.SINGLE_PAGE and 'ui_check_on' or 'ui_check_off'), onClick='toggleVar'}},\r\n                        }},\r\n                        {tag='HorizontalLayout', attributes={preferredHeight=30}, children={\r\n                            {tag='Text', attributes={preferredWidth=1800, alignment='UpperLeft', fontSize='24', text='First page is single', onClick='toggleToolip()'}},\r\n                            {tag='Button', attributes={id=\"FIRST_PAGE_SINGLE\", minWidth=30, preferredWidth=30, image=((SETTINGS.FIRST_PAGE_SINGLE or SETTINGS.SINGLE_PAGE) and 'ui_check_on' or 'ui_check_off'), onClick=(SETTINGS.SINGLE_PAGE and '' or 'toggleVar')}},\r\n                        }},\r\n                        {tag='HorizontalLayout', attributes={preferredHeight=60}, children={\r\n                            {tag='Text', attributes={preferredWidth=1000, alignment='Lowerleft', fontSize='24', text='Pages urls:'}},\r\n                        }},\r\n                        {tag='HorizontalLayout', attributes={preferredHeight=600}, children={\r\n                            {tag=\"InputField\", attributes={lineType=\"MultiLineNewLine\", placeholder=\"http://firstpage\\nhttp://secondpage\", text=lines, onEndEdit='setPages'}},\r\n                        }},\r\n                    }},\r\n                }},\r\n            }},\r\n        }},\r\n    }\r\n    Wait.frames(||self.UI.setXmlTable(settings_menu), 5)\r\n    return 1\r\nend\r\n\r\nfunction buttonPage(player, value, id)\r\n    val = tonumber(value)\r\n    CURRENT_PAGE = CURRENT_PAGE+val\r\n    if (CURRENT_PAGE < 1) then CURRENT_PAGE=1 end\r\n    if (CURRENT_PAGE > SETTINGS.MAX_VAL) then CURRENT_PAGE=SETTINGS.MAX_VAL end\r\n    changePage(nil, CURRENT_PAGE, nil)\r\nend\r\n\r\nfunction changePage(player, value, id)\r\n    if id==nil then\r\n        self.UI.setAttribute(SETTINGS.NAME..\"PageSelector\", \"value\", tostring(value))\r\n    else\r\n        CURRENT_PAGE = tonumber(value)\r\n    end\r\n    if SETTINGS.SINGLE_PAGE then\r\n        self.UI.setAttribute(SETTINGS.NAME..'SingleImage', 'image', SETTINGS.NAME..tostring(CURRENT_PAGE))\r\n    elseif SETTINGS.FIRST_PAGE_SINGLE and CURRENT_PAGE==1 then\r\n        self.UI.setAttribute(SETTINGS.NAME..'LeftImage', 'active', 'False')\r\n        self.UI.setAttribute(SETTINGS.NAME..'RightImage', 'active', 'False')\r\n        self.UI.setAttributes(SETTINGS.NAME..'SingleImage', {image=SETTINGS.NAME..tostring(CURRENT_PAGE), active=\"True\"})\r\n    elseif SETTINGS.FIRST_PAGE_SINGLE and CURRENT_PAGE==SETTINGS.MAX_VAL and #SETTINGS.PAGES%2==0 then\r\n        self.UI.setAttributes(SETTINGS.NAME..'SingleImage', {image=SETTINGS.NAME..tostring((CURRENT_PAGE-1)*2), active=\"True\"})\r\n        self.UI.setAttribute(SETTINGS.NAME..'LeftImage', 'active', 'False')\r\n        self.UI.setAttribute(SETTINGS.NAME..'RightImage', 'active', 'False')\r\n    elseif SETTINGS.FIRST_PAGE_SINGLE then\r\n        self.UI.setAttribute(SETTINGS.NAME..'SingleImage', 'active', 'False')\r\n        self.UI.setAttributes(SETTINGS.NAME..'LeftImage', {image=SETTINGS.NAME..tostring((CURRENT_PAGE-1)*2), active=\"True\"})\r\n        self.UI.setAttributes(SETTINGS.NAME..'RightImage', {image=SETTINGS.NAME..tostring((CURRENT_PAGE-1)*2+1), active=\"True\"})\r\n    elseif CURRENT_PAGE==SETTINGS.MAX_VAL and #SETTINGS.PAGES%2==1 then\r\n        self.UI.setAttributes(SETTINGS.NAME..'SingleImage', {image=SETTINGS.NAME..tostring(CURRENT_PAGE*2-1), active=\"True\"})\r\n        self.UI.setAttribute(SETTINGS.NAME..'LeftImage', 'active', 'False')\r\n        self.UI.setAttribute(SETTINGS.NAME..'RightImage', 'active', 'False')\r\n    else\r\n        self.UI.setAttribute(SETTINGS.NAME..'SingleImage', 'active', 'False')\r\n        self.UI.setAttributes(SETTINGS.NAME..'LeftImage', {image=SETTINGS.NAME..tostring(CURRENT_PAGE*2-1), active=\"True\"})\r\n        self.UI.setAttributes(SETTINGS.NAME..'RightImage', {image=SETTINGS.NAME..tostring(CURRENT_PAGE*2), active=\"True\"})\r\n    end\r\nend",
       "LuaScriptState": "{\"FIRST_PAGE_SINGLE\":true,\"HEIGHT\":\"3579\",\"MAX_VAL\":0,\"NAME\":\"Rules\",\"PAGES\":[\"https://i.imgur.com/LYf9gmq.jpg\",\"https://i.imgur.com/Ye6i9EP.jpg\",\"https://i.imgur.com/NzLoenY.jpg\",\"https://i.imgur.com/6QOpjVi.jpg\",\"https://i.imgur.com/RblQnwh.jpg\",\"https://i.imgur.com/Saf9YKC.jpg\",\"https://i.imgur.com/fapwYIa.jpg\",\"https://i.imgur.com/tIB8RWX.jpg\",\"https://i.imgur.com/aGjtiVS.jpg\",\"https://i.imgur.com/TRFhAsZ.jpg\",\"https://i.imgur.com/XhwxkiA.jpg\",\"https://i.imgur.com/TActOES.jpg\",\"https://i.imgur.com/jcL2PCV.jpg\",\"https://i.imgur.com/CexyRcY.jpg\",\"https://i.imgur.com/TBwhyyJ.jpg\",\"https://i.imgur.com/sr1o6Ys.jpg\",\"https://i.imgur.com/kbKcvLF.jpg\",\"https://i.imgur.com/dTpeAo6.jpg\",\"https://i.imgur.com/h9gkEtl.jpg\",\"https://i.imgur.com/V7bzNk3.jpg\",\"https://i.imgur.com/dN9H8MP.jpg\"],\"PERMANENT\":true,\"SCALE\":0.75,\"SINGLE_PAGE\":false,\"SLIDER_BG_COLOR\":\"#000000\",\"SLIDER_FILL_COLOR\":\"#424242\",\"SLIDER_HANDLE_COLOR\":\"#8B0A0A\",\"SLIDER_HEIGHT\":100,\"WIDTH\":\"2551\"}",
       "XmlUI": "<!-- Xml UI. See documentation: https://api.tabletopsimulator.com/ui/introUI/ -->",
       "CustomUIAssets": [
@@ -35180,6 +35174,76 @@
   "LuaScriptState": "",
   "XmlUI": "<!-- Xml UI. See documentation: https://api.tabletopsimulator.com/ui/introUI/ -->",
   "SnapPoints": [
+    {
+      "Position": {
+        "x": -10.79,
+        "y": 1.16,
+        "z": -10.79
+      }
+    },
+    {
+      "Position": {
+        "x": -13.46,
+        "y": 1.16,
+        "z": -11.38
+      }
+    },
+    {
+      "Position": {
+        "x": -16.43,
+        "y": 1.16,
+        "z": -11.76
+      }
+    },
+    {
+      "Position": {
+        "x": 22.76,
+        "y": 1.16,
+        "z": 11.66
+      }
+    },
+    {
+      "Position": {
+        "x": 21.5,
+        "y": 1.16,
+        "z": 10.87
+      }
+    },
+    {
+      "Position": {
+        "x": 20.05,
+        "y": 1.16,
+        "z": 10.34
+      }
+    },
+    {
+      "Position": {
+        "x": 16.9,
+        "y": 1.16,
+        "z": 10.69
+      }
+    },
+    {
+      "Position": {
+        "x": 15.4,
+        "y": 1.16,
+        "z": 10.42
+      }
+    },
+    {
+      "Position": {
+        "x": 12.22,
+        "y": 1.16,
+        "z": 10.46
+      }
+    },
+    {
+      "Position": {
+        "x": 10.79,
+        "y": 1.16,
+        "z": 9.85
+      }
+    },
     {
       "Position": {
         "x": 31.45,
