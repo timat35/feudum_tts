@@ -1,5 +1,6 @@
 function onload()
 
+
   params = {
         click_function = "test",
         function_owner = self,
@@ -34,11 +35,6 @@ function onload()
   table_token_moving = {}
 
   bool_4player = true
-
-  -- Il vaut mieux eviter les objet global de maniere general, sauf si vraiment necessaire
-  -- BOARDMAP_ZONE est appelé deux fois seulement, et se defini en une ligne
-  -- c'est different des tableaux qui seront appelé plusieurs fois et se definissent en plusieur ligne
-  -- BOARDMAP_ZONE = getObjectFromGUID('515a29')
 
   table_points = {}
   table_points['pink'] = 0
@@ -134,7 +130,6 @@ function onload()
     -- on modifie direct la table COLOR
     COLOR[key] = getObjectFromGUID(values).getColorTint()
   end
-
 end
 
 -- function to launch guild update (numpad1)
@@ -150,9 +145,9 @@ end
 function detectInfluence(title)
 
   local color = {}
-  local position = title.getPosition()  -
+  local position = title.getPosition()
 
-  local table_object = Global.call('findObjectOnTop', position, nil, nil, 0.4)
+  local table_object = Global.call('findObjectOnTop', position, 3, 1.5, 0.4)
 
   for key,value in pairs(table_object) do
     -- print(value.getGUID())
@@ -175,7 +170,7 @@ end
 function detectInfluenceFromPosition(position, radius)
 
   local color = {}
-  local table_object = Global.call('findObjectOnTop', {position[1],1.30 ,position[3]}, 3, radius, 0.4)
+  local table_object = Global.call('findObjectOnTop', {position[1],1.30 ,position[3]}, 3, 1.5, 0.4)
 
   --log(table_object)
 
@@ -200,7 +195,7 @@ end
 function getInfluenceFromPosition(position, radius)
 
   local obj = nil
-  local table_object = Global.call('findObjectOnTop', {position[1],1.30 ,position[3]}, 3, radius, 0.4)
+  local table_object = Global.call('findObjectOnTop', {position[1],1.30 ,position[3]}, 3, 1.5, 0.4)
 
   for key,value in pairs(table_object) do
     -- print(value.getGUID())
@@ -319,7 +314,16 @@ function guildCount(guild_number)
       end
     end
 
+
   end
+
+
+  -- print point
+  -- print(guild_name)
+  -- for i,v in pairs(table_point) do
+  --   print(i,':',v)
+  -- end
+
 
   return(table_point)
 
@@ -472,9 +476,12 @@ function updateGuildLevel(table_point, guild_number, guild_level)
 
                 setInfluenceGuild(guild_number,guild_level,token)
 
+
               end
+
             end
           end
+
       end
     end
 
@@ -496,6 +503,9 @@ function updateGuildLevel(table_point, guild_number, guild_level)
       end
     end
   end
+
+
+
 
 end
 
@@ -533,6 +543,8 @@ function updateGuildInfluence(table_point, guild_number)
       )
 
 
+
+
   Wait.condition(
       function()  updateGuildLevel(table_point, guild_number, 0) end,
       function() return checkGuild(guild_number,3,color_expect3) and checkGuild(guild_number,2,color_expect2) and checkGuild(guild_number,1,color_expect1) end,
@@ -556,6 +568,8 @@ function checkGuild(guild_number,guild_level, color_expect)
   end
   return bool
 end
+
+
 
 
 
@@ -700,21 +714,15 @@ end
 
 
 
-----------------------------------------------------------------------
---UPDATE SCORE-----------------------------------------------------------------------
----------------UPDATE SCORE-----------------------------------------------------------------
----------------------------UPDATE SCORE----------------------------------------
-----------------------------------------UPDATE SCORE---------------------------------------
-----------------------------------------------------UPDATE SCORE--------------------------
------------------------------------------------------------------UPDATE SCORE------------
-----------------------------------------------------------------------
---UPDATE SCORE-----------------------------------------------------------------------
----------------UPDATE SCORE-----------------------------------------------------------------
----------------------------UPDATE SCORE----------------------------------------
-----------------------------------------UPDATE SCORE---------------------------------------
-----------------------------------------------------UPDATE SCORE--------------------------
------------------------------------------------------------------UPDATE SCORE------------
 
+
+----------------------------------------------------------------------
+--UPDATE SCORE-----------------------------------------------------------------------
+---------------UPDATE SCORE-----------------------------------------------------------------
+---------------------------UPDATE SCORE----------------------------------------
+----------------------------------------UPDATE SCORE---------------------------------------
+----------------------------------------------------UPDATE SCORE--------------------------
+-----------------------------------------------------------------UPDATE SCORE------------
 
 function test()
 
@@ -725,7 +733,7 @@ end
 function detectDiscColor(position)
 
   local color_disc_list = {}
-  local temp_object = Global.call('findObjectOnTop', {position[1],1.30 ,position[3]}, 3, 0.4)
+  local temp_object = Global.call('findObjectOnTop', {position[1], 1.30,position[3]}, 3, 1.5, 0.4)
 
   for k, value in pairs(temp_object) do
 
@@ -750,7 +758,7 @@ end
 function detectInfluenceFromLocation(position)
 
   local color = nil
-  local table_object = Global.call('findObjectOnTop', {position[1],1.30 ,position[3]}, 3, radius, 0.4)
+  local table_object = Global.call('findObjectOnTop', {position[1],1.30 ,position[3]}, 3, 1.5, 0.4)
   --log(table_object)
   for key,value in pairs(table_object) do
     -- print(value.getGUID())
@@ -864,54 +872,50 @@ function calculScoreLandscape()
 
   --Scan regions and determine pts, empty (2) or full (4).
 
-  for key_region, value_region in pairs(TABLE_REGION) do
-    for key_pos, value_pos in pairs(value_region) do
+  local boardmap_zone = getObjectFromGUID('515a29')
+  local temp_table = boardmap_zone.getObjects()
 
-      local temp_hit = Global.call('findObjectOnTop', value_pos, 2, 3.75)
-      for key, value_hit in pairs(temp_hit) do
+  for k, object in pairs(temp_table) do
 
-        local type = value_hit.tag
-        if string.find(type, 'Card') then
+    local type = object.tag
+    if string.find(type, 'Card') then
 
-          local ldscp_full = false
-          local landscape_pos = value_hit.getPosition()
-          local object_on_landscape = Global.call('findObjectOnTop', landscape_pos, 3, 2.5)
+      local ldscp_full = false
+      local landscape_pos = object.getPosition()
+      local object_on_landscape = Global.call('findObjectOnTop', landscape_pos, 3, 2.5)
 
-          for key, value in pairs(object_on_landscape) do
-            --log(ldscp_full,'1er')
-            if value.getName() == 'Food' then
-              ldscp_full = true
-            elseif value.getName() == 'Archery Target' then
-              ldscp_full = true
-            elseif value.getName() == 'Shilling' then
-              ldscp_full = true
-            elseif value.getName() == 'Sulfur' then
-              ldscp_full = true
-            end
-            --log(ldscp_full,'bonus ou non')
+      for key, value in pairs(object_on_landscape) do
+        --log(ldscp_full,'1er')
+        if value.getName() == 'Food' then
+          ldscp_full = true
+        elseif value.getName() == 'Archery Target' then
+          ldscp_full = true
+        elseif value.getName() == 'Shilling' then
+          ldscp_full = true
+        elseif value.getName() == 'Sulfur' then
+          ldscp_full = true
+        end
+        --log(ldscp_full,'bonus ou non')
+      end
+
+      for key, value in pairs(object_on_landscape) do
+        if value.getName() == 'Influence' then
+
+          local score = 0
+          if ldscp_full == true then
+             score = 4
+          elseif ldscp_full == false then
+             score = 2
           end
+          --log(score,'score')
 
-          for key, value in pairs(object_on_landscape) do
-            if value.getName() == 'Influence' then
-
-              local score = 0
-              if ldscp_full == true then
-                 score = 4
-               elseif ldscp_full == false then
-                 score = 2
-              end
-              --log(score,'score')
-
-    --Insert score on score_ldscp table.
-              score_ldscp = loopInfColor(score_ldscp, score, value.getColorTint())
-            end
-          end
+--Insert score on score_ldscp table.
+          score_ldscp = loopInfColor(score_ldscp, score, value.getColorTint())
         end
       end
     end
   end
   --log(score_ldscp,'final')
-
   return score_ldscp
 end
 
@@ -958,7 +962,7 @@ function calculScoreRegion()
 
     for k_pos, v_pos in pairs(v_region) do
 
-      local object_hit = Global.call('findObjectOnTop', v_pos, 3, 2, 0.4)
+      local object_hit = Global.call('findObjectOnTop', v_pos, 3, 1.5, 0.4)
 
       for k, object in pairs(object_hit) do
 
@@ -1053,7 +1057,7 @@ function calculEachStandardLocationRuled()
       if color_ruler ~= nil then
 
         local fief = false
-        local hit_location_ruler = Global.call('findObjectOnTop', {value_pos[1],1.30 ,value_pos[3]}, 3, radius, 0.4)
+        local hit_location_ruler = Global.call('findObjectOnTop', {value_pos[1],1.30 ,value_pos[3]}, 3, 1.5, 0.4)
 
         for k, value in pairs(hit_location_ruler) do
 
@@ -1349,7 +1353,7 @@ function calculScoreAllColorsIdenticalLocation()
       if color_ruler ~= nil then
         for i = 1,6 do
           if color_ruler == COLOR[i] then
-            local hit_pos = Global.call('findObjectOnTop', {value_pos[1],1.30 ,value_pos[3]}, 3, radius, 0.4)
+            local hit_pos = Global.call('findObjectOnTop', {value_pos[1],1.30 ,value_pos[3]}, 3, 1.5, 0.4)
             for k, value in pairs(hit_pos) do
               local hit_location = Global.call('getTitleType', value)
               if hit_location == 'outpost' then
@@ -1450,7 +1454,7 @@ function moveEpochMarker()
   local new_pos = {}
 
   for i = 1,5 do
-    local hit_value = Global.call('findObjectOnTop', EPOCH_MARKER[i], 3, radius, 0.4)
+    local hit_value = Global.call('findObjectOnTop', EPOCH_MARKER[i], 3, 1.5, 0.4)
     for k,value in pairs(hit_value) do
       if value.getName() == 'Epoch Marker' then
         if i ~= 5 then
@@ -1573,25 +1577,9 @@ function centralizedButton()
     score = addTwoScores(score_epoch, final_scoring)
 
     local msg = "Game over. Don't forget to add your royal writ with king's seal !!  Thanks"
-    local rgb = {r=0.14, g=0.18, b=0.26}
+    local rgb = {r=0.14, g=0.70, b=0.26}
     broadcastToAll(msg, rgb)
 
   end
 
-    --if new_pos_marker == EPOCH_MARKER[2] then
-    --  Global.click_Button(1)
-    --end
-
-    --if new_pos_marker == EPOCH_MARKER[3] then
-    --  Global.click_Button(2)
-    --end
-
-    --if new_pos_marker == EPOCH_MARKER[4] then
-    --  Global.click_Button(3)
-    --end
-
-    --if new_pos_marker == EPOCH_MARKER[3] then
-    --  Global.click_Button(4)
-    --end
-
-end 
+end
