@@ -50,11 +50,14 @@ function findObjectOnTop(pos, my_type, radius_y, radius_xz)
     local my_type = (my_type or 3)
     local radius_y = (radius_y or 1.5)
     local radius_xz = (radius_xz or radius_y)
+    log(radius_xz, 'radius_xz')
+    log(radius_y, 'radius_y')
 
     local objList = Physics.cast({
-        origin=pos, direction={0,1,0}, type = my_type, debug=true,
-        max_distance = 0, size={radius_xz, radius_y, radius_xz}
+        origin=pos, direction={0,1,0}, type = my_type, size={radius_xz, radius_y, radius_xz},
+        max_distance = 0, debug=true,
     })
+    log(size,'size')
 
     local refinedList = {}
 
@@ -69,6 +72,7 @@ function getTitleType(value)
 
   local title_type = ""
   local temp_image = value.getCustomObject()
+  local temp_name = value.getName()
   local temp_url= ""
   if temp_image ~= nil then
     if (temp_image['image'] ~= nil) then
@@ -83,7 +87,11 @@ function getTitleType(value)
         title_type = 'outpost'
       elseif (temp_url == 'https://i.imgur.com/UirRzRn.jpg') then
         title_type = 'town'
-
+      end
+    end
+    if temp_name ~= nil then
+      if temp_name == 'fief' then
+        title_type = 'fief'
       end
     end
   end
